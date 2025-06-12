@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avanti Hair Salon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<!-- 🔝 Barra de anuncio -->
+<div class="top-bar">
+    <p>✨ ¡Nueva Colección Curly Motion! Comprá con envío gratis en compras mayores a $20.000</p>
+</div>
+
+<header>
+    <!-- 👤 Menú usuario y logo -->
+    <div class="header-top">
+        <div class="logo-left">
+            <h1>Avanti Hair Salon</h1>
+        </div>
+        <div class="user-actions">
+            <a href="#">Ingresá / Registrate</a>
+            <a href="#">Carrito (0)</a>
+        </div>
+    </div>
+
+    <!-- 🧭 Menú principal -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#">Colecciones</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#">Cómo Comprar</a></li>
+        </ul>
+    </nav>
+
+    <!-- 🔍 Buscador -->
+    <div class="search-bar">
+        <input type="text" placeholder="¿Qué estás buscando?" />
+    </div>
+</header>
+   
+
+<!-- HERO BANNER -->
+<section class="hero-slider">
+    <div class="slider-track" id="slider-track">
+        <img src="img/salon/frente.jpg" alt="Estilo 1">
+        <img src="img/salon/peinado.jpg" alt="Estilo 2">
+        <img src="img/salon/lavado.jpg" alt="Estilo 3">
+    </div>
+
+    <div class="slider-dots" id="slider-dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+    </div>
+
+    <div class="slider-text">
+        <h2>Tu estilo, nuestra pasión</h2>
+        <p>Transformaciones reales. Experiencias únicas. Tu nueva peluquería favorita.</p>
+        <a href="#categorias" class="btn-hero">Conocé más</a>
+    </div>
+</section>
+  
+  
+ <main>
+        
+        <section id="categorias">
+            <h2>Productos por Marca</h2>
+            <div class="grid-categorias">
+        
+                <a class="categoria" href="productos/moroccanoil.html">
+                    <img src="img/logos/moroccanoil.png" alt="Moroccanoil">
+                    <button>Moroccanoil</button>
+                </a>
+        
+                <a class="categoria" href="productos/tigi.html">
+                    <img src="img/logos/tigi.png" alt="Tigi">
+                    <button>Tigi</button>
+                </a>
+        
+                <a class="categoria" href="productos/revlon.html">
+                    <img src="img/logos/revlon.png" alt="Revlon">
+                    <button>Revlon</button>
+                </a>
+         
+                <a class="categoria" href="productos/olaplex.html">
+                    <img src="img/logos/olaplex.png" alt="Olaplex">
+                    <button>Olaplex</button>
+                </a>
+        
+                <a class="categoria" href="productos/hairssime.html">
+                    <img src="img/logos/hairssime.png" alt="Hairssime">
+                    <button>Hairssime</button>
+                </a>
+        
+                <a class="categoria" href="productos/avantibox.html">
+                    <img src="logos/avantibox.png" alt="Avanti Box">
+                    <button>Avanti Box</button>
+                </a>
+        
+                <a class="categoria" href="productos/karseell.html">
+                    <img src="logos/karseell.png" alt="Karseell">
+                    <button>Karseell</button>
+                </a>
+        
+                <a class="categoria" href="productos/cepillos.html">
+                    <img src="logos/cepillos.png" alt="Cepillos">
+                    <button>Cepillos</button>
+                </a>
+        
+            </div>
+        </section>
+        
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <ul>
+                <li>WhatsApp: +54 9 221 6908851</li>
+                <li>Instagram: <a href="https://instagram.com/avanti.hairsalon" target="_blank">@avanti.hairsalon</a></li>
+            </ul>
+            <p>Métodos de pago: transferencia, tarjetas de débito y crédito.</p>
+        </section>
+        
+        <section id="carrito">
+            <h2>Tu Carrito</h2>
+            <p>(Carrito vacío por ahora)</p>
+        </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 Avanti Hair Salon – La Plata</p>
+            <ul>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#categorias">Categorías</a></li>
+            </ul>
+        </footer>
+        <script>
+            const sliderTrack = document.getElementById('slider-track');
+            const dots = document.querySelectorAll('.dot');
+            let currentSlide = 0;
+
+            function goToSlide(index) {
+                currentSlide = index;
+                const offset = -index * 100;
+                sliderTrack.style.transform = `translateX(${offset}%)`;
+
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[index].classList.add('active');
+            }
+        </script>
+          
+          
+        </body>
+        
+        </html>
