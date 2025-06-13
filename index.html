@@ -6,152 +6,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Avanti Hair Salon</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-<!-- 🔝 Barra de anuncio -->
-<div class="top-bar">
-    <p>✨ ¡Nueva Colección Curly Motion! Comprá con envío gratis en compras mayores a $20.000</p>
-</div>
+    <!-- 🔝 Barra de anuncio -->
+    <div class="top-bar">
+        <p>✨Tienda Online de Avanti</p>
+    </div>
 
-<header>
-    <!-- 👤 Menú usuario y logo -->
-    <div class="header-top">
-        <div class="logo-left">
-            <h1>Avanti Hair Salon</h1>
+    <header>
+        <div class="header-top">
+            <div class="logo-left">
+                <h1>Avanti</h1>
+            </div>
+            <div class="user-actions">
+                <a href="#">Ingresá / Registrate</a>
+                <a href="#">Carrito (0)</a>
+            </div>
         </div>
-        <div class="user-actions">
-            <a href="#">Ingresá / Registrate</a>
-            <a href="#">Carrito (0)</a>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Colecciones</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#">Cómo Comprar</a></li>
+            </ul>
+        </nav>
+
+        <div class="search-bar">
+            <input type="text" placeholder="¿Qué estás buscando?" />
         </div>
-    </div>
+    </header>
 
-    <!-- 🧭 Menú principal -->
-    <nav class="main-nav">
-        <ul>
-            <li><a href="#">Colecciones</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li><a href="#">Cómo Comprar</a></li>
-        </ul>
-    </nav>
+    <section class="hero-slider">
+        <div class="slider-track" id="slider-track">
+            <img src="img/salon/frente.jpg" alt="Estilo 1">
+            <img src="img/salon/peinado.jpg" alt="Estilo 2">
+            <img src="img/salon/lavado.jpg" alt="Estilo 3">
+        </div>
+        <div class="slider-dots" id="slider-dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+        </div>
+        <!-- <div class="slider-text">
+            <h2>Tu estilo, nuestra pasión</h2>
+            <p>Transformaciones reales. Experiencias únicas. Tu nueva peluquería favorita.</p>
+            <a href="#categorias" class="btn-hero">Conocé más</a>
+        </div> -->
+    </section>
 
-    <!-- 🔍 Buscador -->
-    <div class="search-bar">
-        <input type="text" placeholder="¿Qué estás buscando?" />
-    </div>
-</header>
-   
+    <main>
+        <section class="iconos-productos">
+            <div class="grid-iconos">
+                <a href="productos/todos.html#shampoos" class="icono">
+                    <img src="img/categorias/champu.png" alt="Shampoos">
+                    <p>Shampoos</p>
+                </a>
+                <a href="productos/todos.html#acondicionadores" class="icono">
+                    <img src="img/categorias/acondicionador.png" alt="Acondicionadores">
+                    <p>Acondicionadores</p>
+                </a>
+                <a href="productos/todos.html#mascaras" class="icono">
+                    <img src="img/categorias/mascara.png" alt="Mascarás">
+                    <p>Mascarás</p>
+                </a>
+                <a href="productos/todos.html#serums" class="icono">
+                    <img src="img/categorias/serum.png" alt="Serums">
+                    <p>Serums</p>
+                </a>
+            </div>
+        </section>
 
-<!-- HERO BANNER -->
-<section class="hero-slider">
-    <div class="slider-track" id="slider-track">
-        <img src="img/salon/frente.jpg" alt="Estilo 1">
-        <img src="img/salon/peinado.jpg" alt="Estilo 2">
-        <img src="img/salon/lavado.jpg" alt="Estilo 3">
-    </div>
-
-    <div class="slider-dots" id="slider-dots">
-        <span class="dot active" onclick="goToSlide(0)"></span>
-        <span class="dot" onclick="goToSlide(1)"></span>
-        <span class="dot" onclick="goToSlide(2)"></span>
-    </div>
-
-    <div class="slider-text">
-        <h2>Tu estilo, nuestra pasión</h2>
-        <p>Transformaciones reales. Experiencias únicas. Tu nueva peluquería favorita.</p>
-        <a href="#categorias" class="btn-hero">Conocé más</a>
-    </div>
-</section>
-  
-  
- <main>
-        
         <section id="categorias">
             <h2>Productos por Marca</h2>
             <div class="grid-categorias">
-        
-                <a class="categoria" href="productos/moroccanoil.html">
+                <a class="categoria-card" href="productos/moroccanoil.html">
                     <img src="img/logos/moroccanoil.png" alt="Moroccanoil">
-                    <button>Moroccanoil</button>
                 </a>
-        
-                <a class="categoria" href="productos/tigi.html">
+                <a class="categoria-card" href="productos/tigi.html">
                     <img src="img/logos/tigi.png" alt="Tigi">
-                    <button>Tigi</button>
                 </a>
-        
-                <a class="categoria" href="productos/revlon.html">
+                <a class="categoria-card" href="productos/revlon.html">
                     <img src="img/logos/revlon.png" alt="Revlon">
-                    <button>Revlon</button>
                 </a>
-         
-                <a class="categoria" href="productos/olaplex.html">
+                <a class="categoria-card" href="productos/olaplex.html">
                     <img src="img/logos/olaplex.png" alt="Olaplex">
-                    <button>Olaplex</button>
                 </a>
-        
-                <a class="categoria" href="productos/hairssime.html">
-                    <img src="img/logos/hairssime.png" alt="Hairssime">
-                    <button>Hairssime</button>
+                <a class="categoria-card" href="productos/hairssime.html">
+                    <img src="img/logos/hairssime_A.png" alt="Hairssime">
                 </a>
-        
-                <a class="categoria" href="productos/avantibox.html">
-                    <img src="logos/avantibox.png" alt="Avanti Box">
-                    <button>Avanti Box</button>
+                <a class="categoria-card" href="productos/avantibox.html">
+                    <img src="img/logos/avanti_box.png" alt="Avanti Box">
                 </a>
-        
-                <a class="categoria" href="productos/karseell.html">
-                    <img src="logos/karseell.png" alt="Karseell">
-                    <button>Karseell</button>
+                <a class="categoria-card" href="productos/karseell.html">
+                    <img src="img/logos/karseell.png" alt="Karseell">
                 </a>
-        
-                <a class="categoria" href="productos/cepillos.html">
-                    <img src="logos/cepillos.png" alt="Cepillos">
-                    <button>Cepillos</button>
+                <a class="categoria-card" href="productos/cepillos.html">
+                    <img src="img/logos/cepillo_A.png" alt="Cepillos">
                 </a>
-        
             </div>
         </section>
-        
-
+          
         <section id="contacto">
             <h2>Contacto</h2>
             <ul>
                 <li>WhatsApp: +54 9 221 6908851</li>
-                <li>Instagram: <a href="https://instagram.com/avanti.hairsalon" target="_blank">@avanti.hairsalon</a></li>
+                <li>Instagram: <a href="https://instagram.com/avanti.hairsalon" target="_blank">@avanti.hairsalon</a>
+                </li>
             </ul>
             <p>Métodos de pago: transferencia, tarjetas de débito y crédito.</p>
         </section>
-        
+
         <section id="carrito">
             <h2>Tu Carrito</h2>
             <p>(Carrito vacío por ahora)</p>
         </section>
-        </main>
-        
-        <footer>
-            <p>&copy; 2025 Avanti Hair Salon – La Plata</p>
-            <ul>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#categorias">Categorías</a></li>
-            </ul>
-        </footer>
-        <script>
-            const sliderTrack = document.getElementById('slider-track');
-            const dots = document.querySelectorAll('.dot');
-            let currentSlide = 0;
+    </main>
 
-            function goToSlide(index) {
-                currentSlide = index;
-                const offset = -index * 100;
-                sliderTrack.style.transform = `translateX(${offset}%)`;
+    <footer>
+        <p>&copy; 2025 Avanti Hair Salon – La Plata</p>
+        <ul>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#categorias">Categorías</a></li>
+        </ul>
+    </footer>
 
-                dots.forEach(dot => dot.classList.remove('active'));
-                dots[index].classList.add('active');
-            }
-        </script>
-          
-          
-        </body>
-        
-        </html>
+    <script>
+        const sliderTrack = document.getElementById('slider-track');
+        const dots = document.querySelectorAll('.dot');
+        let currentSlide = 0;
+
+        function goToSlide(index) {
+            currentSlide = index;
+            const offset = -index * 100;
+            sliderTrack.style.transform = `translateX(${offset}%)`;
+
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[index].classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
