@@ -15,20 +15,30 @@
 <body>
     <!-- 🔝 Barra de anuncio -->
     <div class="top-bar">
-        <p>✨Tienda Online de Avanti</p>
+        <p>✨ Tienda Online Avanti Hair Salon</p>
     </div>
-
-    <header>
-        <div class="header-top">
+    
+    <header class="site-header">
+        <div class="header-inner">
+            <!-- Logo -->
             <div class="logo-left">
                 <h1>Avanti</h1>
             </div>
+    
+            <!-- Buscador -->
+            <div class="search-bar">
+                <input type="text" placeholder="¿Qué estás buscando?" />
+                <button class="btn-search"><i class="fas fa-search"></i></button>
+            </div>
+    
+            <!-- Acciones usuario -->
             <div class="user-actions">
                 <a href="#">Ingresá / Registrate</a>
-                <a href="#">Carrito (0)</a>
+                <a href="#"><i class="fas fa-shopping-cart"></i> (0)</a>
             </div>
         </div>
-
+    
+        <!-- Navegación principal -->
         <nav class="main-nav">
             <ul>
                 <li><a href="#">Colecciones</a></li>
@@ -36,12 +46,8 @@
                 <li><a href="#">Cómo Comprar</a></li>
             </ul>
         </nav>
-
-        <div class="search-bar">
-            <input type="text" placeholder="¿Qué estás buscando?" />
-        </div>
     </header>
-
+  
     <section class="hero-slider">
         <div class="slider-track" id="slider-track">
             <img src="img/salon/frente.jpg" alt="Estilo 1">
@@ -53,13 +59,14 @@
             <span class="dot" onclick="goToSlide(1)"></span>
             <span class="dot" onclick="goToSlide(2)"></span>
         </div>
-        <!-- <div class="slider-text">
+        <div class="slider-text">
             <h2>Tu estilo, nuestra pasión</h2>
             <p>Transformaciones reales. Experiencias únicas. Tu nueva peluquería favorita.</p>
             <a href="#categorias" class="btn-hero">Conocé más</a>
-        </div> -->
+        </div>
     </section>
-
+    <div class="hero-overlay"></div>
+    <div class="hero-overlay"></div>
     <main>
         <section class="iconos-productos">
             <div class="grid-iconos">
@@ -112,44 +119,48 @@
             </div>
         </section>
           
-        <section id="contacto">
+    <!-- ===== SECCIONES INFO ===== -->
+    <div class="info-sections">
+        <section id="contacto" class="info-card">
             <h2>Contacto</h2>
             <ul>
-                <li>WhatsApp: +54 9 221 6908851</li>
-                <li>Instagram: <a href="https://instagram.com/avanti.hairsalon" target="_blank">@avanti.hairsalon</a>
+                <li><i class="fab fa-whatsapp"></i> +54 9 221 6908851</li>
+                <li><i class="fab fa-instagram"></i>
+                    <a href="https://instagram.com/avanti.hairsalon" target="_blank">@avanti.hairsalon</a>
                 </li>
             </ul>
-            <p>Métodos de pago: transferencia, tarjetas de débito y crédito.</p>
+            <p><strong>Métodos de pago:</strong> transferencia, débito y crédito</p>
         </section>
-
-        <section id="carrito">
+    
+        <section id="carrito" class="info-card">
             <h2>Tu Carrito</h2>
             <p>(Carrito vacío por ahora)</p>
+            <a href="#" class="btn-hero small">Ver productos</a>
         </section>
+    </div>
     </main>
-
+    
     <footer>
-        <p>&copy; 2025 Avanti Hair Salon – La Plata</p>
-        <ul>
-            <li><a href="#contacto">Contacto</a></li>
-            <li><a href="#categorias">Categorías</a></li>
-        </ul>
+        <div class="footer-inner">
+            <p>© 2025 Avanti Hair Salon – La Plata</p>
+            <ul>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#categorias">Categorías</a></li>
+                <li><a href="#">Términos</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+            </ul>
+        </div>
     </footer>
-
     <script>
-        const sliderTrack = document.getElementById('slider-track');
+        const track = document.getElementById('slider-track');
         const dots = document.querySelectorAll('.dot');
-        let currentSlide = 0;
-
-        function goToSlide(index) {
-            currentSlide = index;
-            const offset = -index * 100;
-            sliderTrack.style.transform = `translateX(${offset}%)`;
-
-            dots.forEach(dot => dot.classList.remove('active'));
-            dots[index].classList.add('active');
+        function goToSlide(i) {
+            track.style.transform = `translateX(-${i * 100}%)`;
+            dots.forEach(d => d.classList.remove('active'));
+            dots[i].classList.add('active');
         }
     </script>
+      
 </body>
 
 </html>
