@@ -457,3 +457,51 @@ footer a:hover {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+/* ===== AJUSTES RESPONSIVE PARA INFO & FOOTER ===== */
+
+/* Espacio extra en móviles para info-sections */
+@media (max-width: 576px) {
+    .info-sections {
+        padding: 1rem 0.5rem;
+        gap: 1rem;
+    }
+}
+
+/* Footer flexible y wrap en móvil */
+footer .footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .footer-inner p {
+    margin: 0;
+}
+
+/* Convertir la lista de enlaces en flex wrap */
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* Aumentar click area en enlaces del footer */
+footer a {
+    padding: 0.25rem 0.5rem;
+}
+
+/* Ajustes específicos en pantallas muy pequeñas */
+@media (max-width: 400px) {
+    .info-card {
+        padding: 1rem;
+    }
+
+    .btn-hero.small {
+        width: 100%;
+        text-align: center;
+    }
+}
