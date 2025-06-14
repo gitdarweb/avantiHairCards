@@ -4,110 +4,105 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Revlon | Avanti Hair Salon</title>
+    <title>Avanti | Catálogo Revlon</title>
     <link rel="stylesheet" href="../styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 
 <body>
-
-    <!-- 🔝 Barra de anuncio -->
+    <!-- 🔝 Línea superior promocional -->
     <div class="top-bar">
-        <p>✨Tienda Online de Avanti</p>
+        <p>🛍️ Avanti Tienda Online | ✨ Belleza que llega a tu casa</p>
     </div>
 
-    <!-- Encabezado principal -->
-    <header>
-        <div class="header-top">
+    <!-- Encabezado -->
+    <header class="site-header">
+        <div class="header-inner">
             <div class="logo-left">
                 <a href="../index.html">
-                    <h1>Avanti</h1>
+                    <img src="../img/logos/avanti.png" alt="Avanti Hair Salon" class="logo-img" />
                 </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="¿Qué estás buscando?" />
+                <button class="btn-search"><i class="fas fa-search"></i></button>
             </div>
             <div class="user-actions">
                 <a href="#">Ingresá / Registrate</a>
-                <a href="#">Carrito (0)</a>
+                <a href="#"><i class="fas fa-shopping-cart"></i> (0)</a>
             </div>
         </div>
 
-        <nav class="main-nav">
+        <!-- Menú hamburguesa -->
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="main-nav" id="main-nav">
             <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../index.html#categorias">Colecciones</a></li>
+                <li><a href="../index.html#categorias">Catálogos</a></li>
                 <li><a href="../index.html#contacto">Contacto</a></li>
                 <li><a href="#">Cómo Comprar</a></li>
             </ul>
         </nav>
-
-        <div class="search-bar">
-            <input type="text" placeholder="¿Qué estás buscando?" />
-        </div>
     </header>
 
-    <!-- Contenido principal -->
-    <main>
-        <section class="productos-marca">
-            <h2>Productos Revlon</h2>
-            <div class="productos-grid">
+    <!-- Banner de marca -->
+    <section class="marca-banner" style="text-align: center; padding: 2rem 1rem;">
+        <img src="../img/logos/revlon.png" alt="Revlon" style="max-width: 160px; margin-bottom: 1rem;" />
+        <h2 style="color: #0D4B4C;">Productos de la marca Revlon</h2>
+    </section>
 
-                <div class="producto">
-                    <img src="../img/revlon/shampoo-nutritivo.jpg" alt="Shampoo Nutritivo Revlon" />
-                    <h3>Shampoo Nutritivo</h3>
-                    <p>Ideal para cabello seco o dañado. Fórmula suave y restauradora.</p>
-                    <p><strong>Precio:</strong> $4500</p>
-                    <button>Añadir al carrito</button>
-                </div>
-
-                <div class="producto">
-                    <img src="../img/revlon/mascara-hidratante.jpg" alt="Máscara Hidratante Revlon" />
-                    <h3>Máscara Hidratante</h3>
-                    <p>Hidrata profundamente y devuelve el brillo natural al cabello.</p>
-                    <p><strong>Precio:</strong> $5800</p>
-                    <button>Añadir al carrito</button>
-                </div>
-
-                <div class="producto">
-                    <img src="../img/revlon/aceite-brillo.jpg" alt="Aceite Brillo Revlon" />
-                    <h3>Aceite Brillo Final</h3>
-                    <p>Textura liviana. Deja el cabello suave y brillante sin engrasar.</p>
-                    <p><strong>Precio:</strong> $3200</p>
-                    <button>Añadir al carrito</button>
-                </div>
-
+    <!-- Productos Revlon -->
+    <section class="productos-marca" style="padding: 2rem 1rem;">
+        <div class="grid-categorias">
+            <!-- Producto ejemplo 1 -->
+            <div class="categoria-card">
+                <img src="../img/productos/revlon_shampoo.jpg" alt="Revlon Shampoo" />
+                <p>Shampoo Revlon Equave 250ml</p>
+                <p>$6.300</p>
             </div>
 
-            <div class="volver-inicio">
-                <a href="../index.html" class="boton-volver">← Volver al inicio</a>
+            <!-- Producto ejemplo 2 -->
+            <div class="categoria-card">
+                <img src="../img/productos/revlon_10en1.jpg" alt="Revlon Uniq One" />
+                <p>Revlon Uniq One 10 en 1 - Leave in 150ml</p>
+                <p>$7.900</p>
             </div>
-        </section>
-    </main>
 
-    <!-- Pie de página -->
+            <!-- Producto ejemplo 3 -->
+            <div class="categoria-card">
+                <img src="../img/productos/revlon_acondicionador.jpg" alt="Revlon Acondicionador" />
+                <p>Acondicionador Revlon Equave 200ml</p>
+                <p>$6.500</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Avanti Hair Salon – La Plata</p>
+        <div class="footer-inner">
+            <p>© 2025 Avanti Hair Salon – La Plata</p>
             <ul>
                 <li><a href="../index.html#contacto">Contacto</a></li>
-                <li><a href="../index.html#categorias">Categorías</a></li>
-                <li><a href="#">Cómo Comprar</a></li>
+                <li><a href="../index.html#categorias">Catálogos</a></li>
+                <li><a href="#">Términos</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
             </ul>
         </div>
     </footer>
 
+    <!-- JS hamburguesa -->
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const nav = document.getElementById("main-nav");
+        hamburger.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+    </script>
 </body>
 
 </html>
-
-<!--<section id="nosotros"> 
-            <div class="nosotros-contenido">
-                <img src="img/salon/nosotras.jpeg" alt="Imagen del salón Avanti" class="imagen-salon">
-                <div class="texto-nosotras">
-                    <h2>Nosotras</h2>
-                    <p>Avanti es un salón de estilismo ubicado en La Plata y atendido por sus dueñas. Se especializan en color y
-                        tratamientos de cuidado para la salud y belleza del cabello. En Avanti pensamos cuidadosamente cada
-                        detalle
-                        para brindarte un espacio cálido y amable, donde nuestra atención personalizada refleja la dedicación
-                        que le
-                        ponemos a cada servicio y asesoramiento.</p>
-                </div>
-            </div>
-        </section> -->

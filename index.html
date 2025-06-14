@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Avanti Hair Salon</title>
+    <title>Avanti✨Tienda Online</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,19 +13,20 @@
 </head>
 
 <body>
-    <!-- 🔝 Barra de anuncio -->
-    <div class="top-bar">
-        <p>✨ Tienda Online Avanti Hair Salon</p>
-    </div>
-    
-    <header class="site-header">
-        <div class="header-inner">
-            <!-- Logo -->
-            <div class="logo-left">
-                <h1>Avanti</h1>
-            </div>
-    
-            <!-- Buscador -->
+<!-- 🔝 Línea superior promocional -->
+<div class="top-bar">
+    <p>🛍️ Avanti Tienda Online | ✨ Belleza que llega a tu casa </p>
+</div>
+
+<header class="site-header">
+    <div class="header-inner">
+        <!-- Logo como imagen en lugar de H1 -->
+        <div class="logo-left">
+            <a href="index.html">
+                <img src="img/logos/avanti.png" alt="Avanti Hair Salon" class="logo-img" />
+            </a>
+        </div>
+       <!-- Buscador -->
             <div class="search-bar">
                 <input type="text" placeholder="¿Qué estás buscando?" />
                 <button class="btn-search"><i class="fas fa-search"></i></button>
@@ -38,33 +39,44 @@
             </div>
         </div>
     
+        <!-- Menú hamburguesa -->
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+        
         <!-- Navegación principal -->
-        <nav class="main-nav">
+        <nav class="main-nav" id="main-nav">
             <ul>
-                <li><a href="#">Colecciones</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#">Catálogos</a></li>
+                <li><a href="#contacto">Productos</a></li>
                 <li><a href="#">Cómo Comprar</a></li>
             </ul>
-        </nav>
+            </nav>
     </header>
   
     <section class="hero-slider">
         <div class="slider-track" id="slider-track">
-            <img src="img/salon/frente.jpg" alt="Estilo 1">
+            <img src="img/salon/salon_corte.jpeg" alt="Estilo 1">
             <img src="img/salon/peinado.jpg" alt="Estilo 2">
             <img src="img/salon/lavado.jpg" alt="Estilo 3">
         </div>
+    
         <div class="slider-dots" id="slider-dots">
             <span class="dot active" onclick="goToSlide(0)"></span>
             <span class="dot" onclick="goToSlide(1)"></span>
             <span class="dot" onclick="goToSlide(2)"></span>
         </div>
-        <div class="slider-text">
-            <h2>Tu estilo, nuestra pasión</h2>
-            <p>Transformaciones reales. Experiencias únicas. Tu nueva peluquería favorita.</p>
-            <a href="#categorias" class="btn-hero">Conocé más</a>
-        </div>
+    
+        <!-- Nuevo botón debajo del slider -->
+        <!-- boton catalogos en imagenes -->
+        <!--<div class="slider-call">-->
+        <!-- <a href="#categorias" class="btn-slider">Catálogos</a>-->
+        <!-- debo corregir posicion esta en pausa.-->
+        <!--<div class="slider-call">-->
+        <!--</div>-->
+  
     </section>
+    
     <div class="hero-overlay"></div>
     <div class="hero-overlay"></div>
     <main>
@@ -90,7 +102,7 @@
         </section>
 
         <section id="categorias">
-            <h2>Productos por Marca</h2>
+            <h2>Catálogos por Marca</h2>
             <div class="grid-categorias">
                 <a class="categoria-card" href="productos/moroccanoil.html">
                     <img src="img/logos/moroccanoil.png" alt="Moroccanoil">
@@ -145,21 +157,35 @@
             <p>© 2025 Avanti Hair Salon – La Plata</p>
             <ul>
                 <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#categorias">Categorías</a></li>
+                <li><a href="#categorias">Catálogos</a></li>
                 <li><a href="#">Términos</a></li>
                 <li><a href="#">Política de Privacidad</a></li>
             </ul>
         </div>
     </footer>
     <script>
+
+
+
+        // Slider manual
         const track = document.getElementById('slider-track');
         const dots = document.querySelectorAll('.dot');
+
         function goToSlide(i) {
             track.style.transform = `translateX(-${i * 100}%)`;
             dots.forEach(d => d.classList.remove('active'));
             dots[i].classList.add('active');
         }
+
+        // Menú hamburguesa
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.getElementById('main-nav');
+
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
     </script>
+      
       
 </body>
 

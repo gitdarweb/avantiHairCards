@@ -4,26 +4,23 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Avanti | Catálogo Tigi</title>
+    <title>Avanti | Avanti Box</title>
     <link rel="stylesheet" href="../styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 
 <body>
-    <!-- 🔝 Línea superior promocional -->
+    <!-- Línea superior -->
     <div class="top-bar">
         <p>🛍️ Avanti Tienda Online | ✨ Belleza que llega a tu casa</p>
     </div>
 
-    <!-- 🔝 Encabezado -->
+    <!-- Header -->
     <header class="site-header">
         <div class="header-inner">
             <div class="logo-left">
                 <a href="../index.html">
-                    <img src="../img/logos/avanti.png" alt="Avanti Hair Salon" class="logo-img" />
+                    <img src="../img/logos/avanti.png" alt="Avanti" class="logo-img" />
                 </a>
             </div>
             <div class="search-bar">
@@ -37,10 +34,9 @@
         </div>
 
         <!-- Menú hamburguesa -->
-        <button class="hamburger" id="hamburger">
-            <i class="fas fa-bars"></i>
-        </button>
+        <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
 
+        <!-- Navegación principal -->
         <nav class="main-nav" id="main-nav">
             <ul>
                 <li><a href="../index.html#categorias">Catálogos</a></li>
@@ -50,55 +46,41 @@
         </nav>
     </header>
 
-    <!-- 🧴 Banner Marca -->
+    <!-- Banner marca -->
     <section class="marca-banner" style="text-align: center; padding: 2rem 1rem;">
-        <img src="../img/logos/tigi.png" alt="Tigi" style="max-width: 160px; margin-bottom: 1rem;" />
-        <h2 style="color: #0D4B4C;">Productos de la marca Tigi</h2>
+        <img src="../img/logos/avanti_box.png" alt="Avanti Box" style="max-width: 160px; margin-bottom: 1rem;" />
+        <h2 style="color: #0D4B4C;">Avanti Box - Kits de Belleza</h2>
     </section>
 
-    <!-- 🛍️ Productos Tigi -->
+    <!-- Productos -->
     <section class="productos-marca" style="padding: 2rem 1rem;">
         <div class="grid-categorias">
-            <!-- Producto ejemplo 1 -->
             <div class="categoria-card">
-                <img src="../img/productos/tigi_bedhead1.jpg" alt="Tigi Bed Head Shampoo" />
-                <p>Shampoo Tigi Bed Head 250ml</p>
-                <p>$5.500</p>
+                <img src="../img/productos/box_curly.jpg" alt="Avanti Box Curly" />
+                <p>Avanti Box Curly Motion</p>
+                <p>$22.000</p>
             </div>
-
-            <!-- Producto ejemplo 2 -->
             <div class="categoria-card">
-                <img src="../img/productos/tigi_acondicionador.jpg" alt="Tigi Acondicionador" />
-                <p>Acondicionador Tigi Recovery 250ml</p>
-                <p>$5.800</p>
+                <img src="../img/productos/box_reparadora.jpg" alt="Avanti Box Reparadora" />
+                <p>Avanti Box Reparadora Pro</p>
+                <p>$24.500</p>
             </div>
-
-            <!-- Producto ejemplo 3 -->
-            <div class="categoria-card">
-                <img src="../img/productos/tigi_spray.jpg" alt="Tigi Spray Finalizador" />
-                <p>Spray Finalizador Tigi Masterpiece</p>
-                <p>$6.200</p>
-            </div>
-
-            <!-- Agregá más productos así -->
         </div>
     </section>
 
-    <!-- 🔚 Footer -->
+    <!-- Footer -->
     <footer>
         <div class="footer-inner">
             <p>© 2025 Avanti Hair Salon – La Plata</p>
             <ul>
                 <li><a href="../index.html#contacto">Contacto</a></li>
                 <li><a href="../index.html#categorias">Catálogos</a></li>
-                <li><a href="#">Términos</a></li>
-                <li><a href="#">Política de Privacidad</a></li>
             </ul>
         </div>
     </footer>
 
-    <!-- JS hamburguesa -->
     <script>
+        // Menú hamburguesa
         const hamburger = document.getElementById("hamburger");
         const nav = document.getElementById("main-nav");
         hamburger.addEventListener("click", () => {
