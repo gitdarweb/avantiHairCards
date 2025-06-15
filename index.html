@@ -32,12 +32,12 @@
                 <button class="btn-search"><i class="fas fa-search"></i></button>
             </div>
     
-            <!-- Acciones usuario -->
-            <div class="user-actions">
-                <a href="#">Ingresá / Registrate</a>
-                <a href="#"><i class="fas fa-shopping-cart"></i> (0)</a>
-            </div>
+        <!-- Acciones usuario -->
+        <div class="user-actions">
+            <a href="#">Ingresá / Registrate</a>
+            <a href="carrito.html"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a>
         </div>
+
     
         <!-- Menú hamburguesa -->
         <button class="hamburger" id="hamburger">
@@ -103,34 +103,74 @@
 
         <section id="categorias">
             <h2>Catálogos por Marca</h2>
-            <div class="grid-categorias">
-                <a class="categoria-card" href="productos/moroccanoil.html">
-                    <img src="img/logos/moroccanoil.png" alt="Moroccanoil">
+            <div class="grid-marcas">
+                <a class="marca-link" href="productos/moroccanoil.html">
+                    <img src="img/logos/moroccanoil.png" alt="Moroccanoil" />
                 </a>
-                <a class="categoria-card" href="productos/tigi.html">
-                    <img src="img/logos/tigi.png" alt="Tigi">
+                <a class="marca-link" href="productos/tigi.html">
+                    <img src="img/logos/tigi.png" alt="Tigi" />
                 </a>
-                <a class="categoria-card" href="productos/revlon.html">
-                    <img src="img/logos/revlon.png" alt="Revlon">
+                <a class="marca-link" href="productos/revlon.html">
+                    <img src="img/logos/revlon.png" alt="Revlon" />
                 </a>
-                <a class="categoria-card" href="productos/olaplex.html">
-                    <img src="img/logos/olaplex.png" alt="Olaplex">
+                <a class="marca-link" href="productos/olaplex.html">
+                    <img src="img/logos/olaplex.png" alt="Olaplex" />
                 </a>
-                <a class="categoria-card" href="productos/hairssime.html">
-                    <img src="img/logos/hairssime_A.png" alt="Hairssime">
+                <a class="marca-link" href="productos/hairssime.html">
+                    <img src="img/logos/hairssime_A.png" alt="Hairssime" />
                 </a>
-                <a class="categoria-card" href="productos/avantibox.html">
-                    <img src="img/logos/avanti_box.png" alt="Avanti Box">
+                <a class="marca-link" href="productos/avantibox.html">
+                    <img src="img/logos/avanti_box.png" alt="Avanti Box" />
                 </a>
-                <a class="categoria-card" href="productos/karseell.html">
-                    <img src="img/logos/karseell.png" alt="Karseell">
+                <a class="marca-link" href="productos/karseell.html">
+                    <img src="img/logos/karseell.png" alt="Karseell" />
                 </a>
-                <a class="categoria-card" href="productos/cepillos.html">
-                    <img src="img/logos/cepillo_A.png" alt="Cepillos">
+                <a class="marca-link" href="productos/cepillos.html">
+                    <img src="img/logos/cepillo_A.png" alt="Cepillos" />
                 </a>
             </div>
         </section>
-          
+        <!-- ===== BENEFICIOS DESTACADOS ===== -->
+        <section class="beneficios">
+            <div class="beneficio animate-fade">
+                <img src="img/categorias/repartidor.png" alt="Envíos a todo el país" />
+                <h3>Enviamos tu compra</h3>
+                <p>Entregas a todo el país</p>
+            </div>
+            <div class="beneficio animate-fade">
+                <img src="img/categorias/billetera.png" alt="Pagá como quieras" />
+                <h3>Pagá como quieras</h3>
+                <p>Tarjetas de crédito o efectivo</p>
+            </div>
+            <div class="beneficio animate-fade">
+                <img src="img/categorias/escudo.png" alt="Comprá con seguridad" />
+                <h3>Comprá con seguridad</h3>
+                <p>Todos tus datos están protegidos</p>
+            </div>
+        </section>
+  
+  
+    <!-- ====Seccion Nosotras ==== -->
+    <section class="hero-info fade-in">
+        <div class="hero-info-content">
+            <div class="hero-info-texto">
+                <h2>¿Quiénes somos?</h2>
+                <p>
+                    Avanti Hair Salon es un salón de belleza ubicado en La Plata, especializado en brindar productos de alta
+                    calidad
+                    para el cuidado del cabello. Nuestro equipo de profesionales está comprometido con ofrecerte las mejores
+                    marcas
+                    y asesoramiento personalizado.
+                </p>
+                <a href="#contacto" class="btn-hero">Contáctanos</a>
+            </div>
+            <div class="hero-info-imagen">
+                <img src="img/salon/nosotras.jpeg" alt="Empresarias">
+            </div>
+        </div>
+    </section>
+      
+    
     <!-- ===== SECCIONES INFO ===== -->
     <div class="info-sections">
         <section id="contacto" class="info-card">
@@ -163,29 +203,15 @@
             </ul>
         </div>
     </footer>
-    <script>
-
-
-
-        // Slider manual
-        const track = document.getElementById('slider-track');
-        const dots = document.querySelectorAll('.dot');
-
-        function goToSlide(i) {
-            track.style.transform = `translateX(-${i * 100}%)`;
-            dots.forEach(d => d.classList.remove('active'));
-            dots[i].classList.add('active');
-        }
-
-        // Menú hamburguesa
-        const hamburger = document.getElementById('hamburger');
-        const nav = document.getElementById('main-nav');
-
-        hamburger.addEventListener('click', () => {
-            nav.classList.toggle('active');
-        });
-    </script>
-      
+        <!-- Scripts modulares -->
+        <script src="products.js"></script>
+        <script src="cart.js"></script>
+        <script src="main.js"></script>
+        <script src="slider.js"></script>
+        </body>
+        
+        </html>
+    
       
 </body>
 

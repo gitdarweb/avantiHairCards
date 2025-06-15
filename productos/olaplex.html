@@ -30,10 +30,12 @@
                 <input type="text" placeholder="¿Qué estás buscando?" />
                 <button class="btn-search"><i class="fas fa-search"></i></button>
             </div>
-            <div class="user-actions">
-                <a href="#">Ingresá / Registrate</a>
-                <a href="#"><i class="fas fa-shopping-cart"></i> (0)</a>
-            </div>
+        <!-- Acciones usuario -->
+        <div class="user-actions">
+            <a href="#">Ingresá / Registrate</a>
+            <a href="../carrito.html"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a>
+        </div>
+
         </div>
 
         <!-- Menú hamburguesa -->
@@ -51,36 +53,15 @@
     </header>
 
     <!-- Banner de marca -->
-    <section class="marca-banner" style="text-align: center; padding: 2rem 1rem;">
-        <img src="../img/logos/olaplex.png" alt="Olaplex" style="max-width: 160px; margin-bottom: 1rem;" />
-        <h2 style="color: #0D4B4C;">Productos de la marca Olaplex</h2>
+    <section class="marca-banner">
+        <img src="../img/logos/olaplex.png" alt="Olaplex" class="logo-marca" />
+        <h2>Productos de la marca Olaplex</h2>
     </section>
 
-    <!-- Productos Olaplex -->
     <section class="productos-marca" style="padding: 2rem 1rem;">
-        <div class="grid-categorias">
-            <!-- Producto 1 -->
-            <div class="categoria-card">
-                <img src="../img/productos/olaplex_no3.jpg" alt="Olaplex Nº3" />
-                <p>Olaplex Nº3 Hair Perfector 100ml</p>
-                <p>$14.800</p>
-            </div>
-
-            <!-- Producto 2 -->
-            <div class="categoria-card">
-                <img src="../img/productos/olaplex_no4.jpg" alt="Olaplex Nº4 Shampoo" />
-                <p>Olaplex Nº4 Shampoo Bond Maintenance 250ml</p>
-                <p>$15.500</p>
-            </div>
-
-            <!-- Producto 3 -->
-            <div class="categoria-card">
-                <img src="../img/productos/olaplex_no5.jpg" alt="Olaplex Nº5 Acondicionador" />
-                <p>Olaplex Nº5 Acondicionador Bond Maintenance 250ml</p>
-                <p>$15.500</p>
-            </div>
-        </div>
+        <div id="product-list" class="grid-categorias"></div>
     </section>
+    
 
     <!-- Footer -->
     <footer>
@@ -95,14 +76,11 @@
         </div>
     </footer>
 
-    <!-- JS hamburguesa -->
-    <script>
-        const hamburger = document.getElementById("hamburger");
-        const nav = document.getElementById("main-nav");
-        hamburger.addEventListener("click", () => {
-            nav.classList.toggle("active");
-        });
-    </script>
+    <script src="../products.js"></script>
+    <script src="../cart.js"></script>
+    <script src="../main.js"></script>
+    <script src="../slider.js"></script>
+
 </body>
 
 </html>

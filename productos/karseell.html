@@ -25,10 +25,12 @@
                 <input type="text" placeholder="¿Qué estás buscando?" />
                 <button class="btn-search"><i class="fas fa-search"></i></button>
             </div>
+            <!-- Acciones usuario -->
             <div class="user-actions">
                 <a href="#">Ingresá / Registrate</a>
-                <a href="#"><i class="fas fa-shopping-cart"></i> (0)</a>
+                <a href="../carrito.html"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a>
             </div>
+
         </div>
 
         <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
@@ -43,25 +45,14 @@
     </header>
 
     <!-- igual estructura, solo cambian datos -->
-    <section class="marca-banner" style="text-align: center; padding: 2rem 1rem;">
-        <img src="../img/logos/karseell.png" alt="Karseell" style="max-width: 160px; margin-bottom: 1rem;" />
-        <h2 style="color: #0D4B4C;">Productos Karseell</h2>
+    <section class="marca-banner">
+        <img src="../img/logos/karseell.png" alt="Karseell" class="logo-marca" />
+        <h2>Productos de la marca Karseell</h2>
+    </section>
+    <section class="productos-marca" style="padding: 2rem 1rem;">
+        <div id="product-list" class="grid-categorias"></div>
     </section>
     
-    <section class="productos-marca" style="padding: 2rem 1rem;">
-        <div class="grid-categorias">
-            <div class="categoria-card">
-                <img src="../img/productos/karseell_keratina.jpg" alt="Karseell Keratina" />
-                <p>Tratamiento Keratina 500ml</p>
-                <p>$12.800</p>
-            </div>
-            <div class="categoria-card">
-                <img src="../img/productos/karseell_mask.jpg" alt="Karseell Máscara" />
-                <p>Máscara Reparadora 300g</p>
-                <p>$11.000</p>
-            </div>
-        </div>
-    </section>
   
 
     <footer>
@@ -73,14 +64,11 @@
             </ul>
         </div>
     </footer>
-
-    <script>
-        const hamburger = document.getElementById("hamburger");
-        const nav = document.getElementById("main-nav");
-        hamburger.addEventListener("click", () => {
-            nav.classList.toggle("active");
-        });
-    </script>
+    <script src="../products.js"></script>
+    <script src="../cart.js"></script>
+    <script src="../main.js"></script>
+    <script src="../slider.js"></script>
+    
 </body>
 
 </html>

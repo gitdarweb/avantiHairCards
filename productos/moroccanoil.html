@@ -27,10 +27,12 @@
                 <input type="text" placeholder="¿Qué estás buscando?" />
                 <button class="btn-search"><i class="fas fa-search"></i></button>
             </div>
+            <!-- Acciones usuario -->
             <div class="user-actions">
                 <a href="#">Ingresá / Registrate</a>
-                <a href="#"><i class="fas fa-shopping-cart"></i> (0)</a>
+                <a href="../carrito.html"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a>
             </div>
+
         </div>
 
         <!-- Menú hamburguesa -->
@@ -47,31 +49,15 @@
     </header>
 
     <!-- Banner marca -->
-    <section class="marca-banner" style="text-align: center; padding: 2rem 1rem;">
-        <img src="../img/logos/moroccanoil.png" alt="Moroccanoil" style="max-width: 160px; margin-bottom: 1rem;" />
-        <h2 style="color: #0D4B4C;">Moroccanoil - Hidratación y Cuidado Premium</h2>
+    <section class="marca-banner">
+        <img src="../img/logos/moroccanoil.png" alt="Moroccanoil" class="logo-marca" />
+        <h2>Productos de la marca Moroccanoil</h2>
     </section>
 
-    <!-- Productos -->
     <section class="productos-marca" style="padding: 2rem 1rem;">
-        <div class="grid-categorias">
-            <div class="categoria-card">
-                <img src="../img/productos/moroccanoil_shampoo.jpg" alt="Shampoo Moroccanoil" />
-                <p>Shampoo Hidratante</p>
-                <p>$18.900</p>
-            </div>
-            <div class="categoria-card">
-                <img src="../img/productos/moroccanoil_mascarilla.jpg" alt="Mascarilla Moroccanoil" />
-                <p>Mascarilla Reparadora</p>
-                <p>$21.500</p>
-            </div>
-            <div class="categoria-card">
-                <img src="../img/productos/moroccanoil_serum.jpg" alt="Serum Moroccanoil" />
-                <p>Tratamiento Oil Light</p>
-                <p>$25.000</p>
-            </div>
-        </div>
+        <div id="product-list" class="grid-categorias"></div>
     </section>
+    
 
     <!-- Footer -->
     <footer>
@@ -84,14 +70,11 @@
         </div>
     </footer>
 
-    <script>
-        // Menú hamburguesa
-        const hamburger = document.getElementById("hamburger");
-        const nav = document.getElementById("main-nav");
-        hamburger.addEventListener("click", () => {
-            nav.classList.toggle("active");
-        });
-    </script>
+    <script src="../products.js"></script>
+    <script src="../cart.js"></script>
+    <script src="../main.js"></script>
+    <script src="../slider.js"></script>
+
 </body>
 
 </html>

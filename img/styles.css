@@ -92,20 +92,7 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
-.btn-hero {
-    display: inline-block;
-    background-color: #EA4B06;
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 1.1rem;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-}
 
-.btn-hero:hover {
-    background-color: #C89F65;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -262,20 +249,7 @@ footer a {
     margin-bottom: 30px;
 }
 
-.btn-hero {
-    display: inline-block;
-    background-color: #EA4B06;
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 1.1rem;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-}
 
-.btn-hero:hover {
-    background-color: #C89F65;
-}
 
 @keyframes slide {
     0% {
@@ -376,20 +350,8 @@ footer a {
     margin-bottom: 30px;
 }
 
-.btn-hero {
-    display: inline-block;
-    background-color: #EA4B06;
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 1.1rem;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-}
 
-.btn-hero:hover {
-    background-color: #C89F65;
-}
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -469,15 +431,6 @@ footer a {
     margin-top: 10px;
 }
 
-.btn-hero {
-    margin-top: 15px;
-    padding: 10px 25px;
-    background-color: #EA4B06;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-}
 
 @media (max-width: 768px) {
     .slider-track img {
@@ -556,15 +509,6 @@ footer a {
     margin-top: 10px;
 }
 
-.btn-hero {
-    margin-top: 15px;
-    padding: 10px 25px;
-    background-color: #EA4B06;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-}
 
 @media (max-width: 768px) {
     .slider-track img {
@@ -770,4 +714,147 @@ footer a {
 
 .categoria-card:hover img {
     filter: none;
+}
+/* Estilos para la sección hero-info */
+.hero-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    /* Fondo blanco para coherencia */
+}
+
+/* Estilos para el título */
+.hero-info h2 {
+    font-size: 1.8rem;
+    color: #0D4B4C;
+    /* Color consistente con tu paleta */
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* Estilos para la sección hero-info */
+.hero-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    /* Fondo blanco para coherencia */
+}
+
+/* Estilos para el título */
+.hero-info h2 {
+    font-size: 1.8rem;
+    color: #0D4B4C;
+    /* Color de tu paleta */
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* Estilos para la imagen */
+.hero-info img {
+    width: 100%;
+    max-width: 400px;
+    /* Limita el tamaño máximo */
+    height: auto;
+    /* Mantiene la proporción */
+    object-fit: cover;
+    /* Ajusta la imagen sin distorsión */
+    border-radius: 0.5rem;
+    /* Bordes redondeados */
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    transition: transform 0.3s ease;
+    /* Transición suave */
+}
+
+/* Hover en la imagen */
+.hero-info img:hover {
+    transform: scale(1.05);
+    /* Efecto al pasar el ratón */
+}
+
+/* Estilos para el párrafo */
+.hero-info p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    /* Limita el ancho del texto */
+}
+
+/* Estilos para el botón */
+.hero-info .btn-hero {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #EA4B06;
+    /* Color de tu paleta */
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero-info .btn-hero:hover {
+    background-color: #C89F65;
+    /* Color al hover */
+}
+
+/* Responsive: Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+    .hero-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-info img {
+        max-width: 300px;
+        /* Imagen más pequeña en móviles */
+    }
+
+    .hero-info p {
+        font-size: 0.9rem;
+    }
+
+    .hero-info .btn-hero {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+/* Botón hero unificado */
+.btn-hero {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #EA4B06;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: #C89F65;
+}
+.hero-info img {
+    width: 100% !important;
+    max-width: 400px !important;
+    height: auto !important;
+    object-fit: cover !important;
+    border-radius: 0.5rem !important;
+    margin-bottom: 1.5rem !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.3s ease !important;
 }

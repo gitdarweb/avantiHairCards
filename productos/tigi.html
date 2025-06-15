@@ -30,10 +30,12 @@
                 <input type="text" placeholder="¿Qué estás buscando?" />
                 <button class="btn-search"><i class="fas fa-search"></i></button>
             </div>
+            <!-- Acciones usuario -->
             <div class="user-actions">
                 <a href="#">Ingresá / Registrate</a>
-                <a href="#"><i class="fas fa-shopping-cart"></i> (0)</a>
+                <a href="../carrito.html"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a>
             </div>
+
         </div>
 
         <!-- Menú hamburguesa -->
@@ -51,38 +53,15 @@
     </header>
 
     <!-- 🧴 Banner Marca -->
-    <section class="marca-banner" style="text-align: center; padding: 2rem 1rem;">
-        <img src="../img/logos/tigi.png" alt="Tigi" style="max-width: 160px; margin-bottom: 1rem;" />
-        <h2 style="color: #0D4B4C;">Productos de la marca Tigi</h2>
+    <section class="marca-banner">
+        <img src="../img/logos/tigi.png" alt="Tigi"class="logo-marca"  />
+        <h2>Productos de la marca Tigi</h2>
     </section>
+    <!-- 🧴 Productos Tigi -->
+<section class="productos-marca" style="padding: 2rem 1rem;">
+    <div id="product-list" class="grid-categorias"></div>
+</section>
 
-    <!-- 🛍️ Productos Tigi -->
-    <section class="productos-marca" style="padding: 2rem 1rem;">
-        <div class="grid-categorias">
-            <!-- Producto ejemplo 1 -->
-            <div class="categoria-card">
-                <img src="../img/productos/tigi_bedhead1.jpg" alt="Tigi Bed Head Shampoo" />
-                <p>Shampoo Tigi Bed Head 250ml</p>
-                <p>$5.500</p>
-            </div>
-
-            <!-- Producto ejemplo 2 -->
-            <div class="categoria-card">
-                <img src="../img/productos/tigi_acondicionador.jpg" alt="Tigi Acondicionador" />
-                <p>Acondicionador Tigi Recovery 250ml</p>
-                <p>$5.800</p>
-            </div>
-
-            <!-- Producto ejemplo 3 -->
-            <div class="categoria-card">
-                <img src="../img/productos/tigi_spray.jpg" alt="Tigi Spray Finalizador" />
-                <p>Spray Finalizador Tigi Masterpiece</p>
-                <p>$6.200</p>
-            </div>
-
-            <!-- Agregá más productos así -->
-        </div>
-    </section>
 
     <!-- 🔚 Footer -->
     <footer>
@@ -97,14 +76,11 @@
         </div>
     </footer>
 
-    <!-- JS hamburguesa -->
-    <script>
-        const hamburger = document.getElementById("hamburger");
-        const nav = document.getElementById("main-nav");
-        hamburger.addEventListener("click", () => {
-            nav.classList.toggle("active");
-        });
-    </script>
+    <script src="../products.js"></script>
+    <script src="../cart.js"></script>
+    <script src="../main.js"></script>
+    <script src="../slider.js"></script>
+
 </body>
 
 </html>

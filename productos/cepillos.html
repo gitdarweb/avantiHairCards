@@ -25,10 +25,12 @@
                 <input type="text" placeholder="¿Qué estás buscando?" />
                 <button class="btn-search"><i class="fas fa-search"></i></button>
             </div>
+            <!-- Acciones usuario -->
             <div class="user-actions">
                 <a href="#">Ingresá / Registrate</a>
-                <a href="#"><i class="fas fa-shopping-cart"></i> (0)</a>
+                <a href="../carrito.html"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a>
             </div>
+
         </div>
 
         <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
@@ -42,25 +44,15 @@
         </nav>
     </header>
 
-    <section class="marca-banner" style="text-align: center; padding: 2rem 1rem;">
-        <img src="../img/logos/cepillo_A.png" alt="Cepillos" style="max-width: 160px; margin-bottom: 1rem;" />
-        <h2 style="color: #0D4B4C;">Cepillos Profesionales</h2>
+    <section class="marca-banner">
+        <img src="../img/logos/cepillos.png" alt="Cepillos" class="logo-marca" />
+        <h2>Articulos / Cepillos </h2>
     </section>
     
     <section class="productos-marca" style="padding: 2rem 1rem;">
-        <div class="grid-categorias">
-            <div class="categoria-card">
-                <img src="../img/productos/cepillo_redondo.jpg" alt="Cepillo Redondo" />
-                <p>Cepillo Térmico Redondo Nº33</p>
-                <p>$5.200</p>
-            </div>
-            <div class="categoria-card">
-                <img src="../img/productos/cepillo_plano.jpg" alt="Cepillo Plano" />
-                <p>Cepillo Antiestático Plano</p>
-                <p>$4.800</p>
-            </div>
-        </div>
+        <div id="product-list" class="grid-categorias"></div>
     </section>
+    
       
 
     <footer>
@@ -73,13 +65,11 @@
         </div>
     </footer>
 
-    <script>
-        const hamburger = document.getElementById("hamburger");
-        const nav = document.getElementById("main-nav");
-        hamburger.addEventListener("click", () => {
-            nav.classList.toggle("active");
-        });
-    </script>
+    <script src="../products.js"></script>
+    <script src="../cart.js"></script>
+    <script src="../main.js"></script>
+    <script src="../slider.js"></script>
+
 </body>
 
 </html>

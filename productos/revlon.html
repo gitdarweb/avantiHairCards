@@ -30,10 +30,12 @@
                 <input type="text" placeholder="¿Qué estás buscando?" />
                 <button class="btn-search"><i class="fas fa-search"></i></button>
             </div>
+            <!-- Acciones usuario -->
             <div class="user-actions">
                 <a href="#">Ingresá / Registrate</a>
-                <a href="#"><i class="fas fa-shopping-cart"></i> (0)</a>
+                <a href="../carrito.html"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a>
             </div>
+
         </div>
 
         <!-- Menú hamburguesa -->
@@ -51,37 +53,15 @@
     </header>
 
     <!-- Banner de marca -->
-    <section class="marca-banner" style="text-align: center; padding: 2rem 1rem;">
-        <img src="../img/logos/revlon.png" alt="Revlon" style="max-width: 160px; margin-bottom: 1rem;" />
-        <h2 style="color: #0D4B4C;">Productos de la marca Revlon</h2>
+    <section class="marca-banner">
+        <img src="../img/logos/revlon.png" alt="Revlon" class="logo-marca" />
+        <h2>Productos de la marca Revlon</h2>
     </section>
 
-    <!-- Productos Revlon -->
     <section class="productos-marca" style="padding: 2rem 1rem;">
-        <div class="grid-categorias">
-            <!-- Producto ejemplo 1 -->
-            <div class="categoria-card">
-                <img src="../img/productos/revlon_shampoo.jpg" alt="Revlon Shampoo" />
-                <p>Shampoo Revlon Equave 250ml</p>
-                <p>$6.300</p>
-            </div>
-
-            <!-- Producto ejemplo 2 -->
-            <div class="categoria-card">
-                <img src="../img/productos/revlon_10en1.jpg" alt="Revlon Uniq One" />
-                <p>Revlon Uniq One 10 en 1 - Leave in 150ml</p>
-                <p>$7.900</p>
-            </div>
-
-            <!-- Producto ejemplo 3 -->
-            <div class="categoria-card">
-                <img src="../img/productos/revlon_acondicionador.jpg" alt="Revlon Acondicionador" />
-                <p>Acondicionador Revlon Equave 200ml</p>
-                <p>$6.500</p>
-            </div>
-        </div>
+        <div id="product-list" class="grid-categorias"></div>
     </section>
-
+    
     <!-- Footer -->
     <footer>
         <div class="footer-inner">
@@ -95,14 +75,11 @@
         </div>
     </footer>
 
-    <!-- JS hamburguesa -->
-    <script>
-        const hamburger = document.getElementById("hamburger");
-        const nav = document.getElementById("main-nav");
-        hamburger.addEventListener("click", () => {
-            nav.classList.toggle("active");
-        });
-    </script>
+    <script src="../products.js"></script>
+    <script src="../cart.js"></script>
+    <script src="../main.js"></script>
+    <script src="../slider.js"></script>
+
 </body>
 
 </html>
