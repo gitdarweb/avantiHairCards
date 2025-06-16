@@ -1,116 +1,88 @@
-Avanti Hair Salon
+🛍️ Avanti Hair Salon – Tienda Online
+Primera entrega – Proyecto Web
+Sitio en vivo:
+🔗 https://gitdarweb.github.io/AvantiHairSalon/
 
-Sitio estático de e-commerce (Front-end)
+✅ Funcionalidades desarrolladas
+Diseño visual institucional (colores verde/naranja, estilo minimalista y profesional).
 
-Repositorio de la primera entrega del proyecto Avanti Hair Salon: una tienda online minimalista para mostrar y vender productos de cuidado del cabello.
+Menú hamburguesa funcional (con cierre automático al hacer clic).
 
-https://gitdarweb.github.io/AvantiHairSalon/
+Slider con imágenes del salón en portada.
 
-Importante: Esta primera entrega demuestra la maquetación, estilos, interactividad y flujo principal de navegación. La siguiente fase completará el proceso de compra y la autenticación de usuarios.
+Catálogo por marcas (8 logos enlazados a sus páginas).
 
+Iconos por categoría de producto (Shampoos, Acondicionadores, Máscaras, Serums).
 
-🚀 Estructura del Proyecto
+Beneficios destacados con ilustraciones.
 
+Sección institucional “Nosotras”.
+
+Acceso a Carrito (estructura lista para futura lógica).
+
+Contacto directo con íconos a WhatsApp, Instagram y ubicación.
+
+Botón flotante de WhatsApp en todas las páginas.
+
+Footer completo y funcional (legal, enlaces y redes sociales).
+
+Enlaces internos funcionales y navegación fluida.
+
+📱 Responsividad (diseño adaptable)
+El sitio se adapta correctamente a:
+
+Teléfonos celulares (formato vertical optimizado).
+
+Tablets y pantallas medianas.
+
+Computadoras de escritorio.
+
+Ajustes realizados:
+
+Íconos redimensionados en celulares.
+
+Reorganización automática de grillas.
+
+Logo e íconos ajustados para evitar superposición.
+
+WhatsApp flotante redondo en todos los tamaños.
+
+📁 Estructura organizada
+txt
+Copiar
+Editar
 AvantiHairSalon/
-├── index.html           # Página principal
-├── productos/           # Catálogos de marcas y categorías
-│   ├── moroccanoil.html
-│   ├── tigi.html
-│   ├── revlon.html
-│   ├── olaplex.html
-│   ├── hairssime.html
-│   ├── avantibox.html
-│   ├── karseell.html
-│   ├── cepillos.html
-│   ├── shampoos.html     # Catálogo “Shampoos”
+├── index.html
+├── carrito.html
+├── terminos.html
+├── privacidad.html
+├── productos/
+│   ├── shampoos.html
 │   ├── acondicionadores.html
-│   ├── mascaras.html
-│   └── serums.html
-├── styles.css           # Estilos globales y responsivos
-├── products.js          # Listados de productos por marca y por categoría
-├── main.js              # Lógica general (hamburguesa, carga dinámica, animaciones)
-├── cart.js              # Manejo de carrito en localStorage y contador
-├── slider.js            # Carrusel de imágenes manual
-└── img/                 # Imágenes (logos, productos, iconos)
+│   └── ...
+├── styles.css
+├── main.js
+├── cart.js
+├── slider.js
+├── products.js
+├── img/
+│   ├── logos/
+│   ├── categorias/
+│   └── salon/
+🔜 Segunda etapa (en desarrollo)
+Carrito de compras dinámico (JS + LocalStorage).
 
-🎯 Funcionalidades implementadas
+Proceso de compra por WhatsApp.
 
-1. Diseño y estructura (HTML + CSS)
+Validación de usuario.
 
-Barra superior: mensaje promocional.
+Flujo de contacto más automatizado.
 
-Header minimalista: logo, buscador, acciones de usuario y menú hamburguesa responsive.
+Optimización general de accesibilidad.
 
-Sidebar: navegación lateral que se expande/colapsa sin frameworks.
-
-Hero slider: carrusel manual de 3 imágenes con puntos de navegación.
-
-Iconos de categorías: sección con 4 iconos (Shampoos, Acondicionadores, Máscaras, Serums).
-
-Catálogos por marca: rejilla 4×2 de 8 logos que llevan a páginas de marca.
-
-Beneficios destacados: sección “Cómo Comprar” con iconos y textos.
-
-"Sección Nosotras": texto e imagen mitad y mitad con animación fade-in.
-
-Info y carrito: tarjetas de contacto minimalistas y enlace a carrito.
-
-WhatsApp flotante: icono fijo para chat.
-
-Footer: enlaces a secciones y políticas.
-
-2. Interactividad (JavaScript)
-
-Hamburguesa & sidebar: toggle + cierre automático al navegar.
-
-Carrusel manual: función goToSlide(index) mueve el slider.
-
-Carga dinámica de productos: usa products.js y productosPorMarca para poblar cada HTML de marca o categoría.
-
-Carrito básico: cart.js guarda en localStorage, muestra contador en header y lista en carrito.html.
-
-Animaciones de scroll: fade-in de secciones cuando entran en viewport.
-
-3. Responsividad
-
-Grid y flex adaptables a móviles y tablets.
-
-Media queries con breakpoints para rejillas, tipografías e imágenes.
-
-Menú hamburguesa fijo en móviles.
-
-📋 Qué falta implementar (Próxima entrega)
-
-Finalizar carrito completo:
-
-Página de resumen (carrito.html) con imágenes, edición de cantidades y total dinámico.
-
-Integrar botones + y - dentro del carrito.
-
-Checkout simulado (sin pasarelas reales por el momento).
-
-Buscador funcional:
-
-Filtrar productos en tiempo real según texto.
-
-Registro / Login de usuarios:
-
-Formularios básicos y validación.
-
-Optimización de assets:
-
-Subir imágenes reales de productos en img/.
-
-Mejorar SEO: etiquetas alt, metadatos.
-
-Integración futura:
-
-Conexión a backend (usuarios, inventario, pasarela de pago).
-
-Envío de órdenes vía API o email.
-
-
-
-Autor
-
-Desarrollado por GitDarWeb, para Avanti Hair Salon
+💼 Desarrollado por
+Dario Duarte
+Instructor – Avanti Hair Salon
+📍 La Plata, Argentina
+📱 WhatsApp: +54 9 221 6908851
+🌐 https://gitdarweb.github.io/AvantiHairSalon/
