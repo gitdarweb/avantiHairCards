@@ -1798,3 +1798,30 @@ section {
         gap: 1rem;
     }
 }
+.top-bar {
+    position: relative;
+    /* o fixed/sticky si ya la usas así */
+    z-index: 40;
+    /* cualquier valor mayor al de la hamburguesa */
+}
+
+.hamburger-fixed {
+    z-index: 30;
+    /* valor menor al de .top-bar */ }
+        /* ===== Posicionar la hamburguesa justo debajo de la top‑bar ===== */
+        .hamburger-fixed {
+            position: fixed;
+            top: 3rem;
+            /* desplaza hacia abajo: ajusta este valor según la altura de tu top‑bar */
+            left: 1rem;
+            /* ya estabas usando 1.5rem, aquí lo bajamos un poquito */
+            z-index: 30;
+            /* por debajo de la top‑bar pero encima del resto */
+            background: none;
+            /* conserva tu estilo */ 
+        }
+                      .hamburger-fixed:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            /* ligero fondo al pasar el mouse */
+        }
+        
