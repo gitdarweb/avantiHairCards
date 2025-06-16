@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Avanti | Shampoos</title>
+    <title>Serums | Avanti</title>
     <link rel="stylesheet" href="../styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,43 +15,48 @@
 <body>
     <!-- 🔝 Línea superior promocional -->
     <div class="top-bar">
-        <p>🛍️ Avanti Tienda Online | ✨ Belleza que llega a tu casa</p>
+        <p>🛍️ Avanti Tienda Online | ✨ Catálogo de Serums</p>
     </div>
-
-    <!-- 🔝 Encabezado -->
-    <header class="site-header">
-        <div class="header-inner">
-            <div class="logo-left">
-                <a href="../index.html">
-                    <img src="../img/logos/avanti.png" alt="Avanti Hair Salon" class="logo-img" />
-                </a>
-            </div>
-            <div class="search-bar">
-                <input type="text" placeholder="¿Qué estás buscando?" />
-                <button class="btn-search"><i class="fas fa-search"></i></button>
-            </div>
-            <!-- Acciones usuario -->
-            <div class="user-actions">
-                <a href="#">Ingresá / Registrate</a>
-                <a href="../carrito.html"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a>
-            </div>
-
+<!-- Header -->
+<header class="site-header">
+    <div class="header-inner">
+        <!-- Logo -->
+        <div class="logo-left">
+            <a href="../index.html">
+                <img src="../img/logos/avanti.png" alt="Avanti Hair Salon" class="logo-img" />
+            </a>
         </div>
 
-        <!-- Menú hamburguesa -->
-        <button class="hamburger" id="hamburger">
-            <i class="fas fa-bars"></i>
-        </button>
+        <!-- Buscador -->
+        <div class="search-bar">
+            <input type="text" placeholder="¿Qué estás buscando?" />
+            <button class="btn-search"><i class="fas fa-search"></i></button>
+        </div>
 
-        <nav class="main-nav" id="main-nav">
-            <ul>
-                <li><a href="../index.html#categorias">Catálogos</a></li>
-                <li><a href="../index.html#contacto">Contacto</a></li>
-                <li><a href="#">Cómo Comprar</a></li>
-            </ul>
-        </nav>
-    </header>
+        <!-- Acciones -->
+        <div class="user-actions">
+            <a href="#">Ingresá / Registrate</a>
+            <a href="../carrito.html"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a>
+        </div>
+    </div>
 
+    <!-- Menú lateral -->
+    <nav class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="../index.html#categorias">🗂 Catálogos</a></li>
+            <li><a href="../index.html#productos">🛍 Productos</a></li>
+            <li><a href="../index.html#como-comprar">💳 Cómo Comprar</a></li>
+            <li><a href="../index.html#nosotras">👩‍🦱 Nosotras</a></li>
+            <li><a href="../index.html#contacto">📞 Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Botón hamburguesa -->
+    <button class="hamburger-fixed" id="hamburger">
+        <i class="fas fa-bars"></i> <span class="menu-label">Menú</span>
+    </button>
+</header>
+    
     <!-- 🧴 Banner Marca -->
     <section class="marca-banner">
         <img src="../img/categorias/serum.png" alt="Serums" class="logo-marca" />
