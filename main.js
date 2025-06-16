@@ -3,23 +3,24 @@ console.log("main.js cargado");
 
 // ==== MENÚ HAMBURGUESA ====
 const hamburger = document.getElementById("hamburger");
-const nav = document.getElementById("main-nav");
-if (hamburger && nav) {
+const sidebar = document.getElementById("sidebar");
+
+if (hamburger && sidebar) {
     hamburger.addEventListener("click", () => {
-        nav.classList.toggle("active");
+        sidebar.classList.toggle("active");
     });
 }
 
-// ==== CARGA DE PRODUCTOS POR MARCA ====
+// ==== CARGA DE PRODUCTOS POR MARCA O CATEGORÍA ====
 document.addEventListener("DOMContentLoaded", () => {
     const path = window.location.pathname;
-    const match = path.match(/\/productos\/(\w+)\.html$/); // detecta productos/tigi.html por ejemplo
+    const match = path.match(/\/productos\/(\w+)\.html$/); // Ej: productos/shampoos.html
 
     if (match) {
-        const marca = match[1]; // Ej: "tigi"
-        const productos = productosPorMarca[marca];
+        const clave = match[1]; // Ej: "tigi", "shampoos"
+        const productos = productosPorMarca?.[clave] || products?.[clave]; // carga de marca o categoría
 
-        if (productos) {
+        if (productos && Array.isArray(productos)) {
             const contenedor = document.getElementById("product-list");
 
             productos.forEach((prod) => {
@@ -27,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 card.className = "categoria-card";
 
                 const img = document.createElement("img");
-                img.src = `../img/productos/${prod.imagen || 'placeholder.jpg'}`;
+                img.src = `../img/${clave}/${prod.imagen || 'placeholder.jpg'}`;
                 img.alt = prod.nombre;
 
                 const nombre = document.createElement("p");
@@ -44,36 +45,31 @@ document.addEventListener("DOMContentLoaded", () => {
                     alert(`"${prod.nombre}" agregado al carrito`);
                 };
 
-                // Agrega los elementos a la tarjeta
                 card.appendChild(img);
                 card.appendChild(nombre);
                 card.appendChild(precio);
                 card.appendChild(boton);
 
-                // Agrega la tarjeta al contenedor
                 contenedor.appendChild(card);
             });
         }
     }
 
-    // Mostrar contador del carrito (si existe la función)
+    // Contador del carrito
     if (typeof updateCartCount === "function") {
         updateCartCount();
     }
-});
-// === FADE-IN SCROLL ANIMATION ===
-document.addEventListener("DOMContentLoaded", () => {
-    const fadeElements = document.querySelectorAll(".fade-in");
 
+    // === FADE-IN SCROLL ANIMATION ===
+    const fadeElements = document.querySelectorAll(".fade-in");
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("visible");
-                observer.unobserve(entry.target); // se activa solo una vez
+                observer.unobserve(entry.target); // animar solo una vez
             }
         });
     }, { threshold: 0.1 });
 
     fadeElements.forEach(el => observer.observe(el));
 });
-  

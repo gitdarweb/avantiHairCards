@@ -1265,5 +1265,152 @@ footer a {
 
     .marca-banner h2 {
         font-size: 1.2rem;
+        
     }
 }
+/* ===== TITULOS DE SECCIONES ===== */
+section h2 {
+    font-size: 1.6rem;
+    color: #0D4B4C;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+/* ===== MENÚ LATERAL HAMBURGUESA ===== */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 220px;
+    height: 100%;
+    background-color: #0D4B4C;
+    color: white;
+    padding-top: 4rem;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #1f5a5c;
+}
+
+.sidebar ul li a {
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #EA4B06;
+    padding-left: 1.2rem;
+}
+
+/* BOTÓN FIJO IZQUIERDA */
+.hamburger-fixed {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1100;
+    font-size: 1.2rem;
+    background: white;
+    border: 2px solid #0D4B4C;
+    color: #0D4B4C;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.menu-label {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* ACTIVAR MENÚ */
+.sidebar.active {
+    left: 0;
+}
+
+/* OCULTAR .main-nav original si sigue */
+.main-nav {
+    display: none !important;
+}
+/* ==== REAJUSTAR CONTENEDORES PRINCIPALES ==== */
+main,
+.hero-slider,
+footer,
+.hero-info,
+.info-sections,
+.productos-marca {
+    margin-left: 0 !important;
+    width: 100% !important;
+}
+
+/* Evitar que el menú lateral achique el contenido */
+body {
+    overflow-x: hidden;
+}
+.hero-slider {
+    position: relative;
+    overflow: hidden;
+    background-color: #f8f8f8;
+    width: 100%;
+}
+footer {
+    background-color: #062D30;
+    color: #C89F65;
+    padding: 2rem 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+footer,
+.footer-inner {
+    position: static;
+    left: 0;
+}
+.explicacion-compra {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: #444;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* Animación al hacer scroll (fade + slide up) */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+#productos-iconos {
+    margin-top: 3rem; }

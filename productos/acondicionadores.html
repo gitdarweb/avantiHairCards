@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avanti | Shampoos</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body>
+    <!-- 🔝 Línea superior promocional -->
+    <div class="top-bar">
+        <p>🛍️ Avanti Tienda Online | ✨ Belleza que llega a tu casa</p>
+    </div>
+
+    <!-- 🔝 Encabezado -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo-left">
+                <a href="../index.html">
+                    <img src="../img/logos/avanti.png" alt="Avanti Hair Salon" class="logo-img" />
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="¿Qué estás buscando?" />
+                <button class="btn-search"><i class="fas fa-search"></i></button>
+            </div>
+            <!-- Acciones usuario -->
+            <div class="user-actions">
+                <a href="#">Ingresá / Registrate</a>
+                <a href="../carrito.html"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a>
+            </div>
+
+        </div>
+
+        <!-- Menú hamburguesa -->
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="main-nav" id="main-nav">
+            <ul>
+                <li><a href="../index.html#categorias">Catálogos</a></li>
+                <li><a href="../index.html#contacto">Contacto</a></li>
+                <li><a href="#">Cómo Comprar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 🧴 Banner Marca -->
+    <section class="marca-banner">
+        <img src="../img/categorias/acondicionador.png" alt="Acondicionador" class="logo-marca" />
+        <h2>Acondicionador</h2>
+    </section>
+    <!-- 🧴 acondicionador-->
+    <section class="productos-marca" style="padding: 2rem 1rem;">
+        <div id="product-list" class="grid-categorias"></div>
+    </section>
+
+
+    <!-- 🔚 Footer -->
+    <footer>
+        <div class="footer-inner">
+            <p>© 2025 Avanti Hair Salon – La Plata</p>
+            <ul>
+                <li><a href="../index.html#contacto">Contacto</a></li>
+                <li><a href="../index.html#categorias">Catálogos</a></li>
+                <li><a href="#">Términos</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="../products.js"></script>
+    <script src="../cart.js"></script>
+    <script src="../main.js"></script>
+    <script src="../slider.js"></script>
+
+</body>
+
+</html>
