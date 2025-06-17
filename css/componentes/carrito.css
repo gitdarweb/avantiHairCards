@@ -1,0 +1,47 @@
+/* ===============================
+   TARJETA "TU CARRITO"
+   =============================== */
+
+#carrito {
+    background-color: #fff;
+    border: 2px dashed #EA4B06;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    max-width: 320px;
+    margin: 2rem auto;
+    transition: transform 0.3s ease;
+}
+
+#carrito:hover {
+    transform: translateY(-5px);
+}
+
+#carrito h2 {
+    color: #0D4B4C;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#carrito p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1.2rem;
+}
+
+#carrito .btn-hero.small {
+    background-color: #EA4B06;
+    color: #fff;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 0.85rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+#carrito .btn-hero.small:hover {
+    background-color: #C89F65;
+}

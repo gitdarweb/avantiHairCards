@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Serums | Avanti</title>
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
@@ -57,35 +58,66 @@
     </button>
 </header>
     
-    <!-- 🧴 Banner Marca -->
-    <section class="marca-banner">
-        <img src="../img/categorias/serum.png" alt="Serums" class="logo-marca" />
-        <h2>Serums</h2>
-    </section>
-    <!-- 🧴 Shampoos -->
+<section class="banner-categoria fade-in">
+    <img src="../img/categorias/serum.png" alt="Serums" />
+    <h2>Catálogo de Serums</h2>
+</section>
+
+    <!-- Productos cargados dinámicamente -->
     <section class="productos-marca" style="padding: 2rem 1rem;">
         <div id="product-list" class="grid-categorias"></div>
     </section>
 
 
-    <!-- 🔚 Footer -->
-    <footer>
-        <div class="footer-inner">
+    <!-- ==== FOOTER ==== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Columna Avanti -->
+            <div class="footer-column about">
+                <h3>Avanti Hair Salon</h3>
+                <p>La Plata • Productos y asesoramiento de calidad</p>
+            </div>
+    
+            <!-- Columna de navegación -->
+            <div class="footer-column links">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="../index.html#contacto">Contacto</a></li>
+                    <li><a href="../index.html#categorias">Catálogos</a></li>
+                    <li><a href="../index.html#como-comprar">Cómo Comprar</a></li>
+                    <li><a href="../index.html#nosotras">Nosotras</a></li>
+                </ul>
+            </div>
+    
+            <!-- Columna Legal y redes -->
+            <div class="footer-column legal">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="../terminos.html">Términos</a></li>
+                    <li><a href="../privacidad.html">Política de Privacidad</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://instagram.com/avanti.hairsalon" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/5492216908851" target="_blank" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-copy">
             <p>© 2025 Avanti Hair Salon – La Plata</p>
-            <ul>
-                <li><a href="../index.html#contacto">Contacto</a></li>
-                <li><a href="../index.html#categorias">Catálogos</a></li>
-                <li><a href="#">Términos</a></li>
-                <li><a href="#">Política de Privacidad</a></li>
-            </ul>
         </div>
     </footer>
+
 <!-- WhatsApp flotante -->
 <a href="https://wa.me/5492216908851" class="whatsapp-float" target="_blank" aria-label="Chatear por WhatsApp">
     <i class="fab fa-whatsapp"></i>
     </a>
     <script src="../products.js"></script>
-    <script src="../cart.js"></script>
+    <script src="../carts.js"></script>
     <script src="../main.js"></script>
     <script src="../slider.js"></script>
 
