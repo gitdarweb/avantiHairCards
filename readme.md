@@ -75,6 +75,9 @@ Carrito de compras dinámico (JS + LocalStorage).
 Proceso de compra por WhatsApp.
 
 Validación de usuario.
+git add .
+git commit -m "Descripción de lo que cambiaste"
+git push
 
 Flujo de contacto más automatizado.
 
