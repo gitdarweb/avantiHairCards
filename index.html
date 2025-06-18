@@ -13,46 +13,54 @@
 </head>
 
 <body>
-    <!-- 🔝 Línea superior promocional -->
-    <div class="top-bar">
-        <p>🛍️ Avanti Tienda Online ✨</p>
-    </div>
+<!-- ==== TOP BAR ==== -->
+<div class="top-bar">
+    <p>🛍️ Avanti Tienda Online | ✨ Productos Profesionales</p>
+</div>
 
-    <header class="site-header">
-        <div class="header-inner">
-            <!-- Logo como imagen en lugar de H1 -->
-            <div class="logo-left">
-                <a href="index.html">
-                    <img src="img/logos/avanti.png" alt="Avanti Hair Salon" class="logo-img" />
-                </a>
-            </div>
-            <!-- Buscador -->
-            <div class="search-bar">
-                <input type="text" placeholder="¿Qué estás buscando?" />
-                <button class="btn-search"><i class="fas fa-search"></i></button>
-            </div>
+<!-- ==== HEADER ==== -->
+<header class="site-header">
+    <div class="header-inner">
 
-            <!-- Acciones usuario -->
-            <div class="user-actions">
-                <a href="#">Ingresá / Registrate</a>
-                <a href="carrito.html"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a>
-            </div>
+        <!-- Logo a la izquierda -->
+        <div class="logo-left">
+            <a href="index.html">
+                <img src="img/logos/avanti.png" alt="Avanti Hair Salon" class="logo-img" />
+            </a>
         </div>
 
-        <!-- Menú lateral oculto -->
-        <nav class="sidebar" id="sidebar">
-            <ul>
-                <li><a href="#categorias">🗂 Catálogos</a></li>
-                <li><a href="#productos">🛍 Productos</a></li>
-                <li><a href="#como-comprar">💳 Cómo Comprar</a></li>
-                <li><a href="#nosotras">👩‍🦱 Nosotras</a></li>
-                <li><a href="#contacto">📞 Contacto</a></li>
-            </ul>  </nav>
-        <!-- Botón hamburguesa -->
-        <button class="hamburger-fixed" id="hamburger">
-            <i class="fas fa-bars"></i> <span class="menu-label">Menú</span>
-        </button>
-        </header>
+        <!-- Buscador en el centro -->
+        <div class="search-bar">
+            <input type="text" placeholder="¿Qué estás buscando?" />
+            <button class="btn-search"><i class="fas fa-search"></i></button>
+        </div>
+
+        <!-- Acciones a la derecha -->
+        <div class="user-actions">
+            <a href="carrito.html" class="carrito-link">
+                <i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)
+            </a>
+        </div>
+    </div>
+
+    <!-- Botón hamburguesa -->
+    <button class="hamburger-fixed" id="hamburger" aria-label="Menú">
+        <i class="fas fa-bars"></i>
+        <span class="menu-label">Menú</span>
+    </button>
+</header>
+
+<!-- 🔸 Sidebar: Menú lateral para móviles -->
+<nav class="sidebar" id="sidebar">
+    <ul>
+        <li><a href="#categorias">🗂 Catálogos</a></li>
+        <li><a href="#productos">🛍 Productos</a></li>
+        <li><a href="#como-comprar">💳 Cómo Comprar</a></li>
+        <li><a href="#nosotras">👩‍🦱 Nosotras</a></li>
+        <li><a href="#contacto">📞 Contacto</a></li>
+    </ul>
+    </nav>
+  
 
     <!-- CARRUSEL ahora está FUERA del header -->
     <section class="hero-slider">
@@ -104,6 +112,10 @@
                 </a>
             </div>
         </section>
+        <!-- ✅ NUEVO SEPARADOR DE MARCA -->
+        <section class="separador-avanti fade-in">
+            <p><i class="fas fa-leaf"></i> Elegí calidad, elegí Avanti</p>
+            </section>
         <!-- seccion iconos productos -->
         <section class="iconos-productos fade-in" id="productos">
             <div class="grid-iconos">
@@ -111,9 +123,9 @@
                     <img src="img/categorias/champu.png" alt="Shampoos" />
                     <p>Shampoos</p>
                 </a>
-                <a href="productos/acondicionadores.html" class="icono">
+                <a href="productos/acondicionadores.html" class="icono" style="transform: scale(0.9);">
                     <img src="img/categorias/acondicionador.png" alt="Acondicionadores" />
-                    <p>Acondicionadores</p>
+                    <p style="font-size: 0.7rem;">Acondicionadores</p>
                 </a>
                 <a href="productos/mascaras.html" class="icono">
                     <img src="img/categorias/mascara.png" alt="Mascarás" />
@@ -124,6 +136,8 @@
                     <p>Serums</p>
                 </a>
             </div></section>
+<!-- Separador visual -->
+<div class="separador-estilo"></div>
 
         <!-- BENEFICIOS DESTACADOS -->
         <section class="beneficios fade-in" id="como-comprar">
@@ -146,6 +160,8 @@
                 Elegí tus productos, agregalos al carrito y coordiná tu compra por WhatsApp. Envíos a todo el país o retiro por
                 salón.    </p>
         </section>
+<!-- Separador visual -->
+<div class="separador-estilo"></div>
 
         <!-- NOSOTRAS -->
         <section class="hero-info fade-in" id="nosotras">

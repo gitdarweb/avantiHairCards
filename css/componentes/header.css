@@ -13,8 +13,8 @@
 }
 
 /* ========================
-   HEADER PRINCIPAL
-   ======================== */
+     HEADER PRINCIPAL
+     ======================== */
 .site-header {
     background-color: #fff;
     border-bottom: 1px solid #eee;
@@ -31,8 +31,8 @@
 }
 
 /* ========================
-   LOGO
-   ======================== */
+     LOGO A LA IZQUIERDA
+     ======================== */
 .logo-left img {
     width: 120px;
     height: auto;
@@ -40,8 +40,8 @@
 }
 
 /* ========================
-   BARRA DE BÚSQUEDA
-   ======================== */
+     BARRA DE BÚSQUEDA
+     ======================== */
 .search-bar {
     display: flex;
     width: 100%;
@@ -72,8 +72,8 @@
 }
 
 /* ========================
-   ACCIONES DE USUARIO
-   ======================== */
+     ACCIONES DE USUARIO
+     ======================== */
 .user-actions {
     display: flex;
     justify-content: flex-end;
@@ -91,76 +91,8 @@
 }
 
 /* ========================
-   MENÚ HAMBURGUESA / SIDEBAR
-   ======================== */
-.hamburger-fixed {
-    position: fixed;
-    top: 3rem;
-    /* justo debajo de la top-bar */
-    left: 1rem;
-    z-index: 30;
-    font-size: 1.2rem;
-    background: white;
-    border: 2px solid #0D4B4C;
-    color: #0D4B4C;
-    border-radius: 5px;
-    padding: 0.5rem 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
-}
-
-.menu-label {
-    font-weight: bold;
-    font-size: 0.9rem;
-}
-
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 220px;
-    height: 100%;
-    background-color: #0D4B4C;
-    color: white;
-    padding-top: 4rem;
-    transition: left 0.3s ease;
-    z-index: 1000;
-}
-
-.sidebar.active {
-    left: 0;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar ul li {
-    padding: 1rem 1.5rem;
-    border-bottom: 1px solid #1f5a5c;
-}
-
-.sidebar ul li a {
-    color: white;
-    font-weight: 600;
-    font-size: 1rem;
-    text-decoration: none;
-    display: block;
-    transition: background 0.3s;
-}
-
-.sidebar ul li a:hover {
-    background-color: #EA4B06;
-    padding-left: 1.2rem;
-}
-
-/* ========================
-   RESPONSIVE HEADER
-   ======================== */
+     RESPONSIVE HEADER
+     ======================== */
 @media (max-width: 768px) {
     .header-inner {
         grid-template-columns: 1fr;
@@ -175,4 +107,20 @@
     .user-actions {
         justify-content: center;
     }
+}
+.logo-left img {
+    transition: transform 0.3s ease;
+}
+
+.logo-left img:hover {
+    transform: scale(1.05);
+}
+.logo-left img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-left img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(13, 75, 76, 0.4);
+    /* verde Avanti suave */
 }
