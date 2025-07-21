@@ -67,7 +67,7 @@
 
     <!-- Productos cargados dinámicamente -->
     <section class="productos-marca" style="padding: 2rem 1rem;">
-        <div id="product-list" class="grid-categorias"></div>
+        <div id="contenedor-productos" class="grid-categorias"></div>
     </section>
 
     <!-- ==== FOOTER ==== -->
@@ -124,6 +124,15 @@
     <script src="../carts.js"></script>
     <script src="../main.js"></script>
     <script src="../slider.js"></script>
-</body>
+    <!-- Carga dinámica de productos -->
+    <script src="../renderProducts.js"></script>
+    <script>
+        // Aquí indicas qué quieres renderizar:
+        renderizarProductosPor('categoria', 'acondicionadores');
+        // Si fuera una página de marca, pondrías:
+        // renderizarProductosPor('marca', 'moroccanoil');
+    </script>
+    
+   
 
 </html>

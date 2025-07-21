@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carrito de Compras | Avanti</title>
     <link rel="stylesheet" href="css/styles.css" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 
@@ -18,7 +17,9 @@
     <header class="site-header">
         <div class="header-inner">
             <div class="logo-left">
-                <a href="index.html"><img src="img/logos/avanti.png" alt="Avanti" class="logo-img" /></a>
+                <a href="index.html">
+                    <img src="img/logos/avanti.png" alt="Avanti" class="logo-img" />
+                </a>
             </div>
             <div class="search-bar">
                 <input type="text" placeholder="¿Qué estás buscando?" />
@@ -46,7 +47,16 @@
 
     <main style="padding: 2rem;">
         <h2>🧾 Tu Carrito</h2>
-        <div id="cart-display" class="info-sections"></div>
+
+        <!-- Aquí se renderizan los productos del carrito -->
+        <div id="carrito-contenedor" class="grid-categorias info-sections"></div>
+
+        <!-- Total y acciones -->
+        <div id="carrito-total" style="margin: 2rem 0; font-size: 1.2rem;"></div>
+        <div style="display: flex; gap: 1rem;">
+            <button onclick="vaciarCarrito()" class="btn-action">🗑 Vaciar carrito</button>
+            <button onclick="finalizarCompra()" class="btn-action">💳 Finalizar compra</button>
+        </div>
     </main>
 
     <!-- Footer -->
@@ -93,6 +103,13 @@
     <script src="carts.js"></script>
     <script src="main.js"></script>
     <script src="slider.js"></script>
+    <script>
+        // Al cargar la página, mostrar carrito y actualizar contador en el header
+        document.addEventListener("DOMContentLoaded", () => {
+            mostrarCarrito();
+            actualizarContadorCarrito();
+        });
+    </script>
 </body>
 
 </html>
