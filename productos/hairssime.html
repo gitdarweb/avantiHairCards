@@ -2,11 +2,35 @@
 <html lang="es">
 
 <head>
+    <!-- ✅ Codificación y responsive -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hairssime | Avanti</title>
+
+    <!-- ✅ Título SEO + Branding -->
+    <title>Avanti✨Tienda Online | Productos Profesionales para el Cabello</title>
+    <meta name="description"
+        content="Tienda online con productos profesionales de peluquería. Moroccanoil, Revlon, Tigi, Olaplex y más. Envíos a todo el país. Calidad y asesoramiento personalizado." />
+    <meta name="author" content="Avanti Hair Salon" />
+
+    <!-- ✅ Meta redes sociales (Open Graph para compartir) -->
+    <meta property="og:title" content="Avanti✨Tienda Online" />
+    <meta property="og:description"
+        content="Elegí calidad, elegí Avanti. Productos de peluquería profesional al alcance de todos." />
+
+    <meta property="og:type" content="website" />
+
+    <!-- ✅ Ícono para pestaña del navegador -->
+    <link rel="icon" href="img/branding/favicon.ico" type="image/x-icon" />
+
+    <!-- ✅ Estilo principal del sitio -->
     <link rel="stylesheet" href="../css/styles.css" />
 
+    <!-- ✅ Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
+    <!-- ✅ FontAwesome: íconos sociales / carrito / menú -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 
@@ -16,44 +40,41 @@
     </div>
 
     <!-- Header -->
-    <header class="site-header">
-        <div class="header-inner">
-            <!-- Logo -->
-            <div class="logo-left">
-                <a href="../index.html">
-                    <img src="../img/logos/avanti.png" alt="Avanti Hair Salon" class="logo-img" />
-                </a>
-            </div>
-    
-            <!-- Buscador -->
-            <div class="search-bar">
-                <input type="text" placeholder="¿Qué estás buscando?" />
-                <button class="btn-search"><i class="fas fa-search"></i></button>
-            </div>
-    
-            <!-- Acciones -->
-            <div class="user-actions">
-                <a href="#">Ingresá / Registrate</a>
-                <a href="../carrito.html"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a>
-            </div>
-        </div>
-    
-        <!-- Menú lateral -->
-        <nav class="sidebar" id="sidebar">
-            <ul>
-                <li><a href="../index.html#categorias">🗂 Catálogos</a></li>
-                <li><a href="../index.html#productos">🛍 Productos</a></li>
-                <li><a href="../index.html#como-comprar">💳 Cómo Comprar</a></li>
-                <li><a href="../index.html#nosotras">👩‍🦱 Nosotras</a></li>
-                <li><a href="../index.html#contacto">📞 Contacto</a></li>
-            </ul>
-        </nav>
-    
-        <!-- Botón hamburguesa -->
-        <button class="hamburger-fixed" id="hamburger">
-            <i class="fas fa-bars"></i> <span class="menu-label">Menú</span>
-        </button>
-    </header>
+<header class="site-header">
+    <!-- Logo -->
+    <a href="../index.html" class="logo">
+        <img src="../img/branding/Logo-dorado.png" alt="Avanti Hair Salon" />
+    </a>
+
+    <!-- Botón burger (solo se ve < 768px) -->
+    <button class="burger" aria-label="Menú">
+        <span></span><span></span><span></span>
+    </button>
+
+    <!-- Menú horizontal -->
+    <nav class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="../index.html#categorias">Catálogos</a></li>
+            <li><a href="../index.html#productos">Productos</a></li>
+            <li><a href="../index.html#como-comprar">Cómo Comprar</a></li>
+            <li><a href="../index.html#nosotras">Nosotras</a></li>
+            <li><a href="../index.html#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Buscador -->
+    <div class="search-bar">
+        <input type="text" placeholder="¿Qué estás buscando?" />
+        <button class="btn-search"><i class="fas fa-search"></i></button>
+    </div>
+
+    <!-- Acciones a la derecha -->
+    <div class="user-actions">
+        <a href="../carrito.html" class="carrito-link">
+            <i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)
+        </a>
+    </div>
+</header>
     
     <!-- Banner título -->
 
@@ -62,7 +83,7 @@
         <h2>Productos de la marca Hairssime</h2>
     </section>
     <section class="productos-marca" style="padding: 2rem 1rem;">
-        <div id="product-list" class="grid-categorias"></div>
+        <div id="contenedor-productos" class="grid-marcas"></div>
     </section>
     
 
@@ -77,12 +98,13 @@
 
         <!-- Columna de navegación -->
         <div class="footer-column links">
-            <h4>Enlaces</h4>
+            <h4>Navegación</h4>
             <ul>
-                <li><a href="../index.html#contacto">Contacto</a></li>
                 <li><a href="../index.html#categorias">Catálogos</a></li>
+                <li><a href="../index.html#productos">Productos</a></li>
                 <li><a href="../index.html#como-comprar">Cómo Comprar</a></li>
                 <li><a href="../index.html#nosotras">Nosotras</a></li>
+                <li><a href="../index.html#contacto">Contacto</a></li>
             </ul>
         </div>
 
@@ -113,10 +135,18 @@
 <a href="https://wa.me/5492216908851" class="whatsapp-float" target="_blank" aria-label="Chatear por WhatsApp">
     <i class="fab fa-whatsapp"></i>
     </a>
-    <script src="../products.js"></script>
-    <script src="../carts.js"></script>
-    <script src="../main.js"></script>
-    <script src="../slider.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/carts.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/slider.js"></script>
+    <!-- Carga dinámica de productos -->
+    <script src="../js/renderProducts.js"></script>
+    <script>
+        // Aquí indicas qué quieres renderizar:
+        renderizarProductosPor('marca', 'hairssime');
+        // Si fuera una página de marca, pondrías:
+        // renderizarProductosPor('marca', 'moroccanoil');
+    </script>
 
 </body>
 

@@ -1,6 +1,6 @@
-/* ============================
-   RESET CSS – AVANTI PROJECT
-   ============================ */
+/* ================================
+   RESET CSS - Normaliza estilos base
+   ================================ */
 
 * {
     margin: 0;
@@ -8,23 +8,22 @@
     box-sizing: border-box;
 }
 
-html,
-body {
-    height: 100%;
-    font-family: 'Poppins', sans-serif;
+html {
     scroll-behavior: smooth;
-    background-color: #f8f8f8;
-    color: #333;
 }
 
-img {
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+    color: #0A3A41;
+    line-height: 1.6;
+}
+
+img,
+video {
     max-width: 100%;
+    height: auto;
     display: block;
-}
-
-ul,
-ol {
-    list-style: none;
 }
 
 a {
@@ -32,26 +31,18 @@ a {
     color: inherit;
 }
 
+ul,
+ol {
+    list-style: none;
+}
+
 button,
 input,
 select,
 textarea {
     font-family: inherit;
-    border: none;
+    font-size: inherit;
     outline: none;
+    border: none;
     background: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 600;
-    line-height: 1.2;
-}
-
-p {
-    line-height: 1.6;
 }

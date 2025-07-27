@@ -1,10 +1,29 @@
-/* Variables personalizadas de color */
+/* ================================
+   VARIABLES CSS - Branding Avanti
+   ================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
 :root {
-    --verde-avanti: #0D4B4C;
-    --verde-suave: #98bfbf;
-    --naranja-avanti: #EA4B06;
-    --dorado-hover: #C89F65;
-    --gris-fondo: #f7f7f7;
-    --gris-borde: #eee;
-    --blanco: #fff;
+    /* Colores principales */
+    --av-verde-oscuro: #062D30;
+    --av-verde: #0A3A41;
+    --av-verde-claro: #0D4B4C;
+
+    /* Colores secundarios */
+    --av-dorado: #C8B05C;
+    --av-naranja: #EA4B06;
+
+    /* Grises útiles */
+    --av-gris-claro: #f5f5f5;
+    --av-gris-medio: #e0e0e0;
+    --av-gris-oscuro: #888;
+
+    /* Tipografía */
+    --font-base: 'Montserrat', sans-serif;
+
+    /* Tamaños */
+    --container-width: 1200px;
+    --transition: all 0.3s ease-in-out;
+    --border-radius: 0.5rem;
 }

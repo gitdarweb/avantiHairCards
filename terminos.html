@@ -18,33 +18,39 @@
     
     <!-- Header completo -->
     <header class="site-header">
-        <div class="header-inner">
-            <div class="logo-left">
-                <a href="index.html">
-                    <img src="img/logos/avanti.png" alt="Avanti Hair Salon" class="logo-img" />
-                </a>
-            </div>
-            <div class="search-bar">
-                <input type="text" placeholder="¿Qué estás buscando?" />
-                <button class="btn-search"><i class="fas fa-search"></i></button>
-            </div>
-            <div class="user-actions">
-                <a href="#">Ingresá / Registrate</a>
-                <a href="carrito.html"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a>
-            </div>
-        </div>
-        <nav class="sidebar" id="sidebar">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <img src="img/branding/Logo-dorado.png" alt="Avanti Hair Salon" />
+        </a>
+    
+        <!-- Botón burger (solo se ve < 768px) -->
+        <button class="burger" aria-label="Menú">
+            <span></span><span></span><span></span>
+        </button>
+    
+        <!-- Menú horizontal -->
+        <nav class="main-nav" id="sidebar">
             <ul>
-                <li><a href="index.html#categorias">🗂 Catálogos</a></li>
-                <li><a href="index.html#productos">🛍 Productos</a></li>
-                <li><a href="index.html#como-comprar">💳 Cómo Comprar</a></li>
-                <li><a href="index.html#nosotras">👩‍🦱 Nosotras</a></li>
-                <li><a href="index.html#contacto">📞 Contacto</a></li>
+                <li><a href="index.html#categorias">Catálogos</a></li>
+                <li><a href="index.html#productos">Productos</a></li>
+                <li><a href="index.html#como-comprar">Cómo Comprar</a></li>
+                <li><a href="index.html#nosotras">Nosotras</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
             </ul>
         </nav>
-        <button class="hamburger-fixed" id="hamburger">
-            <i class="fas fa-bars"></i> <span class="menu-label">Menú</span>
-        </button>
+    
+        <!-- Buscador -->
+        <div class="search-bar">
+            <input type="text" placeholder="¿Qué estás buscando?" />
+            <button class="btn-search"><i class="fas fa-search"></i></button>
+        </div>
+    
+        <!-- Acciones a la derecha -->
+        <div class="user-actions">
+            <a href="carrito.html" class="carrito-link">
+                <i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)
+            </a>
+        </div>
     </header>
     <main class="legal-page">
         <h2>Términos y Condiciones</h2>
@@ -63,21 +69,28 @@
         <p>Podés comunicarte con nosotros por WhatsApp o Instagram desde los enlaces en el sitio.</p>
     </main>
 
+    <!-- ==== FOOTER ==== -->
     <footer class="site-footer">
         <div class="footer-container">
+            <!-- Columna Avanti -->
             <div class="footer-column about">
                 <h3>Avanti Hair Salon</h3>
                 <p>La Plata • Productos y asesoramiento de calidad</p>
             </div>
+    
+            <!-- Columna de navegación -->
             <div class="footer-column links">
-                <h4>Enlaces</h4>
+                <h4>Navegación</h4>
                 <ul>
-                    <li><a href="index.html#contacto">Contacto</a></li>
                     <li><a href="index.html#categorias">Catálogos</a></li>
+                    <li><a href="index.html#productos">Productos</a></li>
                     <li><a href="index.html#como-comprar">Cómo Comprar</a></li>
                     <li><a href="index.html#nosotras">Nosotras</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
                 </ul>
             </div>
+    
+            <!-- Columna Legal y redes -->
             <div class="footer-column legal">
                 <h4>Legal</h4>
                 <ul>
@@ -85,12 +98,16 @@
                     <li><a href="privacidad.html">Política de Privacidad</a></li>
                 </ul>
                 <div class="social-icons">
-                    <a href="https://instagram.com/avanti.hairsalon" target="_blank"><i
-                            class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/5492216908851" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://instagram.com/avanti.hairsalon" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/5492216908851" target="_blank" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
                 </div>
             </div>
         </div>
+    
         <div class="footer-copy">
             <p>© 2025 Avanti Hair Salon – La Plata</p>
         </div>
@@ -100,10 +117,10 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <script src="products.js"></script>
-    <script src="carts.js"></script>
-    <script src="main.js"></script>
-    <script src="slider.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/carts.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 
 </html>

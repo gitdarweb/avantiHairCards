@@ -3,8 +3,12 @@
 
 @import url('./componentes/reset.css');
 @import url('./componentes/variables.css');
-
 @import url('./componentes/header.css');
+
+
+/*@import url('./componentes/reset.css');
+@import url('./componentes/variables.css');
+
 @import url('./componentes/footer.css');
 @import url('./componentes/hero-info.css');
 @import url('./componentes/productos.css');

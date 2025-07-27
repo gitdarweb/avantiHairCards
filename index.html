@@ -1,35 +1,70 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
+    <!-- ✅ Codificación y responsive -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Avanti✨Tienda Online</title>
+
+    <!-- ✅ Título SEO + Branding -->
+    <title>Avanti✨Tienda Online | Productos Profesionales para el Cabello</title>
+    <meta name="description"
+        content="Tienda online con productos profesionales de peluquería. Moroccanoil, Revlon, Tigi, Olaplex y más. Envíos a todo el país. Calidad y asesoramiento personalizado." />
+    <meta name="author" content="Avanti Hair Salon" />
+
+    <!-- ✅ Meta redes sociales (Open Graph para compartir) -->
+    <meta property="og:title" content="Avanti✨Tienda Online" />
+    <meta property="og:description"
+        content="Elegí calidad, elegí Avanti. Productos de peluquería profesional al alcance de todos." />
+
+    <meta property="og:type" content="website" />
+
+    <!-- ✅ Ícono para pestaña del navegador -->
+    <link rel="icon" href="img/branding/favicon.ico" type="image/x-icon" />
+
+    <!-- ✅ Estilo principal del sitio -->
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- ✅ Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
+    <!-- ✅ FontAwesome: íconos sociales / carrito / menú -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
+
 
 <body>
 <!-- ==== TOP BAR ==== -->
 <div class="top-bar">
-    <p>🛍️ Avanti Tienda Online | ✨ Productos Profesionales</p>
+<p>Avanti Tienda Online | Productos Profesionales</p>
 </div>
-
-<!-- ==== HEADER ==== -->
+<!-- HEADER con fondo verde‑trama -->
 <header class="site-header">
-    <div class="header-inner">
+    <!-- 1 · Logo -->
+    <a href="index.html" class="logo">
+        <img src="img/branding/Logo-dorado.png" alt="Avanti Hair Salon" />
+    </a>
 
-        <!-- Logo a la izquierda -->
-        <div class="logo-left">
-            <a href="index.html">
-                <img src="img/logos/avanti.png" alt="Avanti Hair Salon" class="logo-img" />
-            </a>
-        </div>
+    <!-- 2 · Botón burger (solo se ve < 768 px) -->
+    <button class="burger" aria-label="Menú">
+        <span></span><span></span><span></span>
+    </button>
 
-        <!-- Buscador en el centro -->
+    <!-- 3 · Menú horizontal -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#categorias">Catálogos</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#como-comprar">Cómo Comprar</a></li>
+            <li><a href="#nosotras">Nosotras</a></li> <!-- ✅ nuevo -->
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    
+        <!-- Buscador -->
         <div class="search-bar">
             <input type="text" placeholder="¿Qué estás buscando?" />
             <button class="btn-search"><i class="fas fa-search"></i></button>
@@ -42,97 +77,98 @@
             </a>
         </div>
     </div>
-
-    <!-- Botón hamburguesa -->
-    <button class="hamburger-fixed" id="hamburger" aria-label="Menú">
-        <i class="fas fa-bars"></i>
-        <span class="menu-label">Menú</span>
-    </button>
 </header>
+<!-- …el resto de tu página… -->
 
-<!-- 🔸 Sidebar: Menú lateral para móviles -->
-<nav class="sidebar" id="sidebar">
-    <ul>
-        <li><a href="#categorias">🗂 Catálogos</a></li>
-        <li><a href="#productos">🛍 Productos</a></li>
-        <li><a href="#como-comprar">💳 Cómo Comprar</a></li>
-        <li><a href="#nosotras">👩‍🦱 Nosotras</a></li>
-        <li><a href="#contacto">📞 Contacto</a></li>
-    </ul>
-    </nav>
-  
 
-    <!-- CARRUSEL ahora está FUERA del header -->
-    <section class="hero-slider">
-        <div class="slider-track" id="slider-track">
-            <img src="img/salon/salon_corte.jpeg" alt="Estilo 1">
-            <img src="img/salon/peinado.jpg" alt="Estilo 2">
-            <img src="img/salon/lavado.jpg" alt="Estilo 3">
-        </div>
+<!-- OVERLAY -->
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
 
-        <div class="slider-dots" id="slider-dots">
-            <span class="dot active" onclick="goToSlide(0)"></span>
-            <span class="dot" onclick="goToSlide(1)"></span>
-            <span class="dot" onclick="goToSlide(2)"></span>
+<!-- HERO SLIDER -->
+<section class="hero-slider">
+    <div class="slider-track" id="slider-track">
+        <img src="img/salon/salon-1.png" alt="Interior del salón Avanti" />
+        <img src="img/salon/peinados-1.png" alt="Peinado 1" />
+        <img src="img/salon/peinados-2.png" alt="Peinado 2" />
+        <img src="img/salon/peinados-3.png" alt="Peinado 3" />
+    </div>
+    <div class="slider-dots" id="slider-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</section>
+
+<main>
+    <!-- MARCAS DESTACADAS -->
+    <section id="categorias" class="fade-in">
+        <h2 class="section-title">Catálogos por Marca</h2>
+    
+        <div class="grid-marcas">
+            <a class="marca-box" href="productos/moroccanoil.html">
+                <img src="img/portadas/portada-moroccanoil.jpg" alt="Moroccanoil" />
+                <span class="marca-nombre">Moroccanoil</span>
+            </a>
+    
+            <a class="marca-box" href="productos/tigi.html">
+                <img src="img/portadas/portada-TIGI.jpg" alt="Tigi" />
+                <span class="marca-nombre">TIGI</span>
+            </a>
+    
+            <a class="marca-box" href="productos/revlon.html">
+                <img src="img/portadas/portada-revlon.png" alt="Revlon" />
+                <span class="marca-nombre">Revlon</span>
+            </a>
+    
+            <a class="marca-box" href="productos/olaplex.html">
+                <img src="img/portadas/portada-olaplex.png" alt="Olaplex" />
+                <span class="marca-nombre">Olaplex</span>
+            </a>
+    
+            <a class="marca-box" href="productos/hairssime.html">
+                <img src="img/portadas/Portada-Hairssime.jpg" alt="Hairssime" />
+                <span class="marca-nombre">Hairssime</span>
+            </a>
+    
+            <a class="marca-box" href="productos/avantibox.html">
+                <img src="img/portadas/portada-avantibox.png" alt="Avanti Box" />
+                <span class="marca-nombre">Avanti Box</span>
+            </a>
+    
+            <a class="marca-box" href="productos/karseell.html">
+                <img src="img/portadas/portada-TIGI.jpg" alt="Karseell" />
+                <span class="marca-nombre">Karseell</span>
+            </a>
+    
+            <a class="marca-box" href="productos/cepillos.html">
+                <img src="img/portadas/portada-moroccanoil.jpg" alt="Cepillos" />
+                <span class="marca-nombre">Cepillos</span>
+            </a>
         </div>
     </section>
 
-    <div class="hero-overlay"></div>
-    <div class="hero-overlay"></div>
-    <main>
-        
-<!-- seccion marcas esta asi : -->
-        <section id="categorias" class="fade-in">
-
-            <h2 class="section-title">Catálogos por Marca</h2>
-            <div class="grid-marcas">
-                <a class="marca-link" href="productos/moroccanoil.html">
-                    <img src="img/logos/moroccanoil.png" alt="Moroccanoil" />
-                </a>
-                <a class="marca-link" href="productos/tigi.html">
-                    <img src="img/logos/tigi.png" alt="Tigi" />
-                </a>
-                <a class="marca-link" href="productos/revlon.html">
-                    <img src="img/logos/revlon.png" alt="Revlon" />
-                </a>
-                <a class="marca-link" href="productos/olaplex.html">
-                    <img src="img/logos/olaplex.png" alt="Olaplex" />
-                </a>
-                <a class="marca-link" href="productos/hairssime.html">
-                    <img src="img/logos/hairssime_A.png" alt="Hairssime" />
-                </a>
-                <a class="marca-link" href="productos/avantibox.html">
-                    <img src="img/logos/avanti_box.png" alt="Avanti Box" />
-                </a>
-                <a class="marca-link" href="productos/karseell.html">
-                    <img src="img/logos/karseell.png" alt="Karseell" />
-                </a>
-                <a class="marca-link" href="productos/cepillos.html">
-                    <img src="img/logos/cepillo_A.png" alt="Cepillos" />
-                </a>
-            </div>
-        </section>
         <!-- ✅ NUEVO SEPARADOR DE MARCA -->
         <section class="separador-avanti fade-in">
             <p><i class="fas fa-leaf"></i> Elegí calidad, elegí Avanti</p>
             </section>
-        <!-- seccion iconos productos -->
+        <!-- seccion de productos -->
         <section class="iconos-productos fade-in" id="productos">
             <div class="grid-iconos">
                 <a href="productos/shampoos.html" class="icono">
-                    <img src="img/categorias/champu.png" alt="Shampoos" />
+                    <img src="img/segmentos/shampoo.png" alt="Shampoos" />
                     <p>Shampoos</p>
                 </a>
                 <a href="productos/acondicionadores.html" class="icono" style="transform: scale(0.9);">
-                    <img src="img/categorias/acondicionador.png" alt="Acondicionadores" />
+                    <img src="img/segmentos/acondicionador.png" alt="Acondicionadores" />
                     <p style="font-size: 0.7rem;">Acondicionadores</p>
                 </a>
                 <a href="productos/mascaras.html" class="icono">
-                    <img src="img/categorias/mascara.png" alt="Mascarás" />
+                    <img src="img/segmentos/mascara.png" alt="Mascarás" />
                     <p>Mascaras</p>
                 </a>
                 <a href="productos/serums.html" class="icono">
-                    <img src="img/categorias/serum.png" alt="Serums" />
+                    <img src="img/segmentos/serum.png" alt="Serums" />
                     <p>Serums</p>
                 </a>
             </div></section>
@@ -142,17 +178,17 @@
         <!-- BENEFICIOS DESTACADOS -->
         <section class="beneficios fade-in" id="como-comprar">
             <div class="beneficio animate-fade">
-                <img src="img/categorias/repartidor.png" alt="Envíos a todo el país" />
+                <img src="img/comoComprar/envios.png" alt="Envíos a todo el país" />
                 <h3>Enviamos tu compra</h3>
                 <p>Entregas a todo el país</p>
             </div>
             <div class="beneficio animate-fade">
-                <img src="img/categorias/billetera.png" alt="Pagá como quieras" />
+                <img src="img/comoComprar/Medios.de.pago.png" alt="Pagá como quieras" />
                 <h3>Pagá como quieras</h3>
                 <p>Tarjetas de crédito o efectivo</p>
             </div>
             <div class="beneficio animate-fade">
-                <img src="img/categorias/escudo.png" alt="Comprá con seguridad" />
+                <img src="img/comoComprar/compra.segura.png" alt="Comprá con seguridad" />
                 <h3>Comprá con seguridad</h3>
                 <p>Todos tus datos están protegidos</p>
             </div>
@@ -204,9 +240,10 @@
             <!-- Tu carrito -->
             <section id="carrito" class="info-card carrito-card">
                 <h2><i class="fas fa-shopping-cart"></i> Tu Carrito</h2>
-                <p>(Carrito vacío por ahora)</p>
+                <p id="carrito-status">(Carrito vacío por ahora)</p>
                 <a href="carrito.html" class="btn-hero small">Ver productos</a>
             </section>
+
             </div>
         </main> <!-- ← CIERRE CORRECTO DE MAIN -->
 
@@ -220,15 +257,16 @@
                 </div>
 
                 <!-- Columna de navegación -->
-                <div class="footer-column links">
-                    <h4>Enlaces</h4>
-                    <ul>
-                        <li><a href="index.html#contacto">Contacto</a></li>
-                        <li><a href="index.html#categorias">Catálogos</a></li>
-                        <li><a href="index.html#como-comprar">Cómo Comprar</a></li>
-                        <li><a href="index.html#nosotras">Nosotras</a></li>
-                    </ul>
-                </div>
+            <div class="footer-column links">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#categorias">Catálogos</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#como-comprar">Cómo Comprar</a></li>
+                    <li><a href="#nosotras">Nosotras</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
 
                 <!-- Columna Legal y redes -->
                 <div class="footer-column legal">
@@ -259,9 +297,10 @@
         </a>
 
         <!-- Scripts -->
-        <script src="products.js"></script>
-        <script src="carts.js"></script>
-        <script src="main.js"></script>
-        <script src="slider.js"></script>
+        <script src="js/products.js"></script>
+        <script src="js/carts.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/slider.js"></script>
+        <script src="js/home.js"></script> <!-- ← nuevo -->
     </body>
 </html>
