@@ -39,50 +39,60 @@
 <body>
 <!-- ==== TOP BAR ==== -->
 <div class="top-bar">
-<p>Avanti Tienda Online | Productos Profesionales</p>
+    <p>Avanti Tienda Online | Productos Profesionales</p>
 </div>
-<!-- HEADER con fondo verde‑trama -->
+
+<!-- ==== HEADER ==== -->
 <header class="site-header">
-    <!-- 1 · Logo -->
     <a href="index.html" class="logo">
-        <img src="img/branding/Logo-dorado.png" alt="Avanti Hair Salon" />
+        <img src="img/branding/Logo-dorado.png" alt="Avanti Hair Salon" />
     </a>
 
-    <!-- 2 · Botón burger (solo se ve < 768 px) -->
-    <button class="burger" aria-label="Menú">
-        <span></span><span></span><span></span>
-    </button>
-
-    <!-- 3 · Menú horizontal -->
+    <!-- Menú horizontal (desktop) -->
     <nav class="main-nav">
         <ul>
             <li><a href="#categorias">Catálogos</a></li>
             <li><a href="#productos">Productos</a></li>
-            <li><a href="#como-comprar">Cómo Comprar</a></li>
-            <li><a href="#nosotras">Nosotras</a></li> <!-- ✅ nuevo -->
+            <li><a href="#como-comprar">Cómo Comprar</a></li>
+            <li><a href="#nosotras">Nosotras</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
-    
-        <!-- Buscador -->
-        <div class="search-bar">
-            <input type="text" placeholder="¿Qué estás buscando?" />
-            <button class="btn-search"><i class="fas fa-search"></i></button>
-        </div>
 
-        <!-- Acciones a la derecha -->
-        <div class="user-actions">
-            <a href="carrito.html" class="carrito-link">
-                <i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)
-            </a>
-        </div>
+    <!-- Buscador -->
+    <div class="search-bar">
+        <input type="text" placeholder="¿Qué estás buscando?" />
+        <button class="btn-search"><i class="fas fa-search"></i></button>
     </div>
+
+    <!-- Carrito -->
+    <div class="user-actions">
+        <a href="carrito.html" class="carrito-link">
+            <i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)
+        </a>
+    </div>
+
+    <!-- Botón hamburguesa (solo móvil) -->
+    <button class="burger" aria-label="Menú">
+        <span></span><span></span><span></span>
+    </button>
 </header>
-<!-- …el resto de tu página… -->
 
+<!-- ==== Menú lateral (móvil) ==== -->
+<nav class="sidebar" id="sidebar">
+    <ul>
+        <li><a href="#categorias">Catálogos</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#como-comprar">Cómo Comprar</a></li>
+        <li><a href="#nosotras">Nosotras</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
 
-<!-- OVERLAY -->
+<!-- Overlay -->
 <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+
 
 <!-- HERO SLIDER -->
 <section class="hero-slider">
@@ -152,49 +162,57 @@
         <section class="separador-avanti fade-in">
             <p><i class="fas fa-leaf"></i> Elegí calidad, elegí Avanti</p>
             </section>
-        <!-- seccion de productos -->
-        <section class="iconos-productos fade-in" id="productos">
-            <div class="grid-iconos">
-                <a href="productos/shampoos.html" class="icono">
-                    <img src="img/segmentos/shampoo.png" alt="Shampoos" />
-                    <p>Shampoos</p>
-                </a>
-                <a href="productos/acondicionadores.html" class="icono" style="transform: scale(0.9);">
-                    <img src="img/segmentos/acondicionador.png" alt="Acondicionadores" />
-                    <p style="font-size: 0.7rem;">Acondicionadores</p>
-                </a>
-                <a href="productos/mascaras.html" class="icono">
-                    <img src="img/segmentos/mascara.png" alt="Mascarás" />
-                    <p>Mascaras</p>
-                </a>
-                <a href="productos/serums.html" class="icono">
-                    <img src="img/segmentos/serum.png" alt="Serums" />
-                    <p>Serums</p>
-                </a>
-            </div></section>
+    <!-- sección de productos -->
+    <section class="iconos-productos fade-in" id="productos">
+        <div class="grid-iconos">
+            <a href="productos/shampoos.html" class="icono-producto">
+                <img src="img/segmentos/shampoo.png" alt="Shampoos" />
+                <p>Shampoos</p>
+            </a>
+            <a href="productos/acondicionadores.html" class="icono-producto">
+                <img src="img/segmentos/acondicionador.png" alt="Acondicionadores" />
+                <p>Acondicionadores</p>
+            </a>
+            <a href="productos/mascaras.html" class="icono-producto">
+                <img src="img/segmentos/mascara.png" alt="Mascarás" />
+                <p>Mascarás</p>
+            </a>
+            <a href="productos/serums.html" class="icono-producto">
+                <img src="img/segmentos/serum.png" alt="Serums" />
+                <p>Serums</p>
+            </a>
+        </div>
+    </section>
+
 <!-- Separador visual -->
-<div class="separador-estilo"></div>
+<div class="separador-avanti">
+    <i class="fas fa-tags"></i> Lo que necesitás, ¡a un clic de distancia!
+</div>
+
 
         <!-- BENEFICIOS DESTACADOS -->
         <section class="beneficios fade-in" id="como-comprar">
-            <div class="beneficio animate-fade">
-                <img src="img/comoComprar/envios.png" alt="Envíos a todo el país" />
-                <h3>Enviamos tu compra</h3>
-                <p>Entregas a todo el país</p>
-            </div>
-            <div class="beneficio animate-fade">
-                <img src="img/comoComprar/Medios.de.pago.png" alt="Pagá como quieras" />
-                <h3>Pagá como quieras</h3>
-                <p>Tarjetas de crédito o efectivo</p>
-            </div>
-            <div class="beneficio animate-fade">
-                <img src="img/comoComprar/compra.segura.png" alt="Comprá con seguridad" />
-                <h3>Comprá con seguridad</h3>
-                <p>Todos tus datos están protegidos</p>
+            <div class="beneficios-container">
+                <div class="beneficio animate-fade">
+                    <img src="img/comoComprar/envios.png" alt="Envíos a todo el país" />
+                    <h3>Enviamos tu compra</h3>
+                    <p>Entregas a todo el país</p>
+                </div>
+                <div class="beneficio animate-fade">
+                    <img src="img/comoComprar/Medios.de.pago.png" alt="Pagá como quieras" />
+                    <h3>Pagá como quieras</h3>
+                    <p>Tarjetas de crédito o efectivo</p>
+                </div>
+                <div class="beneficio animate-fade">
+                    <img src="img/comoComprar/compra.segura.png" alt="Comprá con seguridad" />
+                    <h3>Comprá con seguridad</h3>
+                    <p>Todos tus datos están protegidos</p>
+                </div>
             </div>
             <p class="explicacion-compra">
                 Elegí tus productos, agregalos al carrito y coordiná tu compra por WhatsApp. Envíos a todo el país o retiro por
-                salón.    </p>
+                salón.
+            </p>
         </section>
 <!-- Separador visual -->
 <div class="separador-estilo"></div>
@@ -301,6 +319,7 @@
         <script src="js/carts.js"></script>
         <script src="js/main.js"></script>
         <script src="js/slider.js"></script>
-        <script src="js/home.js"></script> <!-- ← nuevo -->
+        <script src="js/home.js"></script> <!-- ← genera o gestiona contenido -->
+        <script src="js/marcas-categorias.js"></script> <!-- ← efecto visual sobre elementos ya presentes -->
     </body>
 </html>

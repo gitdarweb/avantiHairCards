@@ -1,0 +1,63 @@
+/* ===================== TOP BAR ===================== */
+/* archivo: estructura.css */
+.top-bar {
+    background-color: var(--color-topbar-bg);
+    /* azul verdoso oscuro */
+    color: white;
+    font-family: var(--font-sans);
+    font-weight: var(--font-light);
+    text-align: center;
+    padding: var(--spacing-sm) 0;
+}
+
+/* ===================== HEADER BASE ===================== */
+/* archivo: estructura.css */
+.site-header {
+    background: url('/img/branding/Fondo de portada.png') center/cover no-repeat, var(--color-primary-dark);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-lg);
+    position: relative;
+}
+
+/* ===================== LOGO ===================== */
+.site-header .logo img {
+    max-height: 3rem;
+    display: block;
+}
+
+/* ===================== NAV DESKTOP ===================== */
+.main-nav ul {
+    display: flex;
+    gap: var(--spacing-lg);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    color: #fff;
+    font-family: var(--font-sans);
+    font-weight: var(--font-light);
+    text-decoration: none;
+    position: relative;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -0.25rem;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-accent-gold);
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a:focus::after {
+    width: 100%;
+}

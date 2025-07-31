@@ -75,7 +75,9 @@ Carrito de compras dinámico (JS + LocalStorage).
 - Accesibilidad y etiquetas `aria`.
 - Filtros por categoría.
 - Mejoras en SEO y carga de imágenes.
-
+git add .
+git commit -m "Descripción de lo que cambiaste"
+git push
 
 💼 Desarrollado por
 Dario Duarte

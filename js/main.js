@@ -1,32 +1,32 @@
 console.log("main.js cargado");
 
-// ==== MENÚ HAMBURGUESA ====
+// ==== MENÚ HAMBURGUESA CON CIERRE AUTOMÁTICO ====
 document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.getElementById("hamburger");
+    const hamburger = document.querySelector(".burger");
     const sidebar = document.getElementById("sidebar");
-    const overlay = document.createElement("div");
-    overlay.id = "overlay";
+    const overlay = document.getElementById("sidebar-overlay");
 
-    if (hamburger && sidebar) {
-        document.body.appendChild(overlay); // Agrega overlay al DOM
-
-        // Toggle del menú
+    if (hamburger && sidebar && overlay) {
         const toggleMenu = () => {
+            // Mostrar/ocultar menú lateral
             sidebar.classList.toggle("active");
+            // Mostrar/ocultar overlay
             overlay.classList.toggle("active");
+            // Activar/desactivar animación de la hamburguesa
+            hamburger.classList.toggle("active");
         };
 
+        // Abrir/cerrar con clic en el icono
         hamburger.addEventListener("click", toggleMenu);
-
-        // Cerrar al hacer clic en un enlace del menú
-        sidebar.querySelectorAll("a[href^='#']").forEach(link => {
+        // Cerrar al hacer clic en el overlay
+        overlay.addEventListener("click", toggleMenu);
+        // Cerrar al hacer clic en cualquier link
+        sidebar.querySelectorAll("a").forEach(link => {
             link.addEventListener("click", toggleMenu);
         });
-
-        // Cerrar al hacer clic fuera del menú (overlay)
-        overlay.addEventListener("click", toggleMenu);
     }
 });
+
 
 // ==== FUNCIONES AL CARGAR DOM ====
 document.addEventListener("DOMContentLoaded", () => {
@@ -34,9 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const path = window.location.pathname;
     const match = path.match(/\/productos\/(\w+)\.html$/); // Ej: productos/shampoos.html
 
+    // Detectar si está en GitHub Pages
+    const isGitHubPages = location.hostname.includes("github.io");
+    const basePath = isGitHubPages ? "/AvantiHairSalon" : "";
+
     if (match) {
-        const marca = match[1]; // Ej: "tigi", "shampoos"
-        const productos = productosPorMarca?.[marca] || products?.[marca]; // compatible con ambos
+        const marca = match[1];
+        const productos = productosPorMarca?.[marca] || products?.[marca];
 
         if (productos) {
             const contenedor = document.getElementById("product-list");
@@ -46,9 +50,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 card.className = "categoria-card";
 
                 const img = document.createElement("img");
-                img.src = `/img/img-productos/${marca}/${prod.imagen}`;
+                img.src = `${basePath}/img/img-productos/${marca}/${prod.imagen}`;
                 img.alt = prod.nombre;
-                img.onerror = () => img.src = `/img/productos/placeholder.jpg`; // fallback
+                img.onerror = () => img.src = `${basePath}/img/productos/placeholder.jpg`;
                 img.classList.add("product-image");
 
                 const nombre = document.createElement("p");
@@ -87,10 +91,11 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("visible");
-                observer.unobserve(entry.target); // se activa solo una vez
+                observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.1 });
 
     fadeElements.forEach(el => observer.observe(el));
 });
+    ui

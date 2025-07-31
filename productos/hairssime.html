@@ -35,46 +35,61 @@
 </head>
 
 <body>
+    <!-- ==== TOP BAR ==== -->
     <div class="top-bar">
-        <p>🛍️ Avanti Tienda Online | ✨ Catálogo de Hairssime</p>
+        <p>Avanti Tienda Online | Productos Profesionales</p>
     </div>
-
-    <!-- Header -->
-<header class="site-header">
-    <!-- Logo -->
-    <a href="../index.html" class="logo">
-        <img src="../img/branding/Logo-dorado.png" alt="Avanti Hair Salon" />
-    </a>
-
-    <!-- Botón burger (solo se ve < 768px) -->
-    <button class="burger" aria-label="Menú">
-        <span></span><span></span><span></span>
-    </button>
-
-    <!-- Menú horizontal -->
+    
+    <!-- ==== HEADER ==== -->
+    <header class="site-header">
+        <a href="../index.html" class="logo">
+            <img src="../img/branding/Logo-dorado.png" alt="Avanti Hair Salon" />
+        </a>
+    
+        <!-- Menú horizontal (desktop) -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="../index.html#categorias">Catálogos</a></li>
+                <li><a href="../index.html#productos">Productos</a></li>
+                <li><a href="../index.html#como-comprar">Cómo Comprar</a></li>
+                <li><a href="../index.html#nosotras">Nosotras</a></li>
+                <li><a href="../index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    
+        <!-- Buscador -->
+        <div class="search-bar">
+            <input type="text" placeholder="¿Qué estás buscando?" />
+            <button class="btn-search"><i class="fas fa-search"></i></button>
+        </div>
+    
+        <!-- Carrito -->
+        <div class="user-actions">
+            <a href="../carrito.html" class="carrito-link">
+                <i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)
+            </a>
+        </div>
+    
+        <!-- Botón hamburguesa (solo móvil) -->
+        <button class="burger" aria-label="Menú">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+    
+    <!-- ==== Menú lateral (móvil) ==== -->
     <nav class="sidebar" id="sidebar">
         <ul>
-            <li><a href="../index.html#categorias">Catálogos</a></li>
+            <li><a href="index.html#categorias">Catálogos</a></li>
             <li><a href="../index.html#productos">Productos</a></li>
-            <li><a href="../index.html#como-comprar">Cómo Comprar</a></li>
+            <li><a href="../index.html#como-comprar">Cómo Comprar</a></li>
             <li><a href="../index.html#nosotras">Nosotras</a></li>
             <li><a href="../index.html#contacto">Contacto</a></li>
         </ul>
     </nav>
+    
+    <!-- Overlay -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
 
-    <!-- Buscador -->
-    <div class="search-bar">
-        <input type="text" placeholder="¿Qué estás buscando?" />
-        <button class="btn-search"><i class="fas fa-search"></i></button>
-    </div>
-
-    <!-- Acciones a la derecha -->
-    <div class="user-actions">
-        <a href="../carrito.html" class="carrito-link">
-            <i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)
-        </a>
-    </div>
-</header>
     
     <!-- Banner título -->
 

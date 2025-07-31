@@ -33,28 +33,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
-    <!-- 🔝 Línea superior promocional -->
-    <div class="top-bar">
-        <p>🛍️ Avanti Tienda Online | ✨ Catálogo de Serums</p>
-    </div>
-<!-- Header -->
+<!-- ==== TOP BAR ==== -->
+<div class="top-bar">
+    <p>Avanti Tienda Online | Productos Profesionales</p>
+</div>
+
+<!-- ==== HEADER ==== -->
 <header class="site-header">
-    <!-- Logo -->
     <a href="../index.html" class="logo">
-        <img src="../img/branding/Logo-dorado.png" alt="Avanti Hair Salon" />
+        <img src="../img/branding/Logo-dorado.png" alt="Avanti Hair Salon" />
     </a>
 
-    <!-- Botón burger (solo se ve < 768px) -->
-    <button class="burger" aria-label="Menú">
-        <span></span><span></span><span></span>
-    </button>
-
-    <!-- Menú horizontal -->
-    <nav class="sidebar" id="sidebar">
+    <!-- Menú horizontal (desktop) -->
+    <nav class="main-nav">
         <ul>
             <li><a href="../index.html#categorias">Catálogos</a></li>
             <li><a href="../index.html#productos">Productos</a></li>
-            <li><a href="../index.html#como-comprar">Cómo Comprar</a></li>
+            <li><a href="../index.html#como-comprar">Cómo Comprar</a></li>
             <li><a href="../index.html#nosotras">Nosotras</a></li>
             <li><a href="../index.html#contacto">Contacto</a></li>
         </ul>
@@ -66,13 +61,33 @@
         <button class="btn-search"><i class="fas fa-search"></i></button>
     </div>
 
-    <!-- Acciones a la derecha -->
+    <!-- Carrito -->
     <div class="user-actions">
         <a href="../carrito.html" class="carrito-link">
             <i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)
         </a>
     </div>
+
+    <!-- Botón hamburguesa (solo móvil) -->
+    <button class="burger" aria-label="Menú">
+        <span></span><span></span><span></span>
+    </button>
 </header>
+
+<!-- ==== Menú lateral (móvil) ==== -->
+<nav class="sidebar" id="sidebar">
+    <ul>
+        <li><a href="index.html#categorias">Catálogos</a></li>
+        <li><a href="../index.html#productos">Productos</a></li>
+        <li><a href="../index.html#como-comprar">Cómo Comprar</a></li>
+        <li><a href="../index.html#nosotras">Nosotras</a></li>
+        <li><a href="../index.html#contacto">Contacto</a></li>
+    </ul>
+</nav>
+
+<!-- Overlay -->
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+<!-- Banner de categoría -->
 <section class="banner-categoria fade-in">
     <img src="../img/categorias/serum.png" alt="Serums" />
     <h2>Catálogo de Serums</h2>
