@@ -1,0 +1,93 @@
+/* componentes/nosotras.css */
+/* Estilos para sección "Nosotras" en Avanti Hair Salon */
+
+
+
+.hero-info {
+    background-color: var(--nosotras-bg);
+    padding: 3rem 1rem;
+}
+
+.hero-info-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-info-texto h2 {
+    font-size: 2.5rem;
+    color: var(--nosotras-heading);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-info-texto p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--nosotras-text);
+    margin-bottom: 1.5rem;
+}
+
+/* Botón principal reducido y responsive */
+.btn-hero {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-accent-orange);
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    max-width: 200px;
+    /* limita ancho máximo */
+    width: auto;
+    /* ancho automático */
+}
+
+.btn-hero:hover {
+    background-color: var(--color-secondary-dark);
+    transform: translateY(-1px);
+}
+
+.hero-info-imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-info-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-info-texto h2 {
+        font-size: 2rem;
+    }
+
+    .hero-info-texto p {
+        font-size: 1rem;
+    }
+
+    .btn-hero {
+        max-width: none;
+        /* permite adaptarse al contenedor */
+        width: 100%;
+        /* ocupa ancho completo con margen */
+        padding: 0.6rem 1rem;
+        /* un poco más de padding para móviles */
+        font-size: 0.95rem;
+        margin-top: 1rem;
+    }
+}

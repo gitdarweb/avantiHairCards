@@ -88,12 +88,18 @@
     
     <!-- Overlay -->
     <div class="sidebar-overlay" id="sidebar-overlay"></div>
-<!-- Banner de categoría -->
+<!-- Banner / título -->
 <section class="banner-categoria fade-in">
-    <img src="../img/categorias/mascara.png" alt="Mascarás" />
-    <h2>Catálogo de Mascarás</h2>
+    <!-- Reemplaza {{marca}} por el slug de la marca, p.ej. "revlon" -->
+    <img src="../img/segmentos/mascara.png" alt="mascaras" />
+    <!-- Reemplaza {{Marca}} por el nombre de la marca con mayúscula inicial -->
+    <h2>Catálogo Máscaras</h2>
 </section>
 
+<!-- Productos -->
+<section class="productos-marca">
+    <div id="contenedor-productos" class="grid-categorias"></div>
+</section>
 <!-- Productos cargados dinámicamente -->
     <section class="productos-marca" style="padding: 2rem 1rem;">
     <div id="contenedor-productos" class="grid-categorias"></div>

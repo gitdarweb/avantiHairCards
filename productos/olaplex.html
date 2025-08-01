@@ -90,16 +90,18 @@
 <!-- Overlay -->
 <div class="sidebar-overlay" id="sidebar-overlay"></div>
 
-    <!-- Banner de marca -->
-    <section class="marca-banner">
-        <img src="../img/logos/olaplex.png" alt="Olaplex" class="logo-marca" />
-        <h2>Productos de la marca Olaplex</h2>
-    </section>
-
-    <section class="productos-marca" style="padding: 2rem 1rem;">
-        <div id="contenedor-productos" class="grid-marcas"></div>
+    <!-- Banner / título -->
+    <section class="banner-categoria fade-in">
+        <!-- Reemplaza {{marca}} por el slug de la marca, p.ej. "revlon" -->
+        <img src="../img/portadas/portada-revlon.png" alt="Olaplex" />
+        <!-- Reemplaza {{Marca}} por el nombre de la marca con mayúscula inicial -->
+        <h2>Catálogo Olaplex</h2>
     </section>
     
+    <!-- Productos -->
+    <section class="productos-marca">
+        <div id="contenedor-productos" class="grid-categorias"></div>
+    </section>
 
     <!-- ==== FOOTER ==== -->
     <footer class="site-footer">
