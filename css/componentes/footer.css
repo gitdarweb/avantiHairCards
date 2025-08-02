@@ -3,7 +3,8 @@
    ======================== */
 
 .site-footer {
-    background-color: #062D30;
+    /*background-color: #062D30;*/
+    background: url('/img/branding/Fondo\ de\ portada.png') center/cover no-repeat, var(--color-primary-dark);
     color: #C89F65;
     padding: 2rem 1rem 1rem;
     font-size: 0.95rem;

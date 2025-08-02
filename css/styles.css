@@ -1,10 +1,9 @@
 /* styles.css - Archivo principal que importa todos los módulos de estilos */
-
 /* archivos en carpeta de componentes */
 @import url('./componentes/base.css');
 @import url('./componentes/variables.css');
+@import url('./componentes/botones.css');
 @import url('./componentes/slider.css');
-
 /* carpeta header todo modulado */
 @import url('./componentes/header/estructura.css');
 @import url('./componentes/header/burger.css');
@@ -18,15 +17,18 @@
 @import url('./componentes/como-comprar.css');
 @import url('./componentes/catalogo-productos.css');
 @import url('./componentes/nosotras.css');
+@import url('./componentes/contacto.css');
+@import url('./componentes/carrito.css');
+@import url('./componentes/footer.css');
+@import url('./componentes/whatsapp.css');
+@import url('./componentes/legal.css');
 /*@import url('./componentes/reset.css') ver si es necesario mas adelante;
 @import url('./componentes/marcas-categorias.css');
 @import url('./componentes/beneficios.css');
 @import url('./componentes/contacto.css');
 @import url('./componentes/utilities.css');
-@import url('./componentes/carrito.css');
 @import url('./componentes/animations.css');
 @import url('./componentes/info.css');
-@import url('./componentes/whatsapp.css');
-@import url('./componentes/sidebar.css');
 
+@import url('./componentes/sidebar.css');
 @import url('./componentes/iconos-productos.css');*/

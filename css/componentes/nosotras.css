@@ -32,31 +32,6 @@
     margin-bottom: 1.5rem;
 }
 
-/* Botón principal reducido y responsive */
-.btn-hero {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-accent-orange);
-    color: #fff;
-    padding: 0.4rem 0.8rem;
-    font-size: 0.85rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 6px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    max-width: 200px;
-    /* limita ancho máximo */
-    width: auto;
-    /* ancho automático */
-}
-
-.btn-hero:hover {
-    background-color: var(--color-secondary-dark);
-    transform: translateY(-1px);
-}
 
 .hero-info-imagen img {
     width: 100%;

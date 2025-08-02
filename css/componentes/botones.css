@@ -1,0 +1,35 @@
+/* componentes/botones.css */
+/* Estilo unificado para todos los botones del sitio */
+
+.btn-hero {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    background-color: #062D30;
+    /* Verde institucional */
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: var(--color-accent-orange);
+    /* Color desde variables */
+    transform: scale(1.05);
+}
+
+/* Responsive opcional */
+@media (max-width: 768px) {
+    .btn-hero {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+}

@@ -51,9 +51,16 @@ function renderizarProductosPor(tipo, valor) {
   lista.forEach(producto => {
     const { nombre, precio, imagen } = producto;
     // Determinar ruta de imagen: si es URL, usarla; si no, intentar carpeta de marca o categoría
+    //const rutaImg = imagen.startsWith('http')
+      //? imagen
+      //: `../img/img-productos/${valor}/${imagen}`;//
+    // Determinar ruta de imagen:
+    ///////////////////////////////////////////////////////////
+    // ✅ CAMBIO: ahora la ruta ya incluye la subcarpeta si es necesaria (por ejemplo: "moroccanoil/archivo.webp"),
+    // así que eliminamos la carpeta ${valor} del path.
     const rutaImg = imagen.startsWith('http')
       ? imagen
-      : `../img/img-productos/${valor}/${imagen}`;
+      : `../img/img-productos/${imagen}`;
 
     const tarjeta = document.createElement('div');
     tarjeta.classList.add('tarjeta-producto');

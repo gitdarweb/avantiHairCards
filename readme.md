@@ -76,7 +76,7 @@ Carrito de compras dinámico (JS + LocalStorage).
 - Filtros por categoría.
 - Mejoras en SEO y carga de imágenes.
 git add .
-git commit -m "etapa de diseño y finalizar carrito de compras."
+git commit -m "desarrollo en estado avanzado , etapa de detalles."
 git push
 
 💼 Desarrollado por

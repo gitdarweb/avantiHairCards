@@ -44,6 +44,7 @@ h6 {
 p {
     margin: 0;
 }
+
 /* aca agregué para diseñar el titulo de catalogo por marcas. no se agrego responsive. */
 /* Título destacado para secciones principales */
 /* Título destacado como solapa de agenda */
@@ -52,7 +53,7 @@ p {
     display: inline-block;
     background-color: rgba(6, 45, 48, 0.85);
     /* Mismo fondo verde oscuro */
-    padding: 0.5rem 1rem;
+    padding: 0.35rem 0.7rem;
     /* Espaciado más compacto para efecto de solapa */
     margin: 1rem auto;
     /* Margen reducido */
@@ -60,11 +61,11 @@ p {
     /* Tipografía Montserrat */
     font-weight: 300;
     /* Grosor más fino para elegancia */
-    font-size: 1.25rem;
+    font-size: 0.875rem;
     /* Tamaño de fuente más pequeño */
     color: #fff;
     text-align: center;
-    border-left: 3px solid #0A3A41;
+    border-left: 2px solid #0A3A41;
     /* Línea de acento más delgada */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     /* Sombra más sutil */
@@ -107,6 +108,7 @@ p {
         transform: translateY(0);
     }
 }
+
 /* Responsive typography base */
 @media (max-width: 768px) {
     html {
