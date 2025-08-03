@@ -3,7 +3,7 @@
    ======================== */
 
 .site-footer {
-    background: url('/img/branding/fondo-original.png') center/cover no-repeat, var(--color-primary-dark);
+    background: url('../../img/branding/fondo-original.png') center/cover no-repeat, var(--color-primary-dark);
     color: var(--color-accent-gold);
     display: flex;
     flex-direction: column;

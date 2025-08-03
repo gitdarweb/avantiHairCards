@@ -2,7 +2,7 @@
 /* Unifica separadores antiguos y nuevos, restaurando dimensiones originales */
 @font-face {
     font-family: 'Quantum Mystique';
-    src: url('/fonts/QuantumMystique.ttf') format('truetype');
+    src: url('../../fonts/QuantumMystique.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

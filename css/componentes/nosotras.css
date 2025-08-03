@@ -1,6 +1,9 @@
 /* componentes/nosotras.css */
 /* Estilos para sección "Nosotras" en Avanti Hair Salon */
-
+@font-face {
+    font-family: 'QuantumMystique';
+    src: url('../../fonts/QuantumMystique.ttf') format('truetype');
+}
 
 
 .hero-info {
@@ -23,6 +26,7 @@
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-family: 'QuantumMystique', sans-serif;
 }
 
 .hero-info-texto p {

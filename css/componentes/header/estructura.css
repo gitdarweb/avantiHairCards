@@ -13,7 +13,7 @@
 /* ===================== HEADER BASE ===================== */
 /* archivo: estructura.css */
 .site-header {
-    background: url('/img/branding/fondo-original.png') center/cover no-repeat, var(--color-primary-dark);
+    background: url('../../../img/branding/fondo-original.png') center/cover no-repeat, var(--color-primary-dark);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
