@@ -60,7 +60,9 @@ function renderizarProductosPor(tipo, valor) {
     // así que eliminamos la carpeta ${valor} del path.
     const rutaImg = imagen.startsWith('http')
       ? imagen
-      : `/img/img-productos/${imagen}`;
+      : `${window.location.pathname.includes('/productos/') ? '../' : ''}img/img-productos/${imagen}`;
+
+
 
     const tarjeta = document.createElement('div');
     tarjeta.classList.add('tarjeta-producto');
