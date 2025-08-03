@@ -1,30 +1,36 @@
 /* componentes/separadores.css */
 /* Unifica separadores antiguos y nuevos, restaurando dimensiones originales */
+@font-face {
+    font-family: 'Quantum Mystique';
+    src: url('/fonts/QuantumMystique.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* Aplica a .separador-avanti (párrafos o section) y a .separador-estilo */
 .separador-avanti,
 .separador-avanti p,
 .separador-estilo {
-    background-color: var(--separator-bg);
-    padding: 2rem 1rem;
-    /* restaurado */
+    background-color: var(--color-primary-dark);
+    padding: 2.5rem 1rem;
     text-align: center;
-    font-size: 1.2rem;
-    /* restaurado */
-    font-weight: 600;
-    color: var(--separator-color);
-    margin: 2rem 0;
-    /* restaurado */
+
+    font-size: 2.2rem;
+    font-weight: normal;
+    font-family: 'Quantum Mystique', sans-serif;
+    letter-spacing: 0.05em;
+    color: var(--color-accent-gold);
+
+    margin: 3rem 0;
     border-top: 2px solid var(--separator-border);
     border-bottom: 2px solid var(--separator-border);
-    font-family: 'Montserrat', sans-serif;
 
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
-
 /* Ajuste de párrafo interno en sección */
 .separador-avanti p {
     margin: 0;

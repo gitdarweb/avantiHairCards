@@ -90,19 +90,23 @@
     <div class="sidebar-overlay" id="sidebar-overlay"></div>
 
 
-    <main style="padding: 2rem;">
-        <h2>🧾 Tu Carrito</h2>
-
-        <!-- Aquí se renderizan los productos del carrito -->
-        <div id="carrito-contenedor" class="grid-categorias info-sections"></div>
-
+    <main id="carrito-detalle">
+        <h2 class="titulo-carrito">🧾 Tu Carrito</h2>
+    
+        <!-- Productos del carrito -->
+        <div id="carrito-contenedor" class="carrito-grid"></div>
+    
         <!-- Total y acciones -->
-        <div id="carrito-total" style="margin: 2rem 0; font-size: 1.2rem;"></div>
-        <div style="display: flex; gap: 1rem;">
-            <button onclick="vaciarCarrito()" class="btn-action">🗑 Vaciar carrito</button>
-            <button onclick="finalizarCompra()" class="btn-action">💳 Finalizar compra</button>
+        <div class="carrito-total-acciones">
+            <div id="carrito-total" class="carrito-total">Total: $0</div>
+    
+            <div class="carrito-botones">
+                <button onclick="vaciarCarrito()" class="btn-action">🗑 Vaciar carrito</button>
+                <button onclick="finalizarCompra()" class="btn-action">💳 Finalizar compra</button>
+            </div>
         </div>
     </main>
+
 
    
     <!-- ==== FOOTER ==== -->

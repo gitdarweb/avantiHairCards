@@ -1,34 +1,18 @@
-/* base.css – Estilos base generales, EN ESTE ARCHIVO TERMINE DE TRABAJAR 30/07/2025. */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
+/* base.css – Estilos basales generales de Avanti Hair Salon */
+/* Trabajado hasta 30/07/2025 */
 
 html {
     font-size: 16px;
-    scroll-behavior: smooth;
+    /* base para responsive typography */
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
     color: #333;
     background-color: #fff;
     line-height: 1.5;
     overflow-x: hidden;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
 }
 
 h1,
@@ -45,51 +29,47 @@ p {
     margin: 0;
 }
 
-/* aca agregué para diseñar el titulo de catalogo por marcas. no se agrego responsive. */
-/* Título destacado para secciones principales */
-/* Título destacado como solapa de agenda */
+/* ================================================
+   Título destacado como solapa de sección (solapa)
+   ================================================ */
 .section-title {
     position: relative;
     display: inline-block;
-    background-color: rgba(6, 45, 48, 0.85);
-    /* Mismo fondo verde oscuro */
+    background-color: var(--color-primary-darker);
     padding: 0.35rem 0.7rem;
-    /* Espaciado más compacto para efecto de solapa */
     margin: 1rem auto;
-    /* Margen reducido */
-    font-family: 'Montserrat', sans-serif;
-    /* Tipografía Montserrat */
+    font-family: var(--font-sans);
     font-weight: 300;
-    /* Grosor más fino para elegancia */
     font-size: 0.875rem;
-    /* Tamaño de fuente más pequeño */
     color: #fff;
     text-align: center;
     border-left: 2px solid #0A3A41;
-    /* Línea de acento más delgada */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    /* Sombra más sutil */
     border-radius: 0 6px 6px 0;
-    /* Bordes más suaves para un look de solapa */
     animation: fadeInUp 0.5s ease-out;
-    /* Animación más rápida */
+}
+/* === ANIMACIONES FADE-IN CON SCROLL === */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* Responsive design */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Responsive ajustes para solapa */
 @media (max-width: 768px) {
     .section-title {
         font-size: 1.1rem;
-        /* Tamaño reducido para tablets */
         padding: 0.4rem 0.8rem;
-        border-left: 2px solid #0A3A41;
-        /* Línea más fina */
     }
 }
 
 @media (max-width: 480px) {
     .section-title {
         font-size: 0.95rem;
-        /* Tamaño mínimo para móviles */
         padding: 0.3rem 0.6rem;
         margin: 0.8rem auto;
     }
@@ -100,7 +80,6 @@ p {
     from {
         opacity: 0;
         transform: translateY(10px);
-        /* Desplazamiento más sutil */
     }
 
     to {

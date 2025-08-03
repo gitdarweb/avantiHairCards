@@ -44,6 +44,7 @@
 }
 
 /* Si JS no añade clases, aplicamos estilos genéricos */
+/* Si JS no añade clases, aplicamos estilos genéricos */
 .grid-categorias>div,
 .card-producto {
     background-color: #FFFFFF;
@@ -51,8 +52,15 @@
     border-radius: 16px;
     padding: 1.25rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+
+    /* convertimos la tarjeta en flex-column con espacio entre contenido y botón */
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+
+    /* altura mínima uniforme para alinear botones */
+    min-height: 360px;
+
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
 }

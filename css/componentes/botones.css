@@ -1,7 +1,8 @@
 /* componentes/botones.css */
 /* Estilo unificado para todos los botones del sitio */
 
-.btn-hero {
+.btn-hero,
+.btn-agregar {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -9,24 +10,41 @@
     font-size: 0.9rem;
     font-weight: 600;
     border-radius: 8px;
-    background-color: #062D30;
+    background-color: var(--color-primary-darker, #062D30);
     /* Verde institucional */
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    gap: 0.5rem;
+    /* Espaciado uniforme entre ícono y texto */
 }
 
-.btn-hero:hover {
+/* Hover para ambos botones */
+.btn-hero:hover,
+.btn-agregar:hover {
     background-color: var(--color-accent-orange);
-    /* Color desde variables */
     transform: scale(1.05);
+}
+
+/* Corrección de alineación vertical del botón dentro de la tarjeta */
+.card-producto {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-producto .btn-agregar {
+    margin-top: auto;
+    width: 100%;
+    /* El botón ocupa todo el ancho disponible */
 }
 
 /* Responsive opcional */
 @media (max-width: 768px) {
-    .btn-hero {
+
+    .btn-hero,
+    .btn-agregar {
         width: 100%;
         padding: 0.8rem 1rem;
         font-size: 1rem;

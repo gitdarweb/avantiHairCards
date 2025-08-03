@@ -1,11 +1,12 @@
-/* Contenedor general */
+/* Contenedor general con fondo verde institucional */
 .iconos-productos {
-    padding: 1.5rem 0.5rem;
-    background-color: #f8f8f8;
+    padding: 2rem 1rem;
+    background-color: var(--color-accent-gold);
+    /* Verde institucional */
     text-align: center;
 }
 
-/* Grid de 4 íconos horizontal en desktop */
+/* Grid de íconos */
 .grid-iconos {
     display: flex;
     justify-content: center;
@@ -17,38 +18,45 @@
 
 /* Cada ícono y texto */
 .icono-producto {
-    flex: 0 1 120px;
+    flex: 1 1 120px;
+    max-width: 160px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
+    background-color: #fff;
+    /* Tarjeta blanca sobre fondo verde */
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Icono reducido y centrado */
+/* Icono centrado */
 .icono-producto img {
     width: 60px;
     height: 60px;
     object-fit: contain;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
     transition: transform 0.25s ease;
 }
 
-/* Texto limpio y uniforme */
+/* Texto */
 .icono-producto p {
     font-family: var(--font-sans);
     font-size: 0.85rem;
     font-weight: var(--font-regular);
     color: var(--color-primary-darker);
+    /* texto oscuro */
     margin: 0;
     line-height: 1.2;
     text-transform: capitalize;
 }
 
-/* Efecto hover */
+/* Hover */
 .icono-producto:hover {
     transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .icono-producto:hover img {
@@ -60,7 +68,7 @@
     text-shadow: 0 0 4px var(--color-accent-orange);
 }
 
-/* Efecto click */
+/* Click */
 .icono-producto:active {
     transform: scale(0.95);
     box-shadow: 0 0 8px var(--color-primary-dark);
@@ -71,7 +79,7 @@
     transform: scale(1);
 }
 
-/* Responsive: en pantallas muy pequeñas, dos columnas */
+/* Responsive móvil */
 @media (max-width: 480px) {
     .grid-iconos {
         gap: 1rem;
@@ -80,5 +88,21 @@
     .icono-producto {
         flex: 0 1 45%;
         margin-bottom: 1rem;
+    }
+}
+
+/* En pantallas grandes, agrandamos los íconos */
+@media (min-width: 768px) {
+    .icono-producto img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .icono-producto p {
+        font-size: 1rem;
+    }
+
+    .icono-producto {
+        flex: 1 1 140px;
     }
 }

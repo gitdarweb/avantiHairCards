@@ -1,34 +1,43 @@
-/* styles.css - Archivo principal que importa todos los módulos de estilos */
-/* archivos en carpeta de componentes */
-@import url('./componentes/base.css');
+/* 1. RESET: limpia todos los estilos de navegador */
+@import url('./componentes/reset.css');
+
+/* 2. VARIABLES: defines colores, tipografías y espaciados que usarán todos */
+/*    Debe ir antes de cualquier módulo que use var(--…) */
 @import url('./componentes/variables.css');
+
+/* 3. BASE: estilos globales (body, tipografía base, headings, párrafos, utilidades) */
+@import url('./componentes/base.css');
+
+/* 4. BOTONES (globales): unifica .btn-hero y similares */
 @import url('./componentes/botones.css');
+
+/* 5. COMPONENTES GLOBALES (slider, marcas, separadores, etc.) */
 @import url('./componentes/slider.css');
-/* carpeta header todo modulado */
+@import url('./componentes/separadores.css');
+
+/* 6. HEADER / SIDEBAR / NAVIGATION */
 @import url('./componentes/header/estructura.css');
 @import url('./componentes/header/burger.css');
 @import url('./componentes/header/responsive.css');
 @import url('./componentes/header/overlay.css');
 @import url('./componentes/header/search-cart.css');
 @import url('./componentes/header/sidebar.css');
+
+/* 7. SECCIONES PRINCIPALES */
 @import url('./componentes/marcas-categorias.css');
-@import url('./componentes/separadores.css');
+@import url('./componentes/catalogo-productos.css');
 @import url('./componentes/productos.css');
 @import url('./componentes/como-comprar.css');
-@import url('./componentes/catalogo-productos.css');
 @import url('./componentes/nosotras.css');
 @import url('./componentes/contacto.css');
 @import url('./componentes/carrito.css');
+@import url('./componentes/carrito-detalle.css');
+
+/* 8. FOOTER y WHATSAPP flotante */
 @import url('./componentes/footer.css');
 @import url('./componentes/whatsapp.css');
-@import url('./componentes/legal.css');
-/*@import url('./componentes/reset.css') ver si es necesario mas adelante;
-@import url('./componentes/marcas-categorias.css');
-@import url('./componentes/beneficios.css');
-@import url('./componentes/contacto.css');
-@import url('./componentes/utilities.css');
-@import url('./componentes/animations.css');
-@import url('./componentes/info.css');
 
-@import url('./componentes/sidebar.css');
-@import url('./componentes/iconos-productos.css');*/
+/* 9. PÁGINAS LEGALES */
+@import url('./componentes/legal.css');
+/* 10. ANIMACIONES */
+@import url('./componentes/animations.css');

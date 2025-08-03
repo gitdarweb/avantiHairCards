@@ -1,0 +1,141 @@
+/* ===============================
+   MÓDULO: carrito-detalle.css
+   Estilos para carrito.html
+   =============================== */
+
+#carrito-detalle {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.titulo-carrito {
+    font-size: 1.8rem;
+    color: #062D30;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Grid de productos renderizados */
+.carrito-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* ==== Ítems del carrito ==== */
+.carrito-item {
+    background-color: #FFFFFF;
+    /* Misma tarjeta blanca */
+    border: 1px solid var(--color-card-border);
+    border-radius: 16px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+        /* ← empuja el botón abajo */
+    
+
+    min-height: 300px;
+    /* Altura mínima uniforme */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+}
+.carrito-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carrito-item-img {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    background-color: #F9F9F9;
+}
+
+.carrito-item-titulo {
+    font-size: 1.05rem;
+    color: var(--color-primary-dark);
+    margin-bottom: 0.5rem;
+    flex-grow: 1;
+    /* Espacio flexible para empujar precio y botón */
+}
+
+.carrito-item-precio {
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+}
+
+/* Botón eliminar */
+.carrito-item .btn-action {
+    background: linear-gradient(135deg, var(--color-secondary-dark) 0%, var(--color-primary-dark) 100%);
+    color: #FFFFFF;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: auto;
+        /* empuja el botón siempre al fondo */
+        width: 100%;
+        /* opcional: que ocupe todo el ancho */
+}
+
+.carrito-item .btn-action:hover {
+    background: var(--color-accent-orange);
+    transform: translateY(-2px);
+}
+
+/* Contenedor total y botones de acción general */
+.carrito-total-acciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.carrito-total {
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.carrito-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .titulo-carrito {
+        font-size: 1.5rem;
+    }
+
+    .carrito-total {
+        font-size: 1.2rem;
+    }
+
+    .carrito-botones {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .carrito-item-img {
+        height: 120px;
+    }
+}
