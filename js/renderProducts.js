@@ -56,11 +56,16 @@ function renderizarProductosPor(tipo, valor) {
       //: `../img/img-productos/${valor}/${imagen}`;//
     // Determinar ruta de imagen:
     ///////////////////////////////////////////////////////////
-    // ✅ CAMBIO: ahora la ruta ya incluye la subcarpeta si es necesaria (por ejemplo: "moroccanoil/archivo.webp"),
-    // así que eliminamos la carpeta ${valor} del path.
+    // Detecta si está en GitHub Pages
+    const baseURL = window.location.hostname.includes('github.io')
+      ? '/AvantiHairSalon/'  // ⚠️ Reemplazá esto con tu nombre real de repositorio
+      : '/';
+
+    // Genera la ruta de la imagen
     const rutaImg = imagen.startsWith('http')
       ? imagen
-      : `${window.location.pathname.includes('/productos/') ? '../' : ''}img/img-productos/${imagen}`;
+      : `${baseURL}img/img-productos/${imagen}`;
+
 
 
 
