@@ -55,16 +55,21 @@ function renderizarProductosPor(tipo, valor) {
       //? imagen
       //: `../img/img-productos/${valor}/${imagen}`;//
     // Determinar ruta de imagen:
-    ///////////////////////////////////////////////////////////
-    // Detecta si está en GitHub Pages
-    const baseURL = window.location.hostname.includes('github.io')
-      ? '/AvantiHairSalon/'  // ⚠️ Reemplazá esto con tu nombre real de repositorio
-      : '/';
+    //////////////////////////////////////////////////////////
+    // Genera una ruta de imagen que funciona en local y en GitHub Pages
+    function obtenerRutaImagen(imagen) {
+      const base = window.location.origin;
+      const repo = window.location.pathname.split('/')[1]; // nombre del repositorio en GitHub
+      const enGitHub = base.includes('github.io');
+      const baseRuta = enGitHub ? `/${repo}/` : '/';
 
-    // Genera la ruta de la imagen
-    const rutaImg = imagen.startsWith('http')
-      ? imagen
-      : `${baseURL}img/img-productos/${imagen}`;
+      return imagen.startsWith('http')
+        ? imagen
+        : `${baseRuta}img/img-productos/${imagen}`;
+    }
+
+    // Usar así:
+    const rutaImg = obtenerRutaImagen(imagen);
 
 
 
