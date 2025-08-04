@@ -27,59 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-
-// ==== FUNCIONES AL CARGAR DOM ====
+// ==== FUNCIONES AL CARGAR DOM ====  
 document.addEventListener("DOMContentLoaded", () => {
-    // === CARGA DE PRODUCTOS POR MARCA O CATEGORÍA ===
-    const path = window.location.pathname;
-    const match = path.match(/\/productos\/(\w+)\.html$/); // Ej: productos/shampoos.html
-
-    // Detectar si está en GitHub Pages
-    const isGitHubPages = location.hostname.includes("github.io");
-    const basePath = isGitHubPages ? "/AvantiHairSalon" : "";
-
-    if (match) {
-        const marca = match[1];
-        const productos = productosPorMarca?.[marca] || products?.[marca];
-
-        if (productos) {
-            const contenedor = document.getElementById("product-list");
-
-            productos.forEach((prod) => {
-                const card = document.createElement("div");
-                card.className = "categoria-card";
-
-                const img = document.createElement("img");
-                img.src = `${basePath}/img/img-productos/${marca}/${prod.imagen}`;
-                img.alt = prod.nombre;
-                img.onerror = () => img.src = `${basePath}/img/productos/placeholder.jpg`;
-                img.classList.add("product-image");
-
-                const nombre = document.createElement("p");
-                nombre.textContent = prod.nombre;
-
-                const precio = document.createElement("p");
-                precio.textContent = `$${prod.precio || 0}`;
-
-                const boton = document.createElement("button");
-                boton.textContent = "Agregar al carrito";
-                boton.classList.add("btn-hero", "small");
-                boton.onclick = () => {
-                    addToCart(prod.nombre, prod.precio);
-                    alert(`"${prod.nombre}" agregado al carrito`);
-                };
-
-                card.appendChild(img);
-                card.appendChild(nombre);
-                card.appendChild(precio);
-                card.appendChild(boton);
-
-                contenedor.appendChild(card);
-            });
-        }
-    }
-
-    // === Mostrar contador del carrito si existe
+    // === Mostrar contador del carrito si existe ===
     if (typeof updateCartCount === "function") {
         updateCartCount();
     }
@@ -98,4 +48,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
     fadeElements.forEach(el => observer.observe(el));
 });
-    ui
