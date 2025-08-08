@@ -74,7 +74,8 @@
 .explicacion-compra {
     margin-top: 2rem;
     font-size: 1rem;
-    color: #333;
+    color: var(--color-topbar-bg);
+    /* Updated to use custom color variable */
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;

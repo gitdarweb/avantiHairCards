@@ -1,11 +1,10 @@
 /* ===============================
    MÓDULO: carrito-detalle.css
-   Estilos para carrito.html
    =============================== */
 
 #carrito-detalle {
-    padding: 2rem;
-    max-width: 1200px;
+    padding: 2rem 1rem;
+    max-width: 1280px;
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
 }
@@ -17,85 +16,93 @@
     text-align: center;
 }
 
-/* Grid de productos renderizados */
+/* GRID AJUSTADA */
 .carrito-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto 2rem auto;
 }
 
-/* ==== Ítems del carrito ==== */
-.carrito-item {
+/* TARJETA */
+.tarjeta-producto {
     background-color: #FFFFFF;
-    /* Misma tarjeta blanca */
-    border: 1px solid var(--color-card-border);
+    border: 1px solid #e0e0e0;
     border-radius: 16px;
     padding: 1rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-        /* ← empuja el botón abajo */
-    
-
-    min-height: 300px;
-    /* Altura mínima uniforme */
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    position: relative;
-}
-.carrito-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.carrito-item-img {
     width: 100%;
-    height: 160px;
-    object-fit: contain;
-    margin-bottom: 1rem;
-    border-radius: 8px;
+    height: 340px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Imagen */
+.mini-img {
+    width: 100%;
+    height: 180px;
     background-color: #F9F9F9;
-}
-
-.carrito-item-titulo {
-    font-size: 1.05rem;
-    color: var(--color-primary-dark);
-    margin-bottom: 0.5rem;
-    flex-grow: 1;
-    /* Espacio flexible para empujar precio y botón */
-}
-
-.carrito-item-precio {
-    font-weight: 700;
-    color: var(--color-accent);
+    border-radius: 8px;
     margin-bottom: 1rem;
+    overflow: hidden;
+    object-fit: contain;
+    /* Cambiado de cover a contain */
+    display: block;
 }
 
-/* Botón eliminar */
-.carrito-item .btn-action {
-    background: linear-gradient(135deg, var(--color-secondary-dark) 0%, var(--color-primary-dark) 100%);
+/* Contenido */
+.info-producto {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 0 0.5rem;
+}
+
+.info-producto h3 {
+    font-size: 1rem;
+    color: #062D30;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    line-height: 1.2;
+    min-height: 2.4em;
+    max-height: 2.4em;
+}
+
+.info-producto p {
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.info-producto .btn-hero.small {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
     color: #FFFFFF;
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     margin-top: auto;
-        /* empuja el botón siempre al fondo */
-        width: 100%;
-        /* opcional: que ocupe todo el ancho */
+    width: 100%;
 }
 
-.carrito-item .btn-action:hover {
-    background: var(--color-accent-orange);
+.info-producto .btn-hero.small:hover {
+    background: #e67e22;
     transform: translateY(-2px);
 }
 
@@ -135,7 +142,12 @@
         align-items: stretch;
     }
 
-    .carrito-item-img {
-        height: 120px;
+    .mini-img {
+        height: 150px;
+    }
+
+    .tarjeta-producto {
+        width: 100%;
+        height: 300px;
     }
 }

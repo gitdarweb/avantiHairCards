@@ -3,14 +3,14 @@
    ================================ */
 /* === MÓDULO: CONTACTO AJUSTADO === */
 
+/* contacto.css */
 .contacto-card {
-    background-color: #f9f9f9;
+    background-color:var(--color-accent-gold);
     border: 1px solid #ddd;
     border-radius: 12px;
     padding: 1.2rem;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    margin: 2rem auto;
     max-width: 500px;
 }
 
@@ -33,15 +33,12 @@
     margin-top: 1rem;
 }
 
-/* Estilo base: fondo verde de marca, ícono blanco */
 .contact-icon {
     width: 48px;
     height: 48px;
     border-radius: 50%;
     background-color: #062D30;
-    /* Verde de marca */
     color: white;
-    /* Ícono blanco al inicio */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,7 +46,6 @@
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Hover: fondo blanco, ícono con color original */
 .contact-icon.whatsapp:hover {
     background-color: #fff;
     color: #25D366;

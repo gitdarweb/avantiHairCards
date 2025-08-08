@@ -106,4 +106,15 @@
         font-size: 1rem;
         padding: 10px 6px;
     }
+        /* --- Compatibilidad touch: mostrar efecto como :hover --- */
+        .marca-box.touch-active .marca-nombre {
+            transform: translateY(0%);
+        }
+    
+        /* Opcional: también aplicar el cambio de brillo/scale de la imagen en touch para que se vea igual que hover */
+        .marca-box.touch-active img {
+            filter: brightness(1);
+            transform: scale(1.03);
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
 }

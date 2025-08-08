@@ -1,87 +1,109 @@
-🛍️ Avanti Hair Salon – Tienda Online
-Primera entrega – Proyecto Web
-Sitio en vivo:
-🔗 https://gitdarweb.github.io/AvantiHairSalon/
+Avanti Hair Salon
 
-Este proyecto representa la primera etapa de desarrollo del sitio web para **Avanti Hair Salon**, una tienda online de productos profesionales para el cuidado capilar.
+Demo en vivo: https://gitdarweb.github.io/AvantiHairSalon/
 
-✅ Objetivos cumplidos en esta entrega
+📖 Descripción del proyecto
 
-🧩 Estructura general del sitio
-- Diseño responsivo y modular.
-- Página de inicio (`index.html`) funcional y estéticamente coherente.
-- 12 secciones internas de productos (8 por marca, 4 por tipo de producto), todas conectadas con navegación funcional.
+Avanti Hair Salon es un sitio web de catálogo y tienda online de productos profesionales para el cuidado capilar. Esta versión corresponde a la última etapa de desarrollo, donde se implementaron mejoras de diseño y funcionalidades interactivo-dinámicas según el feedback de diseño recibido.
+📂 Estructura del proyecto
 
-🎨 Diseño visual
-
-- Paleta de colores basada en los colores de marca: **Verde oscuro (`#0D4B4C`)** y **Dorado suave (`#C89F65`)**.
-- Estilo moderno, limpio y profesional.
-- Iconografía con Font Awesome para mejorar la experiencia de usuario.
-- Estética consistente entre todas las secciones del sitio.
-
-📦 Funcionalidades implementadas
-  📂 Navegación completa entre secciones y productos.
-- 🛒 Simulación de carrito (estructura y conexión con `cart.js` funcional).
-- 🔍 Buscador visual en el header (estético, no funcional en esta etapa).
-- 📱 Menú hamburguesa lateral funcional (JS + CSS).
-- 🖱️ Animaciones suaves de entrada con clases `fade-in` y `animate-fade`.
-- 📱 Botón flotante de WhatsApp visible y responsive.
-- 📸 Galería con slider (manual), con transición e indicadores.
-- ✨ Efecto `hover` luminoso aplicado al logo principal de Avanti con sombra verde suave.
-
-💡 Modularización del CSS
-
-Todo el CSS fue organizado en módulos independientes, cada uno con su propósito claro:
-
-📱 Responsive
-
-- Funciona correctamente en pantallas grandes, tablets y celulares.
-- Elementos validados:
-  - Logo centrado con efecto resplandor verde
-  - Menú hamburguesa funcional con botón dorado
-  - Footer adaptable
-  - Botón de WhatsApp flotante perfecto en móvil
-
-📁 Estructura organizada
-txt
-Copiar
-Editar
 AvantiHairSalon/
-├── index.html
-├── carrito.html
-├── terminos.html
-├── privacidad.html
-├── productos/
+├── index.html              # Página principal
+├── carrito.html            # Simulación de carrito y guía de compra
+├── terminos.html           # Términos y condiciones
+├── privacidad.html         # Política de privacidad
+├── productos/              # Páginas de categorías y productos
 │   ├── shampoos.html
 │   ├── acondicionadores.html
 │   └── ...
-├── styles.css
-├── main.js
-├── cart.js
-├── slider.js
-├── products.js
-├── img/
-│   ├── logos/
-│   ├── categorias/
-│   └── salon/
+├── css/                    # Módulos CSS separados
+│   ├── main.css
+│   ├── productos.css
+│   └── carrito.css
+├── js/                     # Lógica JS modular
+│   ├── main.js             # Menú, interacción general
+│   ├── products.js         # Renderizado dinámico de productos
+│   ├── cart.js             # Carrito (LocalStorage mock)
+│   └── slider.js           # Carrusel de imágenes
+├── fonts/                  # Tipografías personalizadas
+├── img/                    # Imágenes y assets estáticos
+└── .vscode/                # Configuración de editor (opcional)
 
-🚀 Próximos pasos:
-🔜 Segunda etapa (en desarrollo)
+🛠 Tecnologías utilizadas
 
-Carrito de compras dinámico (JS + LocalStorage).
+HTML5
 
-- Activar buscador.
-- Integrar pedidos por WhatsApp o base de datos.
-- Accesibilidad y etiquetas `aria`.
-- Filtros por categoría.
-- Mejoras en SEO y carga de imágenes.
-git add .
-git commit -m "desarrollo en estado avanzado , etapa de detalles."
-git push
+CSS3 (modular)
 
-💼 Desarrollado por
-Dario Duarte
-Programador Universitario – Proyecto: Avanti Hair Salon
-📍 La Plata, Argentina
-📱 WhatsApp: +54 9 221 6908851
-🌐 https://gitdarweb.github.io/AvantiHairSalon/
+JavaScript (ES6+): módulos nativos
+
+Font Awesome para iconografía
+
+GitHub Pages para despliegue estático
+
+🚀 Flujo de navegación
+
+Home (index.html): visión general, marcas y categorías.
+
+Catálogos (productos/*.html): páginas por marca y por tipo de producto.
+
+Cómo Comprar (carrito.html): simulación de carrito y pasos para coordinar la compra por WhatsApp.
+
+Nosotras (sección dentro de index.html): presentación de la marca.
+
+Contacto (footer y sección dentro de index.html): teléfono, Instagram y formulario mock.
+
+Términos y Privacidad (terminos.html, privacidad.html).
+
+✅ Funcionalidades implementadas
+
+Renderizado dinámico de listados de productos desde products.js.
+
+Carrito de compras simulado con almacenamiento en LocalStorage (cart.js).
+
+Menú hamburguesa responsive y cierre automático (main.js).
+
+Carrusel manual de imágenes (slider.js).
+
+Botón flotante de WhatsApp con acceso directo.
+
+Animaciones de fade-in y hover states refinados.
+
+Diseño responsivo en desktop, tablet y mobile.
+
+Accesibilidad inicial: atributos alt, focus states en enlaces.
+
+⚙️ Cómo ejecutar localmente
+
+Clona el repositorio:
+
+git clone https://github.com/gitdarweb/AvantiHairSalon.git
+
+Abre index.html en tu navegador.
+
+Para simular la navegación completa, usa un servidor local (opcional):
+
+# Con Python 3
+python -m http.server 8000
+
+Accede a http://localhost:8000.
+
+🔜 Próximos pasos
+
+Ajustes finales de diseño tras la revisión de la diseñadora.
+
+Integración de buscador y filtros (JS).
+
+Conexión real de carrito con API o WhatsApp Business API.
+
+Optimización SEO y performance (lazy-loading de imágenes).
+
+📬 Contacto
+
+Desarrollador: Dario Duarte (La Plata, Argentina)
+
+WhatsApp: +54 9 221 3533461
+
+Email: duartedario780@gmail.com
+
+Preparado para la presentación final a la diseñadora de Avanti.

@@ -1,12 +1,17 @@
-/* Contenedor general con fondo verde institucional */
+/* === COMPONENTE: iconos-productos (sección productos del index) === */
+
 .iconos-productos {
     padding: 2rem 1rem;
-    background-color: var(--color-accent-gold);
-    /* Verde institucional */
+
+    /* Fondo verde institucional - desactivado por ahora */
+    /* background-color: var(--color-accent-gold); */
+
+    background-color: #ffffff;
+    /* blanco para diseño limpio */
+
     text-align: center;
 }
 
-/* Grid de íconos */
 .grid-iconos {
     display: flex;
     justify-content: center;
@@ -16,7 +21,6 @@
     margin: 0 auto;
 }
 
-/* Cada ícono y texto */
 .icono-producto {
     flex: 1 1 120px;
     max-width: 160px;
@@ -25,14 +29,15 @@
     align-items: center;
     text-decoration: none;
     background-color: #fff;
-    /* Tarjeta blanca sobre fondo verde */
+
+    /* ✅ Borde más grueso y más notorio */
+    border: 2px solid var(--color-accent-green);
     border-radius: 12px;
     padding: 1rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-/* Icono centrado */
 .icono-producto img {
     width: 60px;
     height: 60px;
@@ -41,37 +46,39 @@
     transition: transform 0.25s ease;
 }
 
-/* Texto */
 .icono-producto p {
     font-family: var(--font-sans);
     font-size: 0.85rem;
     font-weight: var(--font-regular);
     color: var(--color-primary-darker);
-    /* texto oscuro */
     margin: 0;
     line-height: 1.2;
     text-transform: capitalize;
 }
 
-/* Hover */
+/* ✅ Hover: sin naranja, usamos verde más claro */
 .icono-producto:hover {
     transform: translateY(-4px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+    /* Cambio visual de borde al pasar el mouse */
+    border-color: rgba(13, 75, 76, 0.4);
 }
 
 .icono-producto:hover img {
     transform: scale(1.1);
-    filter: brightness(1.1) drop-shadow(0 0 6px var(--color-accent-orange));
+    filter: brightness(1.1) drop-shadow(0 0 6px rgba(13, 75, 76, 0.4));
 }
 
 .icono-producto:hover p {
-    text-shadow: 0 0 4px var(--color-accent-orange);
+    text-shadow: 0 0 4px rgba(13, 75, 76, 0.4);
 }
 
-/* Click */
+/* ✅ Active: click con efecto verde claro */
 .icono-producto:active {
-    transform: scale(0.95);
-    box-shadow: 0 0 8px var(--color-primary-dark);
+    transform: scale(0.97);
+    box-shadow: 0 0 10px rgba(13, 75, 76, 0.4);
+    border-color: rgba(13, 75, 76, 0.4);
 }
 
 .icono-producto:active img {
@@ -79,7 +86,7 @@
     transform: scale(1);
 }
 
-/* Responsive móvil */
+/* === Responsive === */
 @media (max-width: 480px) {
     .grid-iconos {
         gap: 1rem;
@@ -91,7 +98,6 @@
     }
 }
 
-/* En pantallas grandes, agrandamos los íconos */
 @media (min-width: 768px) {
     .icono-producto img {
         width: 80px;
@@ -105,4 +111,4 @@
     .icono-producto {
         flex: 1 1 140px;
     }
-}
+} 

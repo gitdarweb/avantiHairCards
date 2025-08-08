@@ -91,6 +91,12 @@
     max-height: 180px;
     object-fit: contain;
     margin-bottom: 1rem;
+    display: block;
+    /* Ensures the image behaves as a block element */
+    margin-left: auto;
+    /* Centers horizontally */
+    margin-right: auto;
+    /* Centers horizontally */
 }
 
 /* Título */

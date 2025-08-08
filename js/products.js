@@ -69,10 +69,10 @@ const productosPorMarca = {
         { nombre: "Cofia", precio: 0, imagen: "avantibox/cofia.png" }
     ],
     karseell: [
-        { nombre: "Máscara 500ml", precio: 0, imagen: "karseell-1024x1024.png" }
+        { nombre: "Máscara 500ml", precio: 0, imagen: "karseell/karseell-1024x1024.png" }
     ],
     cepillos: [
-        { nombre: "Cepillo Eurostil", precio: 0, imagen: "karseell-1024x1024.png" },
+        { nombre: "Cepillo Eurostil", precio: 0, imagen: "/karseellkarseell/karseell-1024x1024.png" },
         { nombre: "Masajeador", precio: 0, imagen: "karseell-1024x1024.png" }
     ]
 };
@@ -83,12 +83,12 @@ const products = {};
 products["shampoos"] = [
     { nombre: "Hydration Shampoo 250ml", precio: 0, imagen:  "moroccanoil/Hydration-Shampoo-250ml.webp" },
     { nombre: "Curly Shampoo 250ml", precio: 0, imagen: "moroccanoil/SHAMPOO_CURLY.webp" },
-    { nombre: "Repair Shampoo 250ml", precio: 0, imagen: "repair.jpg" },
-    { nombre: "Frizz Control Shampoo 250ml", precio: 0, imagen: "frizz.jpg" },
-    { nombre: "Color Care Shampoo 250ml", precio: 0, imagen: "colorcare.jpg" },
-    { nombre: "Recovery Shampoo 400ml", precio: 0, imagen: "recovery.jpg" },
-    { nombre: "Resurrección Shampoo 400ml", precio: 0, imagen: "resurreccion.jpg" },
-    { nombre: "Colour Goddess Shampoo 400ml", precio: 0, imagen: "goddess.jpg" }
+    { nombre: "Repair Shampoo 250ml", precio: 0, imagen: "moroccanoil/Repair-Shampoo-250ml.webp" },
+    { nombre: "Frizz Control Shampoo 250ml", precio: 0, imagen: "moroccanoil/SHAMPOO_FRIZZ-CONTROL_250mL_.webp"},
+    { nombre: "Color Care Shampoo 250ml", precio: 0, imagen: "moroccanoil/Color-Care-Shampoo.webp" },
+    { nombre: "Recovery Shampoo 400ml", precio: 0, imagen: "tigi/recovery-shampoo-jpg.jpg" },
+    { nombre: "Resurrección Shampoo 400ml", precio: 0, imagen: "tigi/resurrection-shampoo.webp" },
+    { nombre: "Colour Goddess Shampoo 400ml", precio: 0, imagen: "tigi/goddess-shampoo.webp" }
 ];
 
 products["acondicionadores"] = [
@@ -112,11 +112,11 @@ products["mascaras"] = [
 products["serums"] = [
     { nombre: "Equave Liss Look Serum 85ml", precio: 0, imagen: "revlon/equave-bifase.png" },
     { nombre: "Nutri Advance Serum 63ml", precio: 0, imagen: "hairssime/nutri-serum.webp" },
-    { nombre: "Tratamiento de Argán Clásico 25ml", precio: 0, imagen: "moroccanoil/Color-Care-Conditioner.webp" },
-    { nombre: "Tratamiento de Argán Clásico 50ml", precio: 0, imagen: "argan_50.jpg" },
-    { nombre: "Tratamiento de Argán Clásico 100ml", precio: 0, imagen: "argan_100.jpg" },
-    { nombre: "Tratamiento de Argán Light 25ml", precio: 0, imagen: "argan_light_25.jpg" },
-    { nombre: "Tratamiento de Argán Light 50ml", precio: 0, imagen: "argan_light_50.jpg" },
-    { nombre: "Tratamiento de Argán Light 100ml", precio: 0, imagen: "argan_light_100.jpg" }
+    { nombre: "Tratamiento de Argán Clásico 25ml", precio: 0, imagen: "moroccanoil/Tratamiento-Argan-Light-25-50-y-100ml.webp" },
+    { nombre: "Tratamiento de Argán Clásico 50ml", precio: 0, imagen: "moroccanoil/Tratamiento-Argan-Light-25-50-y-100ml.webp" },
+    { nombre: "Tratamiento de Argán Clásico 100ml", precio: 0, imagen: "moroccanoil/Tratamiento-Argan-Light-25-50-y-100ml.webp" },
+    { nombre: "Tratamiento de Argán Light 25ml", precio: 0, imagen: "moroccanoil/Tratamiento-Argan-Clásico-25-50-y-100ml.webp" },
+    { nombre: "Tratamiento de Argán Light 50ml", precio: 0, imagen: "moroccanoil/Tratamiento-Argan-Clásico-25-50-y-100ml.webp" },
+    { nombre: "Tratamiento de Argán Light 100ml", precio: 0, imagen: "moroccanoil/Tratamiento-Argan-Clásico-25-50-y-100ml.webp" }
 ];
   

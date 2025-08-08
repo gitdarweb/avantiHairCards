@@ -1,5 +1,7 @@
-/* ===================== RESPONSIVE, ajustes para móviles. ===================== */
+/* ===================== RESPONSIVE, ajustes para móviles y tablets ===================== */
 /* archivo: responsive.css */
+
+/* === MÓVIL: hasta 768px === */
 @media (max-width: 768px) {
     .main-nav {
         display: none;
@@ -7,19 +9,98 @@
 
     .burger {
         display: flex;
+        margin-top: 1rem;
+        justify-content: center;
     }
 
     .site-header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        padding: var(--spacing-md) var(--spacing-lg);
     }
 
-    .search-bar {
-        margin-top: 1rem;
-        width: 100%;
+    .site-header .logo {
+        margin-bottom: 1rem;
     }
 
+    .search-bar,
     .user-actions {
+        width: 100%;
+        display: flex;
+        justify-content: center;
         margin-top: 1rem;
+    }
+}
+
+/* === TABLETS / INTERMEDIO: 769px a 1279px === */
+@media (min-width: 769px) and (max-width: 1279px) {
+    .burger {
+        display: none;
+    }
+
+    .main-nav {
+        display: flex;
+        /* flujo flex normal */
+        position: static;
+        /* sin absolute */
+        transform: none;
+        /* quita translate */
+        margin: 0 auto;
+        /* centra en su contenedor */
+        gap: var(--spacing-lg);
+    }
+
+    .main-nav ul {
+        display: flex;
+        gap: var(--spacing-lg);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-nav li a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+    }
+
+    .site-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+/* === ESCRITORIO GRANDE: desde 1280px en adelante === */
+@media (min-width: 1280px) {
+    .burger {
+        display: none;
+    }
+
+    .main-nav {
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .main-nav ul {
+        display: flex;
+        gap: var(--spacing-lg);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-nav li a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+    }
+
+    .site-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
 }

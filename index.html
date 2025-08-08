@@ -26,10 +26,7 @@
     <!-- ✅ Estilo principal del sitio -->
     <link rel="stylesheet" href="css/styles.css" />
 
-    <!-- ✅ Google Fonts: Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+   
 
     <!-- ✅ FontAwesome: íconos sociales / carrito / menú -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -39,7 +36,10 @@
 <body>
 <!-- ==== TOP BAR ==== -->
 <div class="top-bar">
-    <p>Avanti Tienda Online | Productos Profesionales</p>
+    <p>
+        <span class="topbar-normal">Tienda Online</span> |
+        <span class="topbar-bold">Productos Profesionales</span>
+    </p>
 </div>
 
 <!-- ==== HEADER ==== -->
@@ -109,89 +109,96 @@
         <span class="dot"></span>
     </div>
 </section>
-
-<main>
-    <!-- MARCAS DESTACADAS -->
-    <section id="categorias" class="fade-in">
-        <h2 class="section-title">Catálogos por Marca</h2>
+    <main>
+        <!-- MARCAS DESTACADAS -->
+        <section id="categorias" class="fade-in contenedor-limitado">
+            <h2 class="section-title">Catálogos por Marca</h2>
     
-        <div class="grid-marcas">
-            <a class="marca-box" href="productos/moroccanoil.html">
-                <img src="img/portadas/portada-moroccanoil.jpg" alt="Moroccanoil" />
-                <span class="marca-nombre">Moroccanoil</span>
-            </a>
+            <div class="grid-marcas">
+                <a class="marca-box" href="productos/moroccanoil.html">
+                    <img src="img/portadas/portada-moroccanoil.jpg" alt="Moroccanoil" />
+                    <span class="marca-nombre">Moroccanoil</span>
+                </a>
     
-            <a class="marca-box" href="productos/tigi.html">
-                <img src="img/portadas/portada-TIGI.jpg" alt="Tigi" />
-                <span class="marca-nombre">TIGI</span>
-            </a>
+                <a class="marca-box" href="productos/tigi.html">
+                    <img src="img/portadas/portada-TIGI.jpg" alt="Tigi" />
+                    <span class="marca-nombre">TIGI</span>
+                </a>
     
-            <a class="marca-box" href="productos/revlon.html">
-                <img src="img/portadas/portada-revlon.png" alt="Revlon" />
-                <span class="marca-nombre">Revlon</span>
-            </a>
+                <a class="marca-box" href="productos/revlon.html">
+                    <img src="img/portadas/portada-revlon.png" alt="Revlon" />
+                    <span class="marca-nombre">Revlon</span>
+                </a>
     
-            <a class="marca-box" href="productos/olaplex.html">
-                <img src="img/portadas/portada-olaplex.png" alt="Olaplex" />
-                <span class="marca-nombre">Olaplex</span>
-            </a>
+                <a class="marca-box" href="productos/olaplex.html">
+                    <img src="img/portadas/portada-olaplex.png" alt="Olaplex" />
+                    <span class="marca-nombre">Olaplex</span>
+                </a>
     
-            <a class="marca-box" href="productos/hairssime.html">
-                <img src="img/portadas/Portada-Hairssime.jpg" alt="Hairssime" />
-                <span class="marca-nombre">Hairssime</span>
-            </a>
+                <a class="marca-box" href="productos/hairssime.html">
+                    <img src="img/portadas/Portada-Hairssime.jpg" alt="Hairssime" />
+                    <span class="marca-nombre">Hairssime</span>
+                </a>
     
-            <a class="marca-box" href="productos/avantibox.html">
-                <img src="img/portadas/portada-avantibox.png" alt="Avanti Box" />
-                <span class="marca-nombre">Avanti Box</span>
-            </a>
+                <a class="marca-box" href="productos/avantibox.html">
+                    <img src="img/portadas/portada-avantibox.png" alt="Avanti Box" />
+                    <span class="marca-nombre">Avanti Box</span>
+                </a>
     
-            <a class="marca-box" href="productos/karseell.html">
-                <img src="img/portadas/portada-TIGI.jpg" alt="Karseell" />
-                <span class="marca-nombre">Karseell</span>
-            </a>
+                <a class="marca-box" href="productos/karseell.html">
+                    <img src="img/portadas/portada-TIGI.jpg" alt="Karseell" />
+                    <span class="marca-nombre">Karseell</span>
+                </a>
     
-            <a class="marca-box" href="productos/cepillos.html">
-                <img src="img/portadas/portada-moroccanoil.jpg" alt="Cepillos" />
-                <span class="marca-nombre">Cepillos</span>
-            </a>
+                <a class="marca-box" href="productos/cepillos.html">
+                    <img src="img/portadas/portada-moroccanoil.jpg" alt="Cepillos" />
+                    <span class="marca-nombre">Cepillos</span>
+                </a>
+            </div>
+        </section>
+    
+    <!-- SEGMENTOS DE PRODUCTOS -->
+    <section class="fade-in">
+        <div class="contenedor-limitado">
+            <h2 class="section-title">Segmentos de Productos</h2>
         </div>
     </section>
-
-        <!-- ✅ NUEVO SEPARADOR DE MARCA -->
-        <section class="separador-avanti fade-in">
-            <p><i class="fas fa-leaf"></i> Elegí calidad, elegí Avanti</p>
-            </section>
-            <!-- SEGMENTOS DE PRODUCTOS -->
-            <section id="productos" class="fade-in">
-                <h2 class="section-title">Segmentos de Productos</h2>
-            </section>
+    
     <!-- sección de productos -->
-    <section class="iconos-productos fade-in" id="productos">
-        <div class="grid-iconos">
-            <a href="productos/shampoos.html" class="icono-producto">
-                <img src="img/segmentos/shampoo.png" alt="Shampoos" />
-                <p>Shampoos</p>
-            </a>
-            <a href="productos/acondicionadores.html" class="icono-producto">
-                <img src="img/segmentos/acondicionador.png" alt="Acondicionadores" />
-                <p>Acondicionadores</p>
-            </a>
-            <a href="productos/mascaras.html" class="icono-producto">
-                <img src="img/segmentos/mascara.png" alt="Mascarás" />
-                <p>Mascarás</p>
-            </a>
-            <a href="productos/serums.html" class="icono-producto">
-                <img src="img/segmentos/serum.png" alt="Serums" />
-                <p>Serums</p>
-            </a>
+    <section id="productos" class="iconos-productos fade-in">
+        <div class="contenedor-limitado">
+            <div class="scroll-wrapper">
+                <div class="grid-iconos">
+                    <a href="productos/shampoos.html" class="icono-producto">
+                        <img src="img/segmentos/shampoo.png" alt="Shampoos" />
+                        <p>Shampoos</p>
+                    </a>
+                    <a href="productos/acondicionadores.html" class="icono-producto">
+                        <img src="img/segmentos/acondicionador.png" alt="Acondicionadores" />
+                        <p>Acondicionadores</p>
+                    </a>
+                    <a href="productos/mascaras.html" class="icono-producto">
+                        <img src="img/segmentos/mascara.png" alt="Mascarás" />
+                        <p>Mascarás</p>
+                    </a>
+                    <a href="productos/serums.html" class="icono-producto">
+                        <img src="img/segmentos/serum.png" alt="Serums" />
+                        <p>Serums</p>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
+<!-- ✅ NUEVO SEPARADOR DE MARCA -->
+<section class="separador-avanti fade-in">
+        <p><i class="fas fa-leaf"></i> Elegí calidad, elegí Avanti</p>
+    </section>
 
-<!-- Separador visual -->
-<div class="separador-avanti">
+    <!-- Separador visual -->
+<!--<div class="separador-avanti">
     <i class="fas fa-tags"></i> Lo que necesitás, a un clic de distancia
-</div>
+</div>-->
+
 
 
         <!-- BENEFICIOS DESTACADOS -->
@@ -202,35 +209,39 @@
                     <h3>Enviamos tu compra</h3>
                     <p>Entregas a todo el país</p>
                 </div>
-                <div class="beneficio animate-fade">
-                    <img src="img/comoComprar/Medios.de.pago.png" alt="Pagá como quieras" />
-                    <h3>Pagá como quieras</h3>
-                    <p>Tarjetas de crédito o efectivo</p>
-                </div>
+               
                 <div class="beneficio animate-fade">
                     <img src="img/comoComprar/compra.segura.png" alt="Comprá con seguridad" />
                     <h3>Comprá con seguridad</h3>
                     <p>Todos tus datos están protegidos</p>
                 </div>
+                <div class="beneficio animate-fade">
+                    <img src="img/comoComprar/Medios.de.pago.png" alt="Pagá como quieras" />
+                    <h3>Pagá como quieras</h3>
+                    <p>Tarjetas de crédito o efectivo</p>
+                </div>
             </div>
             <p class="explicacion-compra">
-                Elegí tus productos, agregalos al carrito y coordiná tu compra por WhatsApp. Envíos a todo el país o retiro por
-                salón.
+                <strong>Elegí tus productos, agregalos al carrito y coordiná tu compra por WhatsApp.<br> Envíos a todo el país o retiro por
+                salón.</strong>
             </p>
         </section>
-<!--3. Separador de estilo visual sin texto -->
-<div class="separador-estilo fade-in"></div>
+        
+        <!-- ✅ NUEVO SEPARADOR DE MARCA -->
+        <!--3. Separador de estilo visual sin texto -->
+        <div class="separador-estilo fade-in"></div>
+       
+
 
         <!-- NOSOTRAS -->
         <section class="hero-info fade-in" id="nosotras">
             <div class="hero-info-content">
                 <div class="hero-info-texto">
                     <h2>Nosotras</h2>
-                    <p>En Avanti cuidamos cada detalle para brindarte una experiencia cálida y personalizada.
-                    Ahora también podés comprar desde casa los productos y marcas que usamos y recomendamos en el salón.
-                    🌿 Fácil, confiable y con la calidad de siempre.
-                    
-                    Usá nuestro carrito de compras y elegí con tranquilidad.</p>
+                    <p>En Avanti cuidamos cada detalle para brindarte<br> una experiencia cálida y personalizada.<br>
+                    Ahora también podés comprar desde casa<br> los productos y marcas que usamos en el salón.<br>
+                    Fácil, confiable y con la calidad de siempre.<br>
+                    Usá nuestro carrito de compras<br> y elegí con tranquilidad.</p>
                     <a href="#contacto" class="btn-hero">Contáctanos</a>
                 </div>
                 <div class="hero-info-imagen">
@@ -238,12 +249,14 @@
                 </div>
             </div>
         </section>
-
+<!-- ✅ NUEVO SEPARADOR DE MARCA -->
+<!--3. Separador de estilo visual sin texto -->
+<div class="separador-estilo fade-in"></div>
         <!-- INFO Y CARRITO -->
         <div class="info-sections fade-in">
             <!-- Contacto compacto -->
             <section id="contacto" class="info-card contacto-card">
-                <h2><i class="fas fa-envelope-open-text"></i> Contacto</h2>
+                <h2><i class="fas fa-envelope-open-text"></i> Redes </h2>
                 <div class="contacto-links">
                     <a href="https://wa.me/5492216908851" target="_blank" aria-label="WhatsApp" class="contact-icon whatsapp">
                         <i class="fab fa-whatsapp"></i>
@@ -261,12 +274,12 @@
         
             <!-- Tu carrito -->
             <section id="carrito" class="info-card carrito-card">
-                <h2><i class="fas fa-shopping-cart"></i> Tu Carrito</h2>
+                <h2><i class="fas fa-shopping-cart"></i> Tu carrito</h2>
                 <p id="carrito-status">(Carrito vacío por ahora)</p>
-                <a href="carrito.html" class="btn-hero small">Ver productos</a>
+                <a href="carrito.html" class="btn-hero">Ver productos</a>
             </section>
-
             </div>
+            <div class="separador-estilo fade-in"></div>
         </main> <!-- ← CIERRE CORRECTO DE MAIN -->
 
         <!-- ==== FOOTER ==== -->
@@ -317,13 +330,18 @@
         <a href="https://wa.me/5492216908851" class="whatsapp-float" target="_blank" aria-label="Chatear por WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
+<!-- Scripts -->
+<script src="js/products.js"></script>
+<script src="js/carts.js"></script>
+<script src="js/main.js"></script>
+<script src="js/marca-touch.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/home.js"></script> <!-- genera o gestiona contenido -->
+<script src="js/marcas-categorias.js"></script> <!-- efecto visual sobre elementos ya presentes -->
+<script src="js/touch-hover.js"></script> <!-- efecto táctil y hover -->
 
-        <!-- Scripts -->
-        <script src="js/products.js"></script>
-        <script src="js/carts.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/slider.js"></script>
-        <script src="js/home.js"></script> <!-- ← genera o gestiona contenido -->
-        <script src="js/marcas-categorias.js"></script> <!-- ← efecto visual sobre elementos ya presentes -->
+    
+
+    
     </body>
 </html>

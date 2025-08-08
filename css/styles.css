@@ -7,6 +7,8 @@
 
 /* 3. BASE: estilos globales (body, tipografía base, headings, párrafos, utilidades) */
 @import url('./componentes/base.css');
+/* 3.1 LAYOUT: contenedor y padding general */
+/*@import url('./componentes/layout.css');*/
 
 /* 4. BOTONES (globales): unifica .btn-hero y similares */
 @import url('./componentes/botones.css');
@@ -14,6 +16,7 @@
 /* 5. COMPONENTES GLOBALES (slider, marcas, separadores, etc.) */
 @import url('./componentes/slider.css');
 @import url('./componentes/separadores.css');
+@import url('./componentes/touch-hover.css');
 
 /* 6. HEADER / SIDEBAR / NAVIGATION */
 @import url('./componentes/header/estructura.css');
@@ -41,3 +44,4 @@
 @import url('./componentes/legal.css');
 /* 10. ANIMACIONES */
 @import url('./componentes/animations.css');
+/* 11. PRODUCTOS: estilos específicos para páginas de productos */

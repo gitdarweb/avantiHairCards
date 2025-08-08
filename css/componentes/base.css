@@ -48,6 +48,7 @@ p {
     border-radius: 0 6px 6px 0;
     animation: fadeInUp 0.5s ease-out;
 }
+
 /* === ANIMACIONES FADE-IN CON SCROLL === */
 .fade-in {
     opacity: 0;
@@ -59,6 +60,17 @@ p {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* — Pequeño padding lateral SÓLO en el contenido principal — */
+.contenedor-limitado,
+.info-sections,
+.footer-container {
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+}
+
+
+
 /* Responsive ajustes para solapa */
 @media (max-width: 768px) {
     .section-title {
@@ -98,5 +110,30 @@ p {
 @media (max-width: 480px) {
     html {
         font-size: 14px;
+    }
+}
+/* Main CSS file (e.g., styles.css) */
+.info-sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.info-sections > section {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .info-sections > section {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 769px) {
+    .info-sections > section {
+        flex: 1 1 45%;
+        max-width: 500px;
     }
 }

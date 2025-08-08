@@ -1,7 +1,7 @@
 /* ===================== TOP BAR ===================== */
 /* archivo: estructura.css */
 .top-bar {
-    background-color:var(--color-primary-darker);
+    background-color: var(--color-topbar-bg);
     /* azul verdoso oscuro */
     color: white;
     font-family: var(--font-sans);
@@ -10,10 +10,41 @@
     padding: var(--spacing-sm) 0;
 }
 
+.topbar-normal {
+    color: rgba(255, 255, 255, 0.75);
+    /* blanco intermedio más oscuro */
+    font-weight: 400;
+    /* peso intermedio */
+}
+
+.topbar-bold {
+    font-weight: 700;
+    /* negrita */
+    color: white;
+}
+
 /* ===================== HEADER BASE ===================== */
+/*— Evita que el header tape cualquier sección al hacer scroll a un ancla —*/
+html {
+    /* scroll-padding-top: espacio que el navegador descontará al hacer scroll a #id */
+    scroll-padding-top: calc(
+            /* padding vertical del top-bar (arriba + abajo) */
+            var(--spacing-sm) * 2
+            /* +
+       espacio interno (padding) top de .site-header */
+            + var(--spacing-md)
+            /* +
+       padding bottom de .site-header (mismo valor) */
+            + var(--spacing-md)
+            /* +
+       altura máxima del logo (3rem) para asegurar cobertura */
+            + 3rem);
+}
 /* archivo: estructura.css */
 .site-header {
-    background: url('../../../img/branding/fondo-original.png') center/cover no-repeat, var(--color-primary-dark);
+    background: url('/img/branding/fondo-original.png') center/cover no-repeat, var(--color-primary-dark);
+   
+    /* Igual que el header */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -22,6 +53,7 @@
     padding: var(--spacing-md) var(--spacing-lg);
     position: relative;
 }
+
 
 /* ===================== LOGO ===================== */
 .site-header .logo img {

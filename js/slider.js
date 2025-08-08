@@ -2,26 +2,30 @@
 document.addEventListener("DOMContentLoaded", () => {
     const track = document.getElementById("slider-track");
     const dots = Array.from(document.querySelectorAll("#slider-dots .dot"));
+
+    // ✅ Si no hay slider, no hacer nada
+    if (!track || dots.length === 0) {
+        console.warn("slider.js: No se encontró el slider en esta página.");
+        return;
+    }
+
     const totalSlides = dots.length;
     let currentIndex = 0;
     let intervalId;
 
     function goToSlide(index) {
-        // Ajusta la posición del track
         track.style.transform = `translateX(-${index * 100}%)`;
-        // Actualiza clases de los dots
-        dots.forEach((dot, i) => {
-            dot.classList.toggle("active", i === index);
-        });
+        dots.forEach((dot, i) =>
+            dot.classList.toggle("active", i === index)
+        );
         currentIndex = index;
     }
 
     function nextSlide() {
-        const next = (currentIndex + 1) % totalSlides;
-        goToSlide(next);
+        goToSlide((currentIndex + 1) % totalSlides);
     }
 
-    // Configura evento click en cada punto
+    // Click en cada dot
     dots.forEach((dot, i) => {
         dot.addEventListener("click", () => {
             clearInterval(intervalId);
@@ -30,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Arranca la auto-reproducción
+    // Autoplay inicial
     intervalId = setInterval(nextSlide, 5000);
 });
-// --- End of js/slider.js ---

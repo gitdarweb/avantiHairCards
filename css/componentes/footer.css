@@ -3,7 +3,8 @@
    ======================== */
 
 .site-footer {
-    background: url('../../img/branding/fondo-original.png') center/cover no-repeat, var(--color-primary-dark);
+    background: var(--color-topbar-bg);
+
     color: var(--color-accent-gold);
     display: flex;
     flex-direction: column;
@@ -34,12 +35,14 @@
     font-weight: var(--font-light);
     color: #fff;
     font-size: 1.2rem;
+    
 }
 
 .footer-column p {
     line-height: 1.4;
     font-size: 0.95rem;
     color: #ccc;
+    
 }
 
 .footer-column ul {
