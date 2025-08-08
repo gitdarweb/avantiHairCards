@@ -42,7 +42,7 @@ html {
 }
 /* archivo: estructura.css */
 .site-header {
-    background: url('/img/branding/fondo-original.png') center/cover no-repeat, var(--color-primary-dark);
+    background: url('../../../img/branding/fondo-original.png') center/cover no-repeat, var(--color-primary-dark);
    
     /* Igual que el header */
     display: flex;
