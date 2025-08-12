@@ -36,10 +36,10 @@
         </nav>
     
         <!-- Buscador -->
-        <div class="search-bar">
+    <!-- <div class="search-bar">
             <input type="text" placeholder="¿Qué estás buscando?" />
             <button class="btn-search"><i class="fas fa-search"></i></button>
-        </div>
+        </div>-->
     
         <!-- Carrito -->
         <div class="user-actions">
@@ -81,7 +81,10 @@
     
             <div class="carrito-botones">
                 <button onclick="vaciarCarrito()" class="btn-hero">Vaciar carrito</button>
-                <button onclick="finalizarCompra()" class="btn-hero">Finalizar compra</button>
+                <!--reemplazamos por este botón con id.-->
+                 <button onclick="finalizarCompra()" class="btn-hero">Finalizar compra</button>
+                <!--<button id="botonPago" class="btn-hero">Finalizar compra</button>-->
+
             </div>
         </div>
     </main>
@@ -141,6 +144,7 @@
     <script src="js/carts.js"></script>
     <script src="js/main.js"></script>
     <script src="js/slider.js"></script>
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
     <script>
         // Al cargar la página, mostrar carrito y actualizar contador en el header
         document.addEventListener("DOMContentLoaded", () => {
@@ -148,6 +152,8 @@
             actualizarContadorCarrito();
         });
     </script>
+   
+
 </body>
 
 </html>

@@ -1,4 +1,9 @@
-// carts.js
+// carts.js (versión con debug y uso de cuentas sandbox)
+
+// ------------- CONFIG: pega aquí las credenciales SANDBOX del VENDEDOR -------------
+const SELLER_PUBLIC_KEY = 'APP_USR-1a8e15e1-0fee-465e-8ce5-1d427d58e968';
+const SELLER_ACCESS_TOKEN = 'APP_USR-4080838023543384-081122-462eff38e2541f9127a3cb139d8a5709-2617192212';
+// -------------------------------------------------------------------------------
 
 // ——————————————————————————————
 // 1. Inicialización (más robusta)
@@ -23,7 +28,7 @@ function updateCartCount() {
     if (spanCount) spanCount.textContent = totalItems;
 }
 
-// -- Compatibilidad retro: alias para páginas que llaman a "actualizarContadorCarrito"
+// Alias retro
 if (typeof window.actualizarContadorCarrito === 'undefined') {
     window.actualizarContadorCarrito = function () {
         updateCartCount();
@@ -31,7 +36,7 @@ if (typeof window.actualizarContadorCarrito === 'undefined') {
 }
 
 // ——————————————————————————————
-// 3. Función para agregar al carrito
+// 3. Agregar al carrito
 function agregarAlCarrito(nombre, precio, imagen) {
     const existe = carrito.find(item => item.nombre === nombre);
     if (existe) {
@@ -101,18 +106,99 @@ function vaciarCarrito() {
 }
 
 // ——————————————————————————————
-// 7. Finalizar compra (simulado)
-function finalizarCompra() {
+// 7. Obtener total del carrito (para Mercado Pago)
+function getTotalCarrito() {
+    return carrito.reduce((sum, item) => sum + (item.precio * (item.cantidad || 0)), 0);
+}
+
+// ——————————————————————————————
+// 8. Finalizar compra (SANDBOX) — crea preferencia y abre checkout
+async function finalizarCompra() {
+    console.log('[MP] finalizarCompra iniciada');
     if (carrito.length === 0) {
         alert('El carrito está vacío.');
         return;
     }
-    alert('¡Gracias por tu compra! Serás redirigido al pago.');
-    vaciarCarrito();
+
+    // Inicializar SDK con Public Key del vendedor (sandbox)
+    if (typeof MercadoPago === 'undefined') {
+        alert('SDK de Mercado Pago no cargado. Asegurate de tener <script src="https://sdk.mercadopago.com/js/v2"></script> en carrito.html antes de carts.js');
+        return;
+    }
+
+    const mp = new MercadoPago(SELLER_PUBLIC_KEY, { locale: 'es-AR' });
+
+    const montoTotal = getTotalCarrito();
+    console.log('[MP] Monto total calculado:', montoTotal);
+
+    // Preparar payload
+    const payload = {
+        items: [
+            {
+                title: 'Compra en Avanti Hair Salon',
+                quantity: 1,
+                unit_price: Number(montoTotal) || 0
+            }
+        ],
+        back_urls: {
+            success: 'https://gitdarweb.github.io/AvantiHairSalon/pago-exitoso.html',
+            failure: 'https://gitdarweb.github.io/AvantiHairSalon/pago-fallido.html',
+            pending: 'https://gitdarweb.github.io/AvantiHairSalon/pago-pendiente.html'
+        },
+        auto_return: 'approved'
+    };
+
+    try {
+        const resp = await fetch('https://api.mercadopago.com/checkout/preferences', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                // <-- aquí va el Access Token SANDBOX del VENDEDOR. Formato correcto: 'Bearer TEST-...'
+                'Authorization': 'Bearer ' + SELLER_ACCESS_TOKEN
+            },
+            body: JSON.stringify(payload)
+        });
+
+        // DEBUG: ver status y json
+        console.log('[MP] fetch status:', resp.status, resp.statusText);
+        const data = await resp.json();
+        console.log('[MP] respuesta crear preferencia:', data);
+
+        // Si hay sandbox_init_point lo usamos (mejor para sandbox). Sino usamos mp.checkout con id.
+        const sandboxUrl = data.sandbox_init_point || data.init_point || null;
+
+        if (sandboxUrl) {
+            console.log('[MP] Abriendo sandbox_init_point:', sandboxUrl);
+            // Abrir en nueva pestaña para no perder la tienda
+            window.open(sandboxUrl, '_blank');
+            // Opcional: vaciar carrito aquí si ya querés resetear (comenta si no)
+            // vaciarCarrito();
+        } else if (data.id) {
+            console.log('[MP] Iniciando mp.checkout con preference id:', data.id);
+            mp.checkout({
+                preference: { id: data.id },
+                autoOpen: true
+            });
+            // vaciarCarrito();
+        } else {
+            alert('No se pudo crear la preferencia de pago. Revisá la consola.');
+            console.error('Respuesta inesperada de MP:', data);
+        }
+    } catch (err) {
+        console.error('Error creando preferencia MP:', err);
+        if (err && err.message && /CORS|NetworkError/i.test(err.message)) {
+            alert('Error de conexión (CORS/Network). Ver consola para detalles. Si ocurre, usá el backend de prueba (ver fallback).');
+        } else {
+            alert('Error en la conexión con Mercado Pago. Revisá la consola.');
+        }
+    }
 }
 
+// Exponer globalmente (por si HTML usa onclick="finalizarCompra()")
+window.finalizarCompra = finalizarCompra;
+
 // ——————————————————————————————
-// 8. Auto-ejecución al cargar
+// 9. Auto-ejecución al cargar
 document.addEventListener('DOMContentLoaded', () => {
     mostrarCarrito();
     updateCartCount();

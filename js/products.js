@@ -1,14 +1,15 @@
 // === PRODUCTOS POR MARCA (para los 8 catálogos por logo) ===
 const productosPorMarca = {
     moroccanoil: [
-        { nombre: "Hydration Shampoo 250ml", precio: 0, imagen: "moroccanoil/Hydration-Shampoo-250ml.webp" },
-        { nombre: "Hydration Acondicionador 250ml", precio: 0, imagen: "moroccanoil/Hydration-Conditioner-250ml-.webp" },
-        { nombre: "Hydration Mascara Intensa 250ml", precio: 0, imagen: "moroccanoil/Hydration-Máscara-Intensa-250m.webp" },
-        { nombre: "Hydration Mascara Ultraligera 250ml", precio: 0, imagen: "moroccanoil/Hydration-Máscara-Ultraligera-250m.webp" },
-        { nombre: "Curly Shampoo 250ml", precio: 0, imagen: "moroccanoil/SHAMPOO_CURLY.webp" },
-        { nombre: "Curly Acondicionador 250ml", precio: 0, imagen: "moroccanoil/CONDITIONER_CURLY.webp" },
+        { nombre: "Hydration Shampoo 250ml", precio: 10, imagen: "moroccanoil/Hydration-Shampoo-250ml.webp" },
+        { nombre: "Hydration Acondicionador 250ml", precio: 10, imagen: "moroccanoil/Hydration-Conditioner-250ml-.webp" },
+        { nombre: "Hydration Mascara Intensa 250ml", precio: 10, imagen: "moroccanoil/Hydration-Máscara-Intensa-250m.webp" },
+        { nombre: "Hydration Mascara Ultraligera 250ml", precio: 10, imagen: "moroccanoil/Hydration-Máscara-Ultraligera-250m.webp" },
+        { nombre: "Curly Shampoo 250ml", precio: 10, imagen: "moroccanoil/SHAMPOO_CURLY.webp" },
+        { nombre: "Curly Acondicionador 250ml", precio: 10, imagen: "moroccanoil/CONDITIONER_CURLY.webp" },
         { nombre: "Crema intensa para rizos 300ml", precio: 0, imagen: "moroccanoil/Crema-intensa-para-rizos-300ml.webp" },
         { nombre: "Repair Shampoo 250ml", precio: 0, imagen: "moroccanoil/Repair-Shampoo-250ml.webp" },
+        { nombre: "Repair Acondicionador 250ml", precio: 0, imagen: "repair.jpg" },//falta imagen//
         { nombre: "Repair Mascara 250ml", precio: 0, imagen: "moroccanoil/Repair-Mascara-250ml.webp" },
         { nombre: "Frizz Control Shampoo 250ml", precio: 0, imagen: "moroccanoil/SHAMPOO_FRIZZ-CONTROL_250mL_.webp" },
         { nombre: "Frizz Control Acondicionador 250ml", precio: 0, imagen: "moroccanoil/CONDITIONER_FRIZZ-CONTROL_250ml.webp" },
@@ -26,10 +27,10 @@ const productosPorMarca = {
         { nombre: "Bruma Perfumada", precio: 0, imagen: "moroccanoil/Bruma-Parfum.webp" }
     ],
     tigi: [
-        { nombre: "Recovery Shampoo 400ml", precio: 0, imagen: "tigi/recovery-shampoo-jpg.jpg" },
-        { nombre: "Recovery Acondicionador 400ml", precio: 0, imagen: "tigi/recovery-acondicionador.webp" },
-        { nombre: "Resurrection Shampoo 400ml", precio: 0, imagen: "tigi/resurrection-shampoo.webp" },
-        { nombre: "Resurrection Acondicionador 400ml", precio: 0, imagen: "tigi/resurrection-acondicionador.webp" },
+        { nombre: "Recovery Shampoo 400ml", precio: 10, imagen: "tigi/recovery-shampoo-jpg.jpg" },
+        { nombre: "Recovery Acondicionador 400ml", precio: 10, imagen: "tigi/recovery-acondicionador.webp" },
+        { nombre: "Resurrection Shampoo 400ml", precio: 10, imagen: "tigi/resurrection-shampoo.webp" },
+        { nombre: "Resurrection Acondicionador 400ml", precio: 10, imagen: "tigi/resurrection-acondicionador.webp" },
         { nombre: "Colour Goddess Shampoo 400ml", precio: 0, imagen: "tigi/goddess-shampoo.webp" },
         { nombre: "Colour Goddess Acondicionador 400ml", precio: 0, imagen: "tigi/goddess-acondicionador.webp" },
         { nombre: "After Party 100ml", precio: 0, imagen: "tigi/afterparty.webp" },
@@ -69,11 +70,11 @@ const productosPorMarca = {
         { nombre: "Cofia", precio: 0, imagen: "avantibox/cofia.png" }
     ],
     karseell: [
-        { nombre: "Máscara 500ml", precio: 0, imagen: "karseell/karseell-1024x1024.png" }
+        { nombre: "Máscara 500ml", precio: 0, imagen: "karseell/karseell-1024x1024.png" }//falta imagen//
     ],
     cepillos: [
-        { nombre: "Cepillo Eurostil", precio: 0, imagen: "/karseellkarseell/karseell-1024x1024.png" },
-        { nombre: "Masajeador", precio: 0, imagen: "karseell-1024x1024.png" }
+        { nombre: "Cepillo Eurostil", precio: 0, imagen: "/karseellkarseell/karseell-1024x1024.png" },//falta imagen//
+        { nombre: "Masajeador", precio: 0, imagen: "karseell-1024x1024.png" }//falta imagen//
     ]
 };
 
