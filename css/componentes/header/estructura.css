@@ -46,13 +46,14 @@ html {
    
     /* Igual que el header */
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;+
     align-items: center;
     justify-content: space-between;
     gap: var(--spacing-md);
     padding: var(--spacing-md) var(--spacing-lg);
     position: relative;
 }
+
 
 
 /* ===================== LOGO ===================== */
@@ -85,11 +86,44 @@ html {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--color-accent-gold);
+    background: var(--color-accent-gold);
     transition: width 0.3s ease;
 }
 
 .main-nav a:hover::after,
 .main-nav a:focus::after {
     width: 100%;
+}
+/* ======== REORGANIZAR HEADER EN MOBILE ======== */
+@media (max-width: 768px) {
+    .site-header {
+        flex-wrap: nowrap;
+        /* evita que bajen de línea */
+        justify-content: space-between;
+    }
+
+    /* Asignar orden */
+    .burger-menu {
+        order: 1;
+    }
+
+    .site-header .logo {
+        order: 2;
+        margin: 0 auto;
+        /* centra el logo */
+    }
+
+    .cart {
+        order: 3;
+    }
+
+    /* Ajustar tamaños para que no se aplaste nada */
+    .burger-menu,
+    .cart {
+        flex: 0 0 auto;
+    }
+
+    .site-header .logo {
+        flex: 0 1 auto;
+    }
 }

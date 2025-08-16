@@ -47,7 +47,7 @@
     font-weight: bold;
     text-transform: uppercase;
     color: white;
-    background:#EA4B06;
+    background:var(--color-accent-orange);
     border: none;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -56,9 +56,11 @@
     letter-spacing: 1px;
     text-decoration: none;
 }
-
+.btn-hero {
+    background: var(--color-accent-orange) !important;
+}
 .btn-hero:hover {
-    background: linear-gradient(135deg, #EA4B06, #C89F65);
+    background: linear-gradient(135deg, #0D4B4C, white) !important;
     transform: translateY(-2px);
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
 }
@@ -78,4 +80,5 @@
         width: auto;
     }
 }
+
 

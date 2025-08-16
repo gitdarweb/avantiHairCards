@@ -3,21 +3,34 @@
    ======================== */
 
 .site-footer {
-    background: var(--color-topbar-bg);
-
-    color: var(--color-accent-gold);
-    display: flex;
-    flex-direction: column;
-    /* ← Mejora el responsive general */
-    align-items: center;
-    gap: var(--spacing-md);
-    padding: var(--spacing-md) var(--spacing-lg);
-    position: relative;
-
-    /* Tipografía igual al header */
+    background-color: var(--color-topbar-bg);
+    /* azul verdoso oscuro */
+    color: white;
     font-family: var(--font-sans);
     font-weight: var(--font-light);
-    font-size: 0.95rem;
+    text-align: center;
+    padding: var(--spacing-sm) 0;
+    display: flex;
+    /* Flexbox for centering */
+    justify-content: center;
+    /* Horizontal centering */
+    flex-direction: column;
+    /* Column direction to push footer-copy down */
+    min-height: 100%;
+    /* Ensure footer takes full height if needed */
+}
+
+.topbar-normal {
+    color: rgba(255, 255, 255, 0.75);
+    /* blanco intermedio más oscuro */
+    font-weight: 400;
+    /* peso intermedio */
+}
+
+.topbar-bold {
+    font-weight: 700;
+    /* negrita */
+    color: white;
 }
 
 .footer-container {
@@ -26,6 +39,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 2rem;
+    margin: 0 auto;
+    /* Center container */
 }
 
 .footer-column h3,
@@ -35,14 +50,12 @@
     font-weight: var(--font-light);
     color: #fff;
     font-size: 1.2rem;
-    
 }
 
 .footer-column p {
     line-height: 1.4;
     font-size: 0.95rem;
     color: #ccc;
-    
 }
 
 .footer-column ul {
@@ -62,8 +75,15 @@
     transition: color 0.3s ease;
 }
 
+/* Aplicar el gradiente como fondo en hover */
 .footer-column ul li a:hover {
-    color: var(--color-accent-orange);
+    background: var(--color-accent-gold);
+    color: #fff;
+    /* Color del texto para contraste, ajusta según necesidad */
+    -webkit-background-clip: text;
+    /* Opcional: aplica el gradiente al texto */
+    -webkit-text-fill-color: transparent;
+    /* Opcional: hace el texto transparente para mostrar el gradiente */
 }
 
 .social-icons {
@@ -77,8 +97,15 @@
     transition: color 0.3s ease;
 }
 
+/* Aplicar el gradiente como fondo en hover */
 .social-icons a:hover {
-    color: var(--color-accent-orange);
+    background: var(--color-accent-gold);
+    color: #fff;
+    /* Color del texto para contraste, puedes ajustarlo */
+    -webkit-background-clip: text;
+    /* Opcional: aplica el gradiente al texto en navegadores WebKit */
+    -webkit-text-fill-color: transparent;
+    /* Opcional: hace el texto transparente para mostrar el gradiente */
 }
 
 /* Copyright */
@@ -86,13 +113,16 @@
     width: 100%;
     max-width: 1200px;
     text-align: center;
-    margin-top: 2rem;
+    margin: 2rem auto 0;
+    /* Center horizontally, margin-top for spacing */
     border-top: 1px solid #444;
     padding-top: 1rem;
     font-family: var(--font-sans);
     font-weight: var(--font-light);
     font-size: 0.85rem;
     color: #aaa;
+    margin-top: auto;
+    /* Push to bottom of flex container */
 }
 
 /* Responsive para móviles */

@@ -76,7 +76,7 @@
 }
 
 .btn-hero {
-    background-color: #EA4B06;
+    background-color: #0D4B4C;;
     color: white;
     padding: 0.75rem 2rem;
     font-size: 1rem;
@@ -122,8 +122,8 @@
 }
 
 .dot.active {
-    background-color: #EA4B06;
-    background: #ea4b06;
+    /*background-color:#0D4B4C;*/
+    background: #0D4B4C;;
 }
 
 /* Animación fade-up */

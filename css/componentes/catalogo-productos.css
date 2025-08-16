@@ -150,7 +150,7 @@
 .grid-categorias>div button .contador,
 .btn-agregar .contador {
     background-color: #FFFFFF;
-    color: var(--color-primary-dark);
+    color: var(--color-primary-darker);
     border-radius: 50%;
     padding: 0.1rem 0.4rem;
     font-size: 0.8rem;

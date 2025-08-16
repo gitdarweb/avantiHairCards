@@ -5,7 +5,8 @@
 
 /* carrito.css */
 .carrito-card {
-    background-color: var(--color-accent-gold);
+    /*background: var(--color-background);
+        /* sdin fondo la tarjeta carrito.*/
     border: 1px solid #ddd;
     border-radius: 12px;
     padding: 1.5rem;

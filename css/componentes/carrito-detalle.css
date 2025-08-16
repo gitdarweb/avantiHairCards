@@ -88,7 +88,7 @@
 }
 
 .info-producto .btn-hero.small {
-    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    background: linear-gradient(135deg, #062D30 0%, #062D30 100%);
     color: #FFFFFF;
     padding: 0.6rem 1rem;
     font-size: 0.95rem;
@@ -102,7 +102,7 @@
 }
 
 .info-producto .btn-hero.small:hover {
-    background: #e67e22;
+    background:var(--color-primary-dark);
     transform: translateY(-2px);
 }
 

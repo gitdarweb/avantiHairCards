@@ -2,15 +2,31 @@
 /* Variables globales unificadas para todo el proyecto Avanti */
 :root {
     /* Colores primarios y secundarios */
-    --color-primary-dark: #0D4B4C;/*claro 1*/
-    --color-primary-darker: #062D30;/* oscuro)*/
-    --color-secondary-dark: #0A3A41;/* 1/2 */
+    --color-primary-dark: #0D4B4C;
+    /* claro 1 */
+    --color-primary-darker: #062D30;
+    /* oscuro */
+    --color-secondary-dark: #0A3A41;
+    /*color de la textura.*/
     --color-topbar-bg: #0B292B;
 
     /* Acentos */
-    --color-accent-green:#0D4B4C ;/*claro 1*/
-    --color-accent-gold: #C89F65;
-    --color-accent-orange: #EA4B06;
+    --color-accent-green: #0D4B4C;
+    /* claro 1 */
+    /* Ajustado: Gradiente dorado con tonos oscuros para reflejar el logo Avanti */
+        --color-accent-gold: linear-gradient(90deg,
+                #F3CB4E 0%,
+                /* Claro al inicio */
+                #F3CB4E 25%,
+                /* Transición hacia oscuro */
+                #8a530e 50%,
+                /* Tonos oscuros pronunciados en el medio */
+                #c6963d 75%,
+                /* Transición hacia un dorado cálido */
+                #FFEE67 100%
+                /* Dorado cálido al final */
+            );
+    --color-accent-orange:#0D4B4C;/*cambia el acento naranja al verde mas claro.*/
 
     /* Fondo y bordes */
     --color-background: #F9F9F9;

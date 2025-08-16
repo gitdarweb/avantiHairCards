@@ -87,6 +87,9 @@ Para simular la navegación completa, usa un servidor local (opcional):
 python -m http.server 8000
 
 Accede a http://localhost:8000.
+ git add .
+ git commit -m "pruebas mercado pago"
+ git push
 
 🔜 Próximos pasos
 
