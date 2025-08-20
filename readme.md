@@ -88,7 +88,7 @@ python -m http.server 8000
 
 Accede a http://localhost:8000.
  git add .
- git commit -m "pruebas mercado pago"
+ git commit -m "pruebas de diseño"
  git push
 
 🔜 Próximos pasos
