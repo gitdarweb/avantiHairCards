@@ -9,7 +9,7 @@ const productosPorMarca = {
         { nombre: "Curly Acondicionador 250ml", precio: 10, imagen: "moroccanoil/CONDITIONER_CURLY.webp" },
         { nombre: "Crema intensa para rizos 300ml", precio: 0, imagen: "moroccanoil/Crema-intensa-para-rizos-300ml.webp" },
         { nombre: "Repair Shampoo 250ml", precio: 0, imagen: "moroccanoil/Repair-Shampoo-250ml.webp" },
-        { nombre: "Repair Acondicionador 250ml", precio: 0, imagen: "repair.jpg" },//falta imagen//
+        { nombre: "Repair Acondicionador 250ml", precio: 0, imagen: "moroccanoil/Repair-Conditioner-250ml-.webp" },
         { nombre: "Repair Mascara 250ml", precio: 0, imagen: "moroccanoil/Repair-Mascara-250ml.webp" },
         { nombre: "Frizz Control Shampoo 250ml", precio: 0, imagen: "moroccanoil/SHAMPOO_FRIZZ-CONTROL_250mL_.webp" },
         { nombre: "Frizz Control Acondicionador 250ml", precio: 0, imagen: "moroccanoil/CONDITIONER_FRIZZ-CONTROL_250ml.webp" },

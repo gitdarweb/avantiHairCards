@@ -26,16 +26,18 @@ background: var(--color-primary-darker);
 /* Estilo para el título */
 .hero-info-texto h2 {
     font-size: 2.5rem;
-    background: var(--color-accent-gold);
-    /* Aplica el gradiente como fondo */
-    -webkit-background-clip: text;
-    /* Clip del fondo al texto (para navegadores WebKit) */
-    background-clip: text;
-    /* Propiedad estándar para clipping */
-    -webkit-text-fill-color: transparent;
-    /* Hace el texto transparente para mostrar el gradiente */
-    color: #c6963d;
-    /* Color de respaldo para navegadores que no soportan background-clip */
+
+    /* Sin gradiente */
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+
+    /* Texto blanco */
+    -webkit-text-fill-color: white;
+    /* Safari/Chrome */
+    color: #fff;
+    /* Fallback general */
+
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;

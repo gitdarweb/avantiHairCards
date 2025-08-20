@@ -15,16 +15,16 @@
     /* claro 1 */
     /* Ajustado: Gradiente dorado con tonos oscuros para reflejar el logo Avanti */
         --color-accent-gold: linear-gradient(90deg,
-                #F3CB4E 0%,
-                /* Claro al inicio */
-                #F3CB4E 25%,
-                /* Transición hacia oscuro */
-                #8a530e 50%,
-                /* Tonos oscuros pronunciados en el medio */
-                #c6963d 75%,
-                /* Transición hacia un dorado cálido */
-                #FFEE67 100%
-                /* Dorado cálido al final */
+                #F8E38E 0%,
+                    /* dorado claro al inicio */
+                    #C4902D 35%,
+                    /* empieza a oscurecer */
+                    #7E4405 50%,
+                    /* centro oscuro marcado */
+                    #C4902D 65%,
+                    /* vuelve al dorado medio */
+                    #F8E38E 100%
+                    /* dorado brillante al final */
             );
     --color-accent-orange:#0D4B4C;/*cambia el acento naranja al verde mas claro.*/
 
