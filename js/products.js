@@ -73,8 +73,8 @@ const productosPorMarca = {
         { nombre: "Máscara 500ml", precio: 0, imagen: "karseell/karseell-1024x1024.png" }//falta imagen//
     ],
     cepillos: [
-        { nombre: "Cepillo Eurostil", precio: 0, imagen: "/karseellkarseell/karseell-1024x1024.png" },//falta imagen//
-        { nombre: "Masajeador", precio: 0, imagen: "karseell-1024x1024.png" }//falta imagen//
+        { nombre: "Cepillo Eurostil", precio: 0, imagen: "cepillos/IMG_5230.webp" },//falta imagen//
+        { nombre: "Masajeador", precio: 0, imagen: "cepillos/IMG_5235.webp" }//falta imagen//
     ]
 };
 
