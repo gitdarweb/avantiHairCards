@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 require('dotenv').config();
 const mercadopago = require('mercadopago');
 
@@ -7,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Allowed origins (ajusta en .env o Render dashboard)
-const FRONTEND_ORIGINS = (process.env.FRONTEND_ORIGINS || 'http://localhost:5500,https://gitdarweb.github.io').split(',');
+const FRONTEND_ORIGINS = (process.env.FRONTEND_ORIGINS || 'http://localhost:5500,https://avantihaircards.onrender.com').split(',');
 
 const corsOptions = {
     origin: function (origin, callback) {
@@ -21,6 +22,8 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.use(express.json());
+// Servir archivos estáticos desde la raíz (pago-exitoso.html, pago-fallido.html, etc.)
+app.use(express.static(path.join(__dirname, '../')));
 
 // ---------------------------
 // Endpoint de pago - acepta { carrito: [...] } o [...]
@@ -59,9 +62,9 @@ app.post('/create_preference', async (req, res) => {
         const preference = {
             items,
             back_urls: {
-                success: process.env.FRONTEND_URL ? `${process.env.FRONTEND_URL}/pago-exitoso.html` : 'https://gitdarweb.github.io/AvantiHairSalon/pago-exitoso.html',
-                failure: process.env.FRONTEND_URL ? `${process.env.FRONTEND_URL}/pago-fallido.html` : 'https://gitdarweb.github.io/AvantiHairSalon/pago-fallido.html',
-                pending: process.env.FRONTEND_URL ? `${process.env.FRONTEND_URL}/pago-pendiente.html` : 'https://gitdarweb.github.io/AvantiHairSalon/pago-pendiente.html',
+                success: process.env.FRONTEND_URL ? `${process.env.FRONTEND_URL}/pago-exitoso.html` : `${process.env.FRONTEND_URL}/pago-exitoso.html`,
+                failure: process.env.FRONTEND_URL ? `${process.env.FRONTEND_URL}/pago-fallido.html` : `${process.env.FRONTEND_URL}/pago-fallido.html`,
+                pending: process.env.FRONTEND_URL ? `${process.env.FRONTEND_URL}/pago-pendiente.html` : `${process.env.FRONTEND_URL}/pago-pendiente.html`,
             },
             auto_return: 'approved',
         };
@@ -90,13 +93,3 @@ app.listen(PORT, () => {
     console.log(`🚀 Backend Avanti seguro en puerto ${PORT}`);
     console.log(`Allowed origins: ${FRONTEND_ORIGINS.join(',')}`);
 });
-/**
- * Backend Avanti - compatible con frontend existente (no tocar products.js)
- * - Endpoints:
- *    POST /create_preference -> acepta { carrito: [...] } o [...] -> crea preferencia MP
- *
- * Requisitos: tener en backend/.env:
- *   MERCADOPAGO_ACCESS_TOKEN=TU_TOKEN
- *   FRONTEND_ORIGINS=http://localhost:5500,https://gitdarweb.github.io
- *   FRONTEND_URL=https://gitdarweb.github.io/AvantiHairSalon
- */
