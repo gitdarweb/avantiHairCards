@@ -49,11 +49,17 @@ app.post('/create_preference', async (req, res) => {
             return res.status(400).json({ error: 'El carrito está vacío o mal enviado' });
         }
 
+        // Validar ítems
         const items = carrito.map(it => ({
             title: String(it.nombre || it.title || 'Producto'),
             quantity: Number(it.cantidad || it.quantity) > 0 ? Number(it.cantidad || it.quantity) : 1,
             unit_price: Number(it.precio || it.unit_price) >= 0 ? Number(it.precio || it.unit_price) : 0,
         }));
+
+        const isValidItems = items.every(item => item.title && !isNaN(item.quantity) && item.quantity > 0 && !isNaN(item.unit_price) && item.unit_price >= 0);
+        if (!isValidItems) {
+            return res.status(400).json({ error: 'Ítems inválidos en el carrito' });
+        }
 
         const total = items.reduce((s, i) => s + i.quantity * i.unit_price, 0);
         console.log('🛒 Carrito recibido (server):', carrito);
@@ -62,9 +68,9 @@ app.post('/create_preference', async (req, res) => {
         const preference = {
             items,
             back_urls: {
-                success: process.env.FRONTEND_URL ? `${process.env.FRONTEND_URL}/pago-exitoso.html` : `${process.env.FRONTEND_URL}/pago-exitoso.html`,
-                failure: process.env.FRONTEND_URL ? `${process.env.FRONTEND_URL}/pago-fallido.html` : `${process.env.FRONTEND_URL}/pago-fallido.html`,
-                pending: process.env.FRONTEND_URL ? `${process.env.FRONTEND_URL}/pago-pendiente.html` : `${process.env.FRONTEND_URL}/pago-pendiente.html`,
+                success: `${process.env.FRONTEND_URL}/pago-exitoso.html`,
+                failure: `${process.env.FRONTEND_URL}/pago-fallido.html`,
+                pending: `${process.env.FRONTEND_URL}/pago-pendiente.html`,
             },
             auto_return: 'approved',
         };
@@ -76,7 +82,6 @@ app.post('/create_preference', async (req, res) => {
         res.json({
             id: prefData.id,
             init_point: prefData.init_point,
-            sandbox_init_point: prefData.sandbox_init_point,
             total
         });
     } catch (err) {

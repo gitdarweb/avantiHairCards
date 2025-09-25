@@ -1,4 +1,4 @@
-// carts.js (versión actualizada para backend, sin credenciales)
+// carts.js (versión final con validación y logs mejorados)
 
 // ——————————————————————————————
 // 1. Inicialización (más robusta)
@@ -12,7 +12,7 @@ try {
 }
 
 // Backend URL
-const BACKEND_URL = "http://localhost:3000"; // Cambia a 'https://tu-backend.onrender.com' para producción
+const BACKEND_URL = "https://avantihaircards.onrender.com";
 
 // ——————————————————————————————
 // 2. Guardar y actualizar contador
@@ -36,11 +36,16 @@ if (typeof window.actualizarContadorCarrito === 'undefined') {
 // ——————————————————————————————
 // 3. Agregar al carrito
 function agregarAlCarrito(nombre, precio, imagen) {
+    console.log('Agregando al carrito:', nombre, precio, imagen); // Debug
+    if (!nombre || isNaN(precio) || precio <= 0 || !imagen) {
+        console.error('Datos inválidos:', { nombre, precio, imagen });
+        return;
+    }
     const existe = carrito.find(item => item.nombre === nombre);
     if (existe) {
         existe.cantidad = (existe.cantidad || 0) + 1;
     } else {
-        carrito.push({ nombre, precio, cantidad: 1, imagen });
+        carrito.push({ nombre, precio: Number(precio), cantidad: 1, imagen });
     }
     guardarCarrito();
     updateCartCount();
@@ -118,8 +123,17 @@ async function finalizarCompra() {
         return;
     }
 
+    // Validar carrito
+    const isValidCarrito = carrito.every(item => item.nombre && !isNaN(item.precio) && item.precio > 0 && !isNaN(item.cantidad) && item.cantidad > 0 && item.imagen);
+    if (!isValidCarrito) {
+        alert('Carrito contiene datos inválidos. Revisa los productos.');
+        console.error('Carrito inválido:', carrito);
+        return;
+    }
+
     const montoTotal = getTotalCarrito();
     console.log('[MP] Monto total calculado:', montoTotal);
+    console.log('[MP] Enviando payload:', carrito);
 
     try {
         const response = await fetch(`${BACKEND_URL}/create_preference`, {
@@ -132,22 +146,17 @@ async function finalizarCompra() {
         const data = await response.json();
         console.log('[MP] respuesta backend:', data);
 
-        if (data.id) {
-            console.log('[MP] Abriendo init_point:', data.sandbox_init_point || data.init_point);
-            window.open(data.sandbox_init_point || data.init_point, '_blank');
-            // Opcional: vaciar carrito aquí si querés resetear (comenta si no)
-            // vaciarCarrito();
+        if (response.ok && data.id && data.init_point) {
+            console.log('[MP] Abriendo init_point:', data.init_point);
+            window.open(data.init_point, '_blank');
+            vaciarCarrito();
         } else {
             alert('No se pudo crear la preferencia de pago. Revisá la consola.');
             console.error('Respuesta inesperada del backend:', data);
         }
     } catch (error) {
         console.error('Error en la conexión con el backend:', error);
-        if (error && error.message && /CORS|NetworkError/i.test(error.message)) {
-            alert('Error de conexión (CORS/Network). Ver consola para detalles.');
-        } else {
-            alert('Error en la conexión con el servidor. Revisá la consola.');
-        }
+        alert('Error en la conexión con el servidor. Revisá la consola.');
     }
 }
 
