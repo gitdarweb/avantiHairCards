@@ -7,8 +7,10 @@ const mercadopago = require('mercadopago');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// ——————————————————————————————
 // Allowed origins (ajusta en .env o Render dashboard)
-const FRONTEND_ORIGINS = (process.env.FRONTEND_ORIGINS || 'http://localhost:5500,https://avantihaircards.onrender.com').split(',');
+// Incluye el nuevo dominio avantihairtienda.com.ar para producción
+const FRONTEND_ORIGINS = (process.env.FRONTEND_ORIGINS || 'http://localhost:5500,https://avantihaircards.onrender.com,https://avantihairtienda.com.ar').split(',');
 
 const corsOptions = {
     origin: function (origin, callback) {
@@ -25,9 +27,9 @@ app.use(express.json());
 // Servir archivos estáticos desde la raíz (pago-exitoso.html, pago-fallido.html, etc.)
 app.use(express.static(path.join(__dirname, '../')));
 
-// ---------------------------
+// ——————————————————————————————
 // Endpoint de pago - acepta { carrito: [...] } o [...]
-// ---------------------------
+// ——————————————————————————————
 const mp = new mercadopago.MercadoPagoConfig({
     accessToken: process.env.MERCADOPAGO_ACCESS_TOKEN,
 });
@@ -90,9 +92,11 @@ app.post('/create_preference', async (req, res) => {
     }
 });
 
+// ——————————————————————————————
 // Health
 app.get('/health', (_req, res) => res.send('✅ Backend Avanti funcionando'));
 
+// ——————————————————————————————
 // Start
 app.listen(PORT, () => {
     console.log(`🚀 Backend Avanti seguro en puerto ${PORT}`);

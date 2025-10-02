@@ -1,4 +1,4 @@
-// carts.js (versión final con validación y logs mejorados)
+// carts.js (versión final con validaciones y logs mejorados)
 
 // ——————————————————————————————
 // 1. Inicialización (más robusta)
@@ -11,8 +11,9 @@ try {
     localStorage.setItem('carrito', JSON.stringify(carrito));
 }
 
-// Backend URL
-const BACKEND_URL = "https://avantihaircards.onrender.com";
+// ——————————————————————————————
+// Backend URL (nuevo dominio para producción)
+const BACKEND_URL = "https://avantihairtienda.com.ar";
 
 // ——————————————————————————————
 // 2. Guardar y actualizar contador
